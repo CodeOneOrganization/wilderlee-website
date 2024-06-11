@@ -12,8 +12,6 @@ export default function Button() {
   }, [isOpen])
 
   return (
-    // <button className="button_asterisc">
       <Asterisc className={`${styles.asterisc} button_asterisc_svg`}  onClick={handleVerify}/>
-    // </button>
   );
 }
