@@ -35,10 +35,12 @@
 
 .menu{
   position: fixed;
-  top:  10.88vw;
+  top:  8.88vw;
 
   right: var(--container-padding);
-  z-index: 99;
+  z-index: 999;
+
+  display: none;
 }
 
 .menu menu{
@@ -46,9 +48,25 @@
 
   
   & li{
-    font-size: 2.59vw;
+    cursor: pointer;
+    overflow: hidden;
     color: #fff;
-    font-family: var(--font-orbitron);
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+
+    & span{
+      font-size: 2.59vw;
+      font-family: var(--font-orbitron);
+      display: block;
+
+      transform: translateY(20vw); 
+    }
+
+    & svg{
+      opacity: 0;
+      transform: translateX(-1vw);
+    }
   }
 
   & li:not(:first-of-type){

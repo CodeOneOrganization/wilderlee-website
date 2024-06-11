@@ -1,17 +1,22 @@
 import gsap from "gsap";
 
-export function InHover(){
-    gsap.to(".button_asterisc",{
-        rotate: 100,
-        duration: 1,
+interface AnimationClass{
+    className: string
+}
+
+export function arrowHover({className}:AnimationClass){
+    gsap.to(className,{
+        opacity: 1,
+        x: 0,
+        duration: 0.5,
         ease: "power3.out"
     })
 }
-export function OutHover(){
-    
-    gsap.to(".button_asterisc",{
-        rotate: 0,
-        duration: 1,
-        ease: "power3.out"
+export function arrowHoverOut({className}:AnimationClass){
+    gsap.to(className,{
+        opacity: 0,
+        x: "-1vw",
+        duration: 0.5
     })
+
 }
