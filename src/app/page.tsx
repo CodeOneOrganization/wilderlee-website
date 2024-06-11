@@ -1,6 +1,11 @@
-import Hero from "./layout/Hero";
+import Hero from "@/app/layout/Hero";
+import Nav from "@/app/layout/Nav";
+
 export default function Home() {
   return (
-    <Hero />
+    <>
+      <Nav/>
+      <Hero/>
+    </>
   );
 }
