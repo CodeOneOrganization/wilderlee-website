@@ -1,5 +1,4 @@
 "use client"
-import { InHover, OutHover } from "@/app/layout/Nav/Animations/Hover";
 import { Close, Open } from "@/app/layout/Nav/Animations/Overlay";
 import Asterisc from "@/common/components/Asterisc";
 import styles from "./Nav.module.css"
