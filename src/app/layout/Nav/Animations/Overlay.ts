@@ -13,7 +13,7 @@ export function Open(state: any) {
 
   gsap.to(`.${styles.asterisc}`, {
     top: "-13vw",
-    rotate: 360,
+    rotate: 180,
     duration: 2,
     ease: "power3.out",
     attr: {

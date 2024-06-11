@@ -12,14 +12,14 @@ export default function Arrow({...props}: Props) {
       <path
         d="M23.75 7L36.5 19L23.75 31"
         stroke="white"
-        stroke-width="9.5325"
-        stroke-linecap="square"
+        strokeWidth="9.5325"
+        strokeLinecap="square"
       />
       <path
         d="M5 19L33.125 19"
         stroke="white"
-        stroke-width="9.5325"
-        stroke-linecap="square"
+        strokeWidth="9.5325"
+        strokeLinecap="square"
       />
     </svg>
   );

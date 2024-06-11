@@ -2,6 +2,7 @@ import styles from "./Nav.module.css";
 import Logo from "@/common/components/Logo";
 import Button from "@/app/layout/Nav/Button";
 import Menu from "@/app/layout/Nav/Menu";
+import RotatingOnScroll from "@/common/components/RotateWhenScrolling";
 
 export default function Nav() {
 
@@ -12,8 +13,10 @@ export default function Nav() {
         <Logo />
       </div>
 
-      <Button />
-      <Menu/>
+      <RotatingOnScroll>
+        <Button data-rotate />
+      </RotatingOnScroll>
+      <Menu />
     </nav>
 
   );
