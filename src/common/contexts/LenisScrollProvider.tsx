@@ -12,7 +12,6 @@ export default function LenisScrollProvider({ children }: Props) {
   const _lenis = useRef<Lenis>(null!)
 
   useIsomorphicEffect(() => {
-    console.log("isomorphic lenis scroll fired")
     const lenis = new Lenis({
       autoResize: true,
       easing: (t) => Math.pow(t, 5)
