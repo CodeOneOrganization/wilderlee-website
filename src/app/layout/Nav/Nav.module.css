@@ -32,3 +32,25 @@
 
   z-index: 99;
 }
+
+.menu{
+  position: fixed;
+  top:  10.88vw;
+
+  right: var(--padding-inline);
+  z-index: 99;
+}
+
+.menu menu{
+  list-style: none;
+
+  
+  & li{
+    font-size: 2.59vw;
+    color: #fff;
+  }
+
+  & li:not(:first-of-type){
+    margin-top: 1.66vw;
+  }
+}

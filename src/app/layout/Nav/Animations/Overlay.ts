@@ -2,6 +2,7 @@ import gsap from "gsap";
 import styles from "../Nav.module.css";
 
 export function Open(state: any) {
+
   state(true);
   gsap.set(`.${styles.asterisc}`, {
     top: "1.19vw",
@@ -20,27 +21,34 @@ export function Open(state: any) {
   });
   gsap.to(`.${styles.asterisc}`, {
     right: "-30vw",
-    duration: 2.5,
+    duration: 2,
   });
 }
 
 export function Close(state: any) {
+
   state(false);
   
-  // Animação para retornar à posição inicial sem movimento lateral indesejado
   gsap.to(`.${styles.asterisc}`, {
     top: "1.19vw",
-    right: "-20vw",
+   
     ease: "power3.out",
-    rotate: 0, // Ajustado para garantir a rotação correta
-    duration: 2,
+    rotate: 0, 
+    duration: 1.2,
     attr: {
       width: 101,
       height: 100,
     },
-    onComplete: () => {
-      // Certificar que a posição final esteja correta
-      gsap.set(`.${styles.asterisc}`, {
+
+  });
+
+  gsap.to(`.${styles.asterisc}`, {
+    right: "5.98vw",
+    duration: 0.8,
+
+        onComplete: () => {
+
+      gsap.to(`.${styles.asterisc}`, {
         right: "var(--padding-inline)",
       });
     }
