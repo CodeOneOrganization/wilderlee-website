@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import {orbitron, oranienbaum} from "./fonts"
 
 import "./index.css";
+import Providers from "@/common/contexts/Providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${orbitron.variable} ${oranienbaum.variable}`}>{children}</body>
+      <body className={`${orbitron.variable} ${oranienbaum.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
