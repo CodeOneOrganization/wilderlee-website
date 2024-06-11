@@ -24,6 +24,10 @@ export function Open(state: any) {
   gsap.to(`.${styles.asterisc}`, {
     right: "-29vw",
     duration: 1,
+
+    onComplete: () => {
+      state(true);
+    },
   });
 
   gsap.to(".spanMenu1", {
@@ -46,9 +50,7 @@ export function Open(state: any) {
     ease: "elastic.out(1,8)",
     delay: 1.5,
 
-    onComplete: () => {
-      state(true);
-    },
+  
   });
 }
 
