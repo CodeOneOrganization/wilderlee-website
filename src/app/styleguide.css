@@ -74,11 +74,25 @@ h1, h1 > * {
   line-height: 0.9;
 }
 
+h3, h3 > * {
+  font-size: calc(var(--title-size) / 2.0736);
+  font-family: var(--font-orbitron) !important;
+  text-transform: uppercase;
+}
+h4, h4 > * {
+  font-size: calc(var(--title-size) / 2.985984);
+  font-family: var(--font-orbitron) !important;
+  text-transform: uppercase;
+}
+
 p, span {
   line-height: 1.4;
   font-family: var(--font-oranienbaum);
   font-size: max(20px, 1.25vw);
 
-  /* transition: 450ms cubic-bezier(0.25, 0, 0.75, 1); */
-  
+}
+p.small{
+  line-height: 1.4;
+  font-family: var(--font-oranienbaum);
+  font-size: calc(max(20px, 1.25vw) / 1.2);
 }
