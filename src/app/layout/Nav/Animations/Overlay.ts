@@ -6,7 +6,7 @@ export function Open(state: any) {
   state(true);
   gsap.set(`.${styles.asterisc}`, {
     top: "1.19vw",
-    right: "var(--padding-inline)",
+    right: "var(--container-padding)",
   });
 
   gsap.to(`.${styles.asterisc}`, {
@@ -49,7 +49,7 @@ export function Close(state: any) {
         onComplete: () => {
 
       gsap.to(`.${styles.asterisc}`, {
-        right: "var(--padding-inline)",
+        right: "var(--container-padding)",
       });
     }
   });

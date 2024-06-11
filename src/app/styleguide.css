@@ -1,4 +1,83 @@
-:root{
-    --black: #0F0F0F;
-    --padding-inline:  5.98vw;
+:root {
+  --section-padding: max(142px, 7.4vw);
+  --container-padding: 5.9vw;
+  --gap-padding: max(1vw, 8px);
+
+  --color-black: #0F0F0F;
+  --color-blue: #00BAF7;
+  --color-white: #fff;
+
+  --title-size: max(2rem, 6.66vw);
+  --border-size: 0.3em;
+  
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: max(24px, 1vw);
+  font-weight: 400;
+  -webkit-font-smoothing: antialised;
+  font-smoothing: antialised;
+  line-height: 1;
+}
+
+body {
+  color: var(--color-white);
+  
+  background-color: var(--color-black);
+}
+
+section {
+  position: relative;
+  padding-block: var(--section-padding);
+}
+
+.container {
+  padding-inline: var(--container-padding);
+}
+
+.fullHeight {
+  min-height: 100dvh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ----------------------- TYPOGRAPHY --------------------- */
+
+*.blue {
+  color: var(--color-blue);
+}
+
+h1, h1 > * {
+  font-size: var(--title-size);
+  font-family: var(--font-orbitron) !important;
+  line-height: 0.9;
+}
+
+p, span {
+  line-height: 1.4;
+  font-family: var(--font-oranienbaum);
+  font-size: max(20px, 1.25vw);
+
+  
 }
