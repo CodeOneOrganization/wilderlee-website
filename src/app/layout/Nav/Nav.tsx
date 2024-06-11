@@ -7,7 +7,7 @@ export default function Nav() {
 
   return (
 
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} container`}>
       <div className="logo">
         <Logo />
       </div>

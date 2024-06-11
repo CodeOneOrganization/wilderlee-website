@@ -1,4 +1,3 @@
-// import { useEffect } from "react"
 import styles from "./TrainYourMind.module.css"
 
 import PlayIcon from "@/common/components/Play"
@@ -15,7 +14,7 @@ export default function TrainYourMind() {
         </div>
       </div>
       <div className={styles.wrapper}>
-        <video muted className={styles.video} src="videos/SonyVideo.mp4" autoPlay  type="video/mp4" />
+        <video muted className={styles.video} src="videos/SonyVideo.mp4" autoPlay typeof="video/mp4" />
         <PlayIcon className={styles.play} />
       </div>
     </section>
