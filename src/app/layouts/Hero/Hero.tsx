@@ -3,6 +3,7 @@ import GSAP from "gsap"
 import styles from "./Hero.module.css"
 
 import Asterisk from "@/common/components/Asterisc"
+import RotateWhenScrolling from "@/common/components/RotateWhenScrolling"
 
 const items = [
   { src: "/images/image1.jpg" },
@@ -22,7 +23,9 @@ export default function Hero() {
           </b>
           <br />
           Trainer
-          <Asterisk className={styles.asterisk} />
+          <RotateWhenScrolling>
+            <Asterisk data-rotate className={styles.asterisk} />
+          </RotateWhenScrolling>
         </h1>
         <p className={styles.text}>
           <span className={`${styles.innerText} ${styles.textLeft} fadeIn`}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
