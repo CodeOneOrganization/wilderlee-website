@@ -19,16 +19,3 @@ export function arrowHoverOut({ className }: AnimationClass) {
     duration: 0.5,
   });
 }
-
-export function asteriscHover() {
-  gsap.to(`.${styles.asterisc}`, {
-    rotate: 40,
-    duration: 1,
-  });
-}
-export function asteriscHoverOut() {
-  gsap.to(`.${styles.asterisc}`, {
-    rotate: 0,
-    duration: 1,
-  });
-}
