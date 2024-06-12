@@ -17,11 +17,11 @@ export default function RotatingOnView({ children }: Props) {
       
     }
 
-    lenis?.current.on("scroll", (e) => {
-      e.5 
-    })
+    // lenis?.current.on("scroll", (e) => {
+    //   e.5 
+    // })
 
-    return () => lenis?.current.off("scroll", )
+    return () => lenis?.current.off("scroll", ScrollTrigger.update)
 
   }, [lenis])
   return children

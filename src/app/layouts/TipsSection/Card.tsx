@@ -1,33 +1,32 @@
+"use client"
 import Line from "@/app/layouts/TipsSection/Line";
-import styles from "./styles.module.css";
-import Arrow from "@/common/components/Arrow";
 
-interface Props{
-    Title: string,
-    Paragraph: string,
-    Image: string
+import styles from "./styles.module.css";
+
+import Arrow from "@/common/components/Arrow";
+import { hover } from "@/app/layout/TipsSection/animations/Hover";
+
+interface Props {
+  Title: string,
+  Paragraph: string,
+  Image: string
 }
 
-export default function Card() {
+export default function Card({ Title, Paragraph, Image }: Props) {
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onMouseEnter={hover}>
       <Line />
       <div className={styles.card_container}>
         
-      <div className={styles.image}>
-          <img src="/images/tipsImage1.png" alt="Image" />
+        <div className={styles.image}>
+          <img src={Image} alt="Image" />
         </div>
 
         <div className={styles.text}>
-        <h4>
-          Transforme Seu Corpo em <b className="blue">30</b> Dias
-        </h4>
+          <h4 dangerouslySetInnerHTML={{ __html: Title }}></h4>
 
-        <p className="tiny">O Guia Definitivo de Treino e Dieta </p>
-        <p className={`${styles.p_card} small`}>
-          Sou Wilderlee, um personal trainer certificado com anos de experiência <br />
-          ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem
-        </p>
+          <p className="tiny">O Guia Definitivo de Treino e Dieta</p>
+          <p className={`${styles.p_card} small`} dangerouslySetInnerHTML={{ __html: Paragraph }}></p>
 
         </div>
         <Arrow className={styles.arrow}/>

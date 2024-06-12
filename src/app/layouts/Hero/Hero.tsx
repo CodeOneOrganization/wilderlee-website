@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
       <div className={`${styles.right} row`}>
         <div className={`${styles.imageBoard} col`}>
-          <img className={`${styles.image} ${styles.big}`} src={items[0].src} alt="" />
+          <img className={`${styles.image} ${styles.big}`} src={items[0].src} alt="Image peaple in gym" />
           {items.splice(1, 3).map((x, i) => <img key={`${x.src}`} className={`${styles.image} ${styles.small}`} src={x.src} />)}
         </div>
         <h1 className={styles.textAcrossTheBoard}>

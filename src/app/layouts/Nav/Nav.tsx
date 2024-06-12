@@ -5,6 +5,7 @@ import Button from "@/app/layouts/Nav/Button";
 import Menu from "@/app/layouts/Nav/Menu";
 
 import RotatingOnScroll from "@/common/components/RotateWhenScrolling";
+import Overlay from "@/app/layouts/Nav/Overlay";
 
 export default function Nav() {
   return (
@@ -16,8 +17,7 @@ export default function Nav() {
       <RotatingOnScroll>
         <Button data-rotate />
       </RotatingOnScroll>
-      <Menu />
+      <Overlay />
     </nav>
-
   );
 }
