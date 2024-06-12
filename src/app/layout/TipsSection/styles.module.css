@@ -14,11 +14,17 @@
 
     margin-top: 1.82vw;
 }
+.card{
+    cursor: pointer;
+}
+
+.card:hover .image img{
+    filter: grayscale(30%);
+}
+
 .card_container{
     position: relative;
     display: flex;
-    /* background-color: red; */
-    /* justify-content: space-between; */
     align-items: center;
     margin-top:  1.30vw;
 }
@@ -26,8 +32,15 @@
     overflow: hidden;
     width:  22.083vw;
     height: 12.96vw;
-    background-color: red;
 }
+.image img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+
+    transition: filter .15s ease-out;
+}
+
 
 .text{
     padding-left: 1.97vw;
@@ -37,6 +50,8 @@
 }
 
 .arrow{
+    overflow: hidden;
     position: absolute;
     right: 2.81vw;
+ 
 }
