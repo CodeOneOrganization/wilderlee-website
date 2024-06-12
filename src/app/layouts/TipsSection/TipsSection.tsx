@@ -1,6 +1,8 @@
-import Card from "@/app/layout/TipsSection/Card";
+import Card from "@/app/layouts/TipsSection/Card";
+
 import styles from "./styles.module.css";
-import Line from "@/app/layout/TipsSection/Line";
+
+import Line from "@/app/layouts/TipsSection/Line";
 
 export default function TipsSection() {
   return (

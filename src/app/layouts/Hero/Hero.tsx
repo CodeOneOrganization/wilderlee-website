@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <section className={`${styles.hero} fullHeight container`}>
       <div className={`${styles.left}`}>
-        <h1 className={styles.title}>
+        <h1 className={`${styles.title} fadeIn`}>
           Wilderlee
           <br />
           <b className="blue">
@@ -25,8 +25,8 @@ export default function Hero() {
           <Asterisk className={styles.asterisk} />
         </h1>
         <p className={styles.text}>
-          <span className={`${styles.innerText} ${styles.textLeft}`}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
-          <span className={`${styles.innerText} ${styles.textRight}`}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
+          <span className={`${styles.innerText} ${styles.textLeft} fadeIn`}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
+          <span className={`${styles.innerText} ${styles.textRight} fadeIn`}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
         </p>
       </div>
       <div className={`${styles.right} row`}>

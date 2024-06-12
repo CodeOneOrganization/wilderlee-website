@@ -1,7 +1,10 @@
 "use client";
 import Arrow from "@/common/components/Arrow";
+
 import styles from "./Nav.module.css";
-import { arrowHover, arrowHoverOut } from "@/app/layout/Nav/Animations/Hover";
+
+import { arrowHover, arrowHoverOut } from "@/app/layouts/Nav/Animations/Hover";
+
 export default function Menu() {
   return (
     <div className={styles.menu}>

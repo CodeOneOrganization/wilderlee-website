@@ -1,5 +1,5 @@
 "use client"
-import { Close, Open } from "@/app/layout/Nav/Animations/Overlay";
+import { Close, Open } from "@/app/layouts/Nav/Animations/Overlay";
 import Asterisk from "@/common/components/Asterisc";
 import styles from "./Nav.module.css"
 import { useState, useCallback, ButtonHTMLAttributes } from "react";

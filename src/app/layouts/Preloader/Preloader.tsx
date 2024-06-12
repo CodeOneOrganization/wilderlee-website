@@ -5,6 +5,7 @@ import GSAP from "gsap"
 import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect"
 
 import styles from "./Preloader.module.css"
+import heroStyles from "@/app/layouts/Hero/Hero.module.css"
 
 export default function Preloader() {
   useIsomorphicEffect(() => {
@@ -42,6 +43,11 @@ export default function Preloader() {
       timeline.to(`.${styles.preloader}`, {
         height: "0dvh" 
       }, "+=0.2")
+      timeline.to(`.${heroStyles.hero} .fadeIn`, {
+        stagger: 0.75,
+        duration: 1,
+        opacity: 1
+      })
     })
 
     return () => _ctx.revert()

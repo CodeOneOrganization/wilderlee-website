@@ -1,4 +1,4 @@
-import Line from "@/app/layout/TipsSection/Line";
+import Line from "@/app/layouts/TipsSection/Line";
 import styles from "./styles.module.css";
 import Arrow from "@/common/components/Arrow";
 
