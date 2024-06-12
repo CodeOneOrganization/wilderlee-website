@@ -1,13 +1,11 @@
 import styles from "./Nav.module.css";
 import Logo from "@/common/components/Logo";
 import Button from "@/app/layout/Nav/Button";
-import Menu from "@/app/layout/Nav/Menu";
 import RotatingOnScroll from "@/common/components/RotateWhenScrolling";
+import Overlay from "@/app/layout/Nav/Overlay";
 
 export default function Nav() {
-
   return (
-
     <nav className={`${styles.nav} container`}>
       <div className="logo">
         <Logo />
@@ -16,8 +14,7 @@ export default function Nav() {
       <RotatingOnScroll>
         <Button data-rotate />
       </RotatingOnScroll>
-      <Menu />
+      <Overlay />
     </nav>
-
   );
 }
