@@ -27,7 +27,7 @@ export default function RotatingOnScroll({ children, rotate = 180 }: Props) {
         // current rotation in z axis
         const rnz = GSAP.utils.interpolate(rpz, rotate * p, 0.5)
 
-        console.log("new rotation value:", rnz)
+        // console.log("new rotation value:", rnz)
 
         _element.style.transform = `rotate(${rnz}deg)`
         _element.setAttribute("data-rotate-previous", `${rnz}`)

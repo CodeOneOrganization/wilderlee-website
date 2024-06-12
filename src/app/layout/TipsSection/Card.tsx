@@ -23,7 +23,7 @@ export default function Card() {
           Transforme Seu Corpo em <b className="blue">30</b> Dias
         </h4>
 
-        <p className="small">O Guia Definitivo de Treino e Dieta </p>
+        <p className="tiny">O Guia Definitivo de Treino e Dieta </p>
         <p className={`${styles.p_card} small`}>
           Sou Wilderlee, um personal trainer certificado com anos de experiência <br />
           ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem
