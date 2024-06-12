@@ -1,0 +1,64 @@
+.trainYourMind {}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-bottom: max(36px, 1.8vw);
+}
+
+.title {
+  font-size: calc(var(--title-size) / 2.0736);
+  font-family: var(--font-orbitron);
+  text-transform: uppercase;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: max(1vw, 9px);
+
+  color: var(--color-blue);
+}
+
+.line {
+  background: var(--color-blue);
+  height: 1px;
+  width: 100px
+}
+
+.innerText {
+  width: max-content;
+  text-transform: uppercase;
+  font-family: var(--font-orbitron);
+  font-size: 0.6em;
+}
+
+.wrapper {
+  width: 100%;
+ height: 75dvh;
+
+  background: #444;
+  border-radius: var(--border-size);
+
+  overflow: hidden;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+  pointer-events: none;
+
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}

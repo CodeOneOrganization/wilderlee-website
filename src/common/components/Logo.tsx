@@ -23,7 +23,7 @@ export default function Logo() {
           rx="0.45"
           fill="#D9D9D9"
           stroke="white"
-          stroke-width="0.1"
+          strokeWidth="0.1"
         />
       </mask>
       <g mask="url(#mask0_19_324)">
@@ -34,11 +34,10 @@ export default function Logo() {
         <path
           d="M45.75 3.25003V45.7H41.8L21.95 25.85C15.1744 32.6256 5.5256 42.2744 -1.25 49.05"
           stroke="white"
-          stroke-width="6.5"
-          stroke-linecap="square"
+          strokeWidth="6.5"
+          strokeLinecap="square"
         />
       </g>
     </svg>
   );
 }
-//style="mask-type:alpha"

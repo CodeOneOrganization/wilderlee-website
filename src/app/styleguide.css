@@ -9,10 +9,11 @@
 
   --title-size: max(2rem, 6.66vw);
   --border-size: 0.3em;
-  
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   border: 0;
@@ -20,7 +21,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   font-size: max(24px, 1vw);
   font-weight: 400;
   -webkit-font-smoothing: antialised;
@@ -30,7 +31,7 @@ html{
 
 body {
   color: var(--color-white);
-  
+
   background-color: var(--color-black);
 }
 
@@ -68,30 +69,37 @@ section {
   color: var(--color-blue);
 }
 
-h1, h1 > * {
+h1,
+h1 > * {
   font-size: calc(0.9 * var(--title-size));
   font-family: var(--font-orbitron) !important;
   line-height: 0.9;
 }
 
-h3, h3 > * {
+h3,
+h3 > * {
   font-size: calc(var(--title-size) / 2.0736);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
-h4, h4 > * {
+
+h4,
+h4 > * {
   font-size: calc(var(--title-size) / 2.985984);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 
-p, span {
+p,
+span {
   line-height: 1.4;
   font-family: var(--font-oranienbaum);
   font-size: max(20px, 1.25vw);
 
 }
-p.small{
+
+p.small,
+span.small {
   line-height: 1.4;
   font-family: var(--font-oranienbaum);
   font-size: calc(max(20px, 1.25vw) / 1.2);

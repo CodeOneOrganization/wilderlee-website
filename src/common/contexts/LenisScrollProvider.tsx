@@ -1,6 +1,7 @@
 "use client"
 import { useRef, createContext, MutableRefObject } from "react";
 
+import GSAP from "gsap";
 import Lenis from "lenis";
 
 import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect";
@@ -25,13 +26,18 @@ export default function LenisScrollProvider({ children }: Props) {
 
     _lenis.current = lenis
 
+    GSAP.ticker.add((time: number) => {
+      lenis.raf(time * 1000)
+    })
+
+    GSAP.ticker.lagSmoothing(0)
+
     requestAnimationFrame(raf)
 
     return () => {
       _lenis.current.destroy()
       lenis.destroy()
     }
-
   }, [])
 
   return (

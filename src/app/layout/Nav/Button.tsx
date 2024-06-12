@@ -1,17 +1,27 @@
-"use client"
+"use client";
 import { Close, Open } from "@/app/layout/Nav/Animations/Overlay";
-import Asterisc from "@/common/components/Asterisc";
-import styles from "./Nav.module.css"
+import Asterisk from "@/common/components/Asterisc";
+import styles from "./Nav.module.css";
 import { useState, useCallback } from "react";
+import {
+  asteriscHover,
+  asteriscHoverOut,
+} from "@/app/layout/Nav/Animations/Hover";
 
-export default function Button() {
-
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const handleVerify = useCallback(() =>{
-    !isOpen? Open(setIsOpen) : Close(setIsOpen)
-  }, [isOpen])
+interface Props extends React.SVGAttributes<SVGSVGElement> {}
+export default function Button({ ...props }: Props) {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const handleVerify = useCallback(() => {
+    !isOpen ? Open(setIsOpen) : Close(setIsOpen);
+  }, [isOpen]);
 
   return (
-      <Asterisc className={`${styles.asterisc} button_asterisc_svg`}  onClick={handleVerify}/>
+    <button
+      className={styles.asterisc}
+      onMouseEnter={asteriscHover}
+      onMouseLeave={asteriscHoverOut}
+    >
+      <Asterisk {...props} onClick={handleVerify} />
+    </button>
   );
 }
