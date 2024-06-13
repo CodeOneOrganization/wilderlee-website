@@ -3,7 +3,8 @@
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
-  --color-black: #0F0F0F;
+  --color-black: #000;
+  /* --color-black: #0F0F0F; */
   --color-blue: #00BAF7;
   --color-white: #fff;
 
