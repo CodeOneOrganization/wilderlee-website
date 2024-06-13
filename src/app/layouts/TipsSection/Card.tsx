@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./styles.module.css";
+import styles from "./tipsSection.module.css";
 
 import Line from "@/app/layouts/TipsSection/Line";
 // import { hover } from "@/app/layouts/TipsSection/animations/Hover";

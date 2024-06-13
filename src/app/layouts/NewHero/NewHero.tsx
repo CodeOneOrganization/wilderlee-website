@@ -1,6 +1,6 @@
 "use client"
 
-import styles from "./styles.module.css";
+import styles from "./Hero.module.css";
 
 import { rotateHover, rotateHoverOut } from "@/common/animations/RotateHover";
 
