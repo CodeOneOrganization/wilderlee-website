@@ -17,7 +17,7 @@ export default function Button({ ...props }: Props) {
 
   return (
     <button
-      className={styles.asterisc}
+      className={`${styles.asterisc} fadeIn`}
       onMouseEnter={asteriscHover}
       onMouseLeave={asteriscHoverOut}
     >

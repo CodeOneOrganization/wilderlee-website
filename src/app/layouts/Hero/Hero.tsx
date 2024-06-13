@@ -27,21 +27,21 @@ export default function Hero() {
             <Asterisk data-rotate className={styles.asterisk} />
           </RotateWhenScrolling>
         </h1>
-        <p className={styles.text}>
-          <span className={`${styles.innerText} ${styles.textLeft} fadeIn`}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
-          <span className={`${styles.innerText} ${styles.textRight} fadeIn`}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
+        <p className={`${styles.text} fadeIn`}>
+          <span className={`${styles.innerText} ${styles.textLeft} `}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
+          <span className={`${styles.innerText} ${styles.textRight} `}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
         </p>
       </div>
       <div className={`${styles.right} row`}>
         <div className={`${styles.imageBoard} col`}>
-          <img className={`${styles.image} ${styles.big}`} src={items[0].src} alt="Image peaple in gym" />
-          {items.splice(1, 3).map((x, i) => <img key={`${x.src}`} className={`${styles.image} ${styles.small}`} src={x.src} />)}
+          <img className={`${styles.image} ${styles.big} fadeIn`} src={items[0].src} alt="Image peaple in gym" />
+          {items.splice(1, 3).map((x, i) => <img key={`${x.src}`} className={`${styles.image} fadeIn ${styles.small}`} src={x.src} />)}
         </div>
-        <h1 className={styles.textAcrossTheBoard}>
+        <h1 className={`${styles.textAcrossTheBoard} fadeIn`}>
           {"FITNESS".split("").map((x, i) => <span className={styles.innerLetter} key={`${x}_${i}`}>{x}</span>)}
         </h1>
       </div>
-      <svg className={styles.blurredBackground} viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+      {/* <svg className={styles.blurredBackground} viewBox="0 0 1920 920" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#blurred)">
           <ellipse cx="50%" cy="50%" rx="calc(1920 / 2 - 1)" ry="calc(920 / 2 - 60)" fill="#1C1C1C" />
         </g>
@@ -52,7 +52,7 @@ export default function Hero() {
             <feGaussianBlur stdDeviation="40" result="effect1_foregroundBlur_25_562" />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
     </section>
   )
 }

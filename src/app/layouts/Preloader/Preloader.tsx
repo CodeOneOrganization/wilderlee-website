@@ -6,8 +6,12 @@ import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect"
 
 import styles from "./Preloader.module.css"
 import heroStyles from "@/app/layouts/Hero/Hero.module.css"
+import navStyles from "@/app/layouts/Nav/Nav.module.css"
+import useLenisScroll from "@/common/hooks/useLenisScroll"
 
 export default function Preloader() {
+  const lenis = useLenisScroll()
+
   useIsomorphicEffect(() => {
     const _ctx = GSAP.context(() => {
       const timeline = GSAP.timeline()
@@ -19,21 +23,21 @@ export default function Preloader() {
         height: "0dvh"
       })
       timeline.set(`.${styles.preloader} .fadeIn`, {
-        opacity: 0
-      })
-
-      timeline.to(`.${styles.preloader} .fadeIn`, {
-        delay: 1,
-        stagger: 0.75,
-        ease: "power3.out",
-        duration: 1,
         opacity: 1
       })
+
+      // timeline.to(`.${styles.preloader} .fadeIn`, {
+      //   delay: 1,
+      //   stagger: 0.75,
+      //   ease: "power3.out",
+      //   duration: 1,
+      //   opacity: 1
+      // })
       timeline.to(`.${styles.preloader} .fadeIn`, {
+        delay: 0.5,
         stagger: 0.2,
         opacity: 0,
         duration: 0.6,
-        delay: 0.2
       })
       timeline.to(`.${styles.blackSpot}`, {
         height: "100dvh",
@@ -41,12 +45,21 @@ export default function Preloader() {
         ease: "power3.out",
       }, "+=0.750")
       timeline.to(`.${styles.preloader}`, {
-        height: "0dvh" 
-      }, "+=0.2")
+        height: "0dvh"
+      }, "-=0.15")
       timeline.to(`.${heroStyles.hero} .fadeIn`, {
-        stagger: 0.75,
-        duration: 1,
+        stagger: 0.4,
+        duration: 0.4,
+        ease: "power2.inOut",
         opacity: 1
+      })
+      timeline.to(`.${navStyles.nav} .fadeIn`, {
+        stagger: 0.4,
+        duration: 0.4,
+        opacity: 1,
+        onComplete: () => {
+          lenis?.current.start()
+        }
       })
     })
 

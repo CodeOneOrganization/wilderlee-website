@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import {orbitron, oranienbaum} from "./fonts"
+import { orbitron, oranienbaum } from "./fonts"
 
 import "./index.css";
 import Providers from "@/common/contexts/Providers";
