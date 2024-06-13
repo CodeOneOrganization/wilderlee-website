@@ -1,19 +1,35 @@
 .hero{
     width: 100vw;
-    background: url("../../../../public/images/BackGroundHero.jpg") no-repeat center/cover;
+    background: url("../../../../public/images/BackGroundHero2.jpg") no-repeat center/cover;
 }
-.hero h1{
+.title{
+    overflow: hidden;
     position: absolute;
-    left: 50%;
+    left: 3vw;
     bottom: 5.41vw;
 
-    font-size: 13vw;
     font-weight: 800;
     text-transform: uppercase;
     font-style: italic;
     line-height: 0.9;
 
-    transform: translateX(-50%);
+    /* transform: translateX(-50%); */
+}
+.title_span{
+    font-size: 13vw;
+    display: block;
+    line-height: 0.9;
+    transform: translateY(20vw);
+}
+.subTitle{
+    overflow: hidden;
+    position: absolute;
+    right: 7vw;
+    bottom: 3.68vw;
+}
+.subTitle_span{
+    display: block;
+    transform: translateY(20vw);
 }
 .plate{
     position: absolute;
