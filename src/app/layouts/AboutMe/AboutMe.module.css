@@ -30,7 +30,7 @@
 }
 
 .innerText {
-  max-width: 450px;
+  max-width: 380px;
 
 }
 
@@ -38,4 +38,14 @@
   text-align: right;
 
 
+}
+
+.blurredBackground {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 100%;
+  z-index: -1;
+  transform: translateY(-60%) translateX(-50%);
 }

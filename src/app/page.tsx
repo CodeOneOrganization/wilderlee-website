@@ -15,7 +15,7 @@ export default function Home() {
       <TrainYourMind />
       {/* <Hero/> */}
       <AboutMe />
-      <NewHero/>
+      {/* <NewHero/> */}
 
     </>
   );
