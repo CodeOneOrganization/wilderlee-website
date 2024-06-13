@@ -3,8 +3,8 @@
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
-  --color-black: #000;
-  /* --color-black: #0F0F0F; */
+  /* --color-black: #000; */
+  --color-black: #0F0F0F;
   --color-blue: #00BAF7;
   --color-white: #fff;
 
@@ -71,21 +71,21 @@ section {
 }
 
 h1,
-h1 > * {
+h1>* {
   font-size: calc(0.9 * var(--title-size));
   font-family: var(--font-orbitron) !important;
   line-height: 0.9;
 }
 
 h3,
-h3 > * {
+h3>* {
   font-size: calc(var(--title-size) / 2.0736);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 
 h4,
-h4 > * {
+h4>* {
   font-size: calc(var(--title-size) / 2.985984);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;

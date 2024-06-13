@@ -1,8 +1,13 @@
 "use client";
-import { Close, Open } from "@/app/layout/Nav/Animations/Overlay";
-import GymPlate from "@/common/components/GymPlate";
-import styles from "./Nav.module.css";
+
 import { useState, useCallback } from "react";
+
+import { Close, Open } from "@/app/layouts/Nav/Animations/Overlay";
+
+import styles from "./Nav.module.css";
+
+
+import GymPlate from "@/common/components/GymPlate";
 import { rotateHover, rotateHoverOut } from "@/common/animations/RotateHover";
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {}

@@ -1,0 +1,50 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  right: 0;
+
+  width: 100vw;
+  height: 100dvh;
+
+  background-color: var(--color-blue);
+
+  z-index: 999;
+  visibility: visible;
+}
+
+.wChar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.job {
+  position: absolute;
+  top: calc(50% - 196px / 2 - 1vw);
+  left: 50%;
+
+  color: var(--color-black);
+  font-family: var(--font-orbitron);
+  text-transform: uppercase;
+  line-height: 0.9;
+  font-size: 16.44px;
+
+  transform: translate(-50%, -50%);
+}
+
+.blackSpot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 0dvh;
+
+  background-color: var(--color-black);
+
+  z-index: 999;
+}

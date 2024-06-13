@@ -1,0 +1,41 @@
+.top {
+
+}
+.job {
+  font-size: 0.6em;
+  text-transform: uppercase;
+  font-family: var(--font-orbitron);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+
+  margin-top: 61px;
+  margin-bottom: 430px;
+  gap: 25px;
+}
+
+.line {
+  width: 350px;
+  height: 4px;
+
+  background-color: var(--color-blue);
+
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.innerText {
+  max-width: 450px;
+
+}
+
+.innerText:nth-child(2) {
+  text-align: right;
+
+
+}

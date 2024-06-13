@@ -1,4 +1,4 @@
-import Menu from "@/app/layout/Nav/Menu";
+import Menu from "@/app/layouts/Nav/Menu";
 import styles from "./Nav.module.css";
 
 export default function Overlay() {

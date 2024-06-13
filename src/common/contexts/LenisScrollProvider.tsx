@@ -1,5 +1,5 @@
 "use client"
-import { useRef, createContext, MutableRefObject } from "react";
+import { useRef, createContext, MutableRefObject, useEffect } from "react";
 
 import GSAP from "gsap";
 import Lenis from "lenis";
@@ -39,6 +39,12 @@ export default function LenisScrollProvider({ children }: Props) {
       lenis.destroy()
     }
   }, [])
+
+  useEffect(() => {
+    if (!_lenis) return
+    _lenis.current.stop()
+    _lenis.current.scrollTo(0, { immediate: true, force: true })
+  }, [_lenis])
 
   return (
     <LenisScrollContext.Provider value={_lenis}>
