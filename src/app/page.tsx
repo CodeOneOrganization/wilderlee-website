@@ -1,16 +1,22 @@
-import Hero from "@/app/layouts/Hero";
-import TrainYourMind from "@/app/layouts/TrainYourMind";
+// import Hero from "@/app/layout/Hero";
+import TrainYourMind from "./layouts/TrainYourMind";
 import Nav from "@/app/layouts/Nav";
+import NewHero from "@/app/layouts/NewHero";
 import TipsSection from "@/app/layouts/TipsSection";
+import AboutMe from "@/app/layouts/AboutMe";
 
 export default function Home() {
   return (
     <>
       <Nav/>
-      <Hero/>
+      <NewHero/>
+      {/* <Hero/> */}
       <TipsSection/>
       <TrainYourMind />
-      <Hero/>
+      {/* <Hero/> */}
+      <AboutMe />
+      <NewHero/>
+
     </>
   );
 }

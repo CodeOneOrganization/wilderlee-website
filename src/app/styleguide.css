@@ -3,6 +3,7 @@
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
+  /* --color-black: #000; */
   --color-black: #0F0F0F;
   --color-blue: #00BAF7;
   --color-white: #fff;
@@ -24,7 +25,7 @@
 html {
   font-size: max(24px, 1vw);
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialised;
   font-smoothing: antialised;
   line-height: 1;
 }
@@ -58,10 +59,6 @@ section {
   flex-direction: column;
 }
 
-.fadeIn {
-  opacity: 0;
-}
-
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -74,21 +71,21 @@ section {
 }
 
 h1,
-h1 > * {
+h1>* {
   font-size: calc(0.9 * var(--title-size));
   font-family: var(--font-orbitron) !important;
   line-height: 0.9;
 }
 
 h3,
-h3 > * {
+h3>* {
   font-size: calc(var(--title-size) / 2.0736);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 
 h4,
-h4 > * {
+h4>* {
   font-size: calc(var(--title-size) / 2.985984);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
@@ -107,13 +104,4 @@ span.small {
   line-height: 1.4;
   font-family: var(--font-oranienbaum);
   font-size: calc(max(20px, 1.25vw) / 1.2);
-}
-
-p.tiny,
-span.tiny {
-  line-height: 1;
-  font-family: var(--font-oranienbaum);
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.2em;
 }

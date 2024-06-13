@@ -1,12 +1,14 @@
-"use client"
-import { Close, Open } from "@/app/layouts/Nav/Animations/Overlay";
-import Asterisk from "@/common/components/Asterisc";
-import styles from "./Nav.module.css";
+"use client";
+
 import { useState, useCallback } from "react";
-import {
-  asteriscHover,
-  asteriscHoverOut,
-} from "@/app/layouts/Nav/Animations/Hover";
+
+import { Close, Open } from "@/app/layouts/Nav/Animations/Overlay";
+
+import styles from "./Nav.module.css";
+
+
+import GymPlate from "@/common/components/GymPlate";
+import { rotateHover, rotateHoverOut } from "@/common/animations/RotateHover";
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {}
 export default function Button({ ...props }: Props) {
@@ -17,11 +19,11 @@ export default function Button({ ...props }: Props) {
 
   return (
     <button
-      className={`${styles.asterisc} fadeIn`}
-      onMouseEnter={asteriscHover}
-      onMouseLeave={asteriscHoverOut}
+      className={styles.gymPlate}
+      onMouseEnter={() => rotateHover({ className: `.${styles.gymPlate}` })}
+      onMouseLeave={() => rotateHoverOut({ className: `.${styles.gymPlate}` })}
     >
-      <Asterisk {...props} onClick={handleVerify} />
+      <GymPlate {...props} onClick={handleVerify} />
     </button>
   );
 }

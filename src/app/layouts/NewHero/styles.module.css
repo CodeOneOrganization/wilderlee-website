@@ -1,0 +1,23 @@
+.hero{
+    width: 100vw;
+    background: url("../../../../public/images/BackGroundHero.jpg") no-repeat center/cover;
+}
+.hero h1{
+    position: absolute;
+    left: 50%;
+    bottom: 5.41vw;
+
+    font-size: 13vw;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 0.9;
+
+    transform: translateX(-50%);
+}
+.plate{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

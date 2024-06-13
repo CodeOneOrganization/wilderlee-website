@@ -28,8 +28,8 @@ export default function Hero() {
           </RotateWhenScrolling>
         </h1>
         <p className={`${styles.text} fadeIn`}>
-          <span className={`${styles.innerText} ${styles.textLeft} `}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
-          <span className={`${styles.innerText} ${styles.textRight} `}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
+          <span className={`${styles.innerText} ${styles.textLeft}`}>Sou Wilderlee, um personal trainer certificado com anos de experiência ajudando pessoas a transformarem seus corpos e vidas. Minha abordagem é personalizada, focando nas necessidades individuais de cada cliente para garantir resultados reais e duradouros.</span>
+          <span className={`${styles.innerText} ${styles.textRight}`}>No meu site, você encontrará recursos valiosos para guiá-lo em sua jornada de fitness, todos criados com cuidado e profissionalismo.</span>
         </p>
       </div>
       <div className={`${styles.right} row`}>

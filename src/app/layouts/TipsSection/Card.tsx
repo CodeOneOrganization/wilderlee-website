@@ -1,10 +1,11 @@
 "use client"
-import Line from "@/app/layouts/TipsSection/Line";
 
 import styles from "./styles.module.css";
 
+import Line from "@/app/layouts/TipsSection/Line";
+// import { hover } from "@/app/layouts/TipsSection/animations/Hover";
+
 import Arrow from "@/common/components/Arrow";
-import { hover } from "@/app/layout/TipsSection/animations/Hover";
 
 interface Props {
   Title: string,
@@ -14,7 +15,7 @@ interface Props {
 
 export default function Card({ Title, Paragraph, Image }: Props) {
   return (
-    <div className={styles.card} onMouseEnter={hover}>
+    <div className={styles.card}>
       <Line />
       <div className={styles.card_container}>
         
