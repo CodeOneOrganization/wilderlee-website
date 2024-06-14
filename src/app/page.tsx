@@ -1,9 +1,9 @@
-// import Hero from "@/app/layout/Hero";
-import TrainYourMind from "./layouts/TrainYourMind";
+import TrainYourMind from "@/app/layouts/TrainYourMind";
 import Nav from "@/app/layouts/Nav";
 import NewHero from "@/app/layouts/NewHero";
 import TipsSection from "@/app/layouts/TipsSection";
 import AboutMe from "@/app/layouts/AboutMe";
+import Footer from "@/app/layouts/Footer/Footer";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       {/* <Hero/> */}
       <AboutMe />
       {/* <NewHero/> */}
-
+      <Footer/>
     </>
   );
 }

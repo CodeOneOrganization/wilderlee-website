@@ -17,7 +17,13 @@ export default function SlideIn({children, ...props}: Props) {
     function onHover() {
       const timeline = GSAP.timeline()
 
-      timeline.set()
+      timeline.set(_element, {
+        
+      })
+
+      timeline.to(_targetElement, {
+
+      })
     }
 
     _targetElement?.addEventListener("mouseover", onHover)

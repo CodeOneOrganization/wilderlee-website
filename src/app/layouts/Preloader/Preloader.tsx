@@ -5,14 +5,19 @@ import GSAP from "gsap"
 import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect"
 
 import styles from "./Preloader.module.css"
-import heroStyles from "@/app/layouts/Hero/Hero.module.css"
+import heroStyles from "@/app/layouts/NewHero/Hero.module.css"
 import navStyles from "@/app/layouts/Nav/Nav.module.css"
 import useLenisScroll from "@/common/hooks/useLenisScroll"
+import SplitType from "split-type"
 
 export default function Preloader() {
   const lenis = useLenisScroll()
 
   useIsomorphicEffect(() => {
+    const _heroElement = document.querySelector("[data-animate='slide-text']") as HTMLElement
+    console.log("hero styles:", _heroElement)
+
+    SplitType.create(_heroElement, { types: "chars" })
     const _ctx = GSAP.context(() => {
       const timeline = GSAP.timeline()
 
@@ -25,14 +30,15 @@ export default function Preloader() {
       timeline.set(`.${styles.preloader} .fadeIn`, {
         opacity: 1
       })
+      timeline.set(`.${heroStyles.title}`, {
+        overflow: "hidden"
+      })
+      timeline.set(`.${heroStyles.title} .char`, {
+        y: "100%",
+        position: "relative",
+        display: "inline-flex",
+      })
 
-      // timeline.to(`.${styles.preloader} .fadeIn`, {
-      //   delay: 1,
-      //   stagger: 0.75,
-      //   ease: "power3.out",
-      //   duration: 1,
-      //   opacity: 1
-      // })
       timeline.to(`.${styles.preloader} .fadeIn`, {
         delay: 0.5,
         stagger: 0.2,
@@ -41,18 +47,23 @@ export default function Preloader() {
       })
       timeline.to(`.${styles.blackSpot}`, {
         height: "100dvh",
-        duration: 0.8,
-        ease: "power3.out",
-      }, "+=0.750")
+        duration: 0.4,
+        ease: "power2.inOut",
+      }, "+=0.250")
       timeline.to(`.${styles.preloader}`, {
         height: "0dvh"
       }, "-=0.15")
-      timeline.to(`.${heroStyles.hero} .fadeIn`, {
-        stagger: 0.4,
-        duration: 0.4,
-        ease: "power2.inOut",
-        opacity: 1
+      timeline.to(`.${heroStyles.title} .char`, {
+        y: "0%",
+        stagger: 0.04,
+        duration: 1.2,
+        ease: "power3.out",
       })
+      timeline.to(`.${heroStyles.subTitle_span}`, {
+        y: 0,
+        ease: "elastic.inOut(1,8)",
+        duration: 2,
+      }, "-=1.5")
       timeline.to(`.${navStyles.nav} .fadeIn`, {
         stagger: 0.4,
         duration: 0.4,
@@ -60,7 +71,7 @@ export default function Preloader() {
         onComplete: () => {
           lenis?.current.start()
         }
-      })
+      }, "-=0.750")
     })
 
     return () => _ctx.revert()

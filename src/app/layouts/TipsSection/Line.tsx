@@ -1,4 +1,4 @@
-import styles from "./styles.module.css"
+import styles from "./tipsSection.module.css"
 
 export default function Line() {
     return(
