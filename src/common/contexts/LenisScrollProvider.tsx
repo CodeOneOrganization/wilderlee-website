@@ -40,11 +40,12 @@ export default function LenisScrollProvider({ children }: Props) {
     }
   }, [])
 
-  useEffect(() => {
-    if (!_lenis) return
-    _lenis.current.stop()
-    _lenis.current.scrollTo(0, { immediate: true, force: true })
-  }, [_lenis])
+  
+  // useEffect(() => {
+  //   if (!_lenis) return
+  //   _lenis.current.stop()
+  //   _lenis.current.scrollTo(0, { immediate: true, force: true })
+  // }, [_lenis])
 
   return (
     <LenisScrollContext.Provider value={_lenis}>
