@@ -39,6 +39,9 @@ body {
   background-color: var(--color-black);
 }
 
+.light{
+  background-color: #1C1C1C;
+}
 section {
   position: relative;
   padding-top: var(--section-padding);
@@ -97,11 +100,17 @@ h4 {
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
+h5,
+h5 > *{
+  font-size:  1.504vw;
+  font-family: var(--font-orbitron) !important;
+  text-transform: uppercase;
 
+}
 p,
 span {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: max(20px, 1.25vw);
 
 }
@@ -109,7 +118,7 @@ span {
 p.small,
 span.small {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: calc(max(20px, 1.25vw) / 1.2);
 }
 
@@ -117,7 +126,15 @@ p.tiny,
 small.tiny {
   line-height: 1;
   letter-spacing: 0.2em;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   text-transform: uppercase;
   font-size: 0.4em;
+}
+
+@media(width <= 968px) {
+  p.small,
+  span.small {
+    font-size: 0.4em;
+  }
+
 }

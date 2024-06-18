@@ -33,4 +33,10 @@ export default class DraggableCarousel {
   public move() {
     this.progress = lerp(this.progress, this.x, 0.1)
   }
+
+  public 
+
+  public events(){
+     
+  }
 }

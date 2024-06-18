@@ -4,6 +4,8 @@ import Hero from "@/app/layouts/Hero";
 import Footer from "@/app/layouts/Footer/Footer";
 import Avaliations from "@/app/layouts/Avaliations/Avaliations";
 import MyClients from "./layouts/MyClients/MyClients";
+import Plans from "@/app/layouts/Plans";
+import Info from "@/app/layouts/Info";
 
 export default function Home() {
   return (
@@ -13,6 +15,9 @@ export default function Home() {
       <TrainYourMind />
       <Avaliations />
       <MyClients />
+      {/* <TrainYourMind /> */}
+      <Info/>
+      <Plans/>
       <Footer/>
     </>
   );
