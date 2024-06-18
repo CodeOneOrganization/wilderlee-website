@@ -44,7 +44,7 @@
   width: 100vw;
   height: 0dvh;
 
-  background-color: var(--color-black);
+  background-color: var(--color-white);
 
   z-index: 999;
 }

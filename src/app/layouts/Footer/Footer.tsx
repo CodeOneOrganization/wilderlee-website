@@ -58,8 +58,8 @@ export default function Footer() {
       </div>
 
       <div className={`${styles.bottom} container row`}>
-        <p>Todos os direitos reservados</p>
-        <p>Website by CodeOne Organization</p>
+        <p className="small">Todos os direitos reservados</p>
+        <p className="small">Website by CodeOne Organization</p>
       </div>
     </footer>
   );
