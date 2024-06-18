@@ -1,0 +1,24 @@
+.card{
+    position: relative;
+    width: 25.83vw;
+    height: 15.9vw;
+}
+.card *{
+    margin-left: 3.64vw;
+}
+.paragraph{
+    margin-top: 3.69vw;
+}
+.line{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.3vw;
+    height: 14vw;
+    background-color: #fff;
+}
+.cards{
+    justify-content: space-between;
+    align-items: center;
+}

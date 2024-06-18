@@ -4,6 +4,7 @@ import NewHero from "@/app/layouts/NewHero";
 
 import Footer from "@/app/layouts/Footer/Footer";
 import Plans from "@/app/layouts/Plans";
+import Info from "@/app/layouts/Info";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Nav/>
       <NewHero/>
       {/* <TrainYourMind /> */}
+      <Info/>
       <Plans/>
       <Footer/>
     </>
