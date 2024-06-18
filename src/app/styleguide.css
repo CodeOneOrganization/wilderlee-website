@@ -38,6 +38,9 @@ body {
   background-color: var(--color-black);
 }
 
+.light{
+  background-color: #1C1C1C;
+}
 section {
   position: relative;
   padding-block: var(--section-padding);
@@ -97,7 +100,13 @@ h4>* {
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
+h5,
+h5 > *{
+  font-size:  1.504vw;
+  font-family: var(--font-orbitron) !important;
+  text-transform: uppercase;
 
+}
 p,
 span {
   line-height: 1.4;
