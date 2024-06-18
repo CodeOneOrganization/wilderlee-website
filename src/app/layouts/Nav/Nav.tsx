@@ -5,6 +5,7 @@ import Button from "@/app/layouts/Nav/Button";
 
 import RotatingOnScroll from "@/common/components/RotateWhenScrolling";
 import Overlay from "@/app/layouts/Nav/Overlay";
+import CheeseIcon from "@/common/components/CheeseIcon";
 
 export default function Nav() {
   return (
@@ -12,9 +13,9 @@ export default function Nav() {
       <div className="logo fadeIn">
         <Logo />
       </div>
-      <RotatingOnScroll>
-        <Button data-rotate />
-      </RotatingOnScroll>
+      <div className={styles.cheeseBurger}>
+        <CheeseIcon />
+      </div>
       <Overlay />
     </nav>
   );
