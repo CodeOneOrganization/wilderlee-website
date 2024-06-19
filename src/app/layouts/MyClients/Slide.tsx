@@ -18,19 +18,19 @@ export default function Slide({ children }: Props) {
     })
 
     function raf() {
-      scroll.raf()
       requestAnimationFrame(raf)
+      scroll.raf()
     }
 
     _requestAnimationId.current = requestAnimationFrame(raf)
 
-    // const _cleanRequestAnimationFrameId = _requestAnimationId
+    const _cleanRequestAnimationFrameId = _requestAnimationId
 
-    // return () => {
-    //   cancelAnimationFrame(_cleanRequestAnimationFrameId.current!)
-    //   _requestAnimationId.current = null
-    // }
-  }, [])
+    return () => {
+      cancelAnimationFrame(_cleanRequestAnimationFrameId.current!)
+      _requestAnimationId.current = null
+    }
+  }, [_requestAnimationId])
 
   return children
 }

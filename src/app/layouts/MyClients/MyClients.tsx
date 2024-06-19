@@ -23,14 +23,13 @@ function Snapshot({src}: SnapshotProps){
 
 export default function MyClients() {
   return (
-    <section className={styles.myClients} data-slide-element data-lenis-prevent>
+    <section className={styles.myClients} data-slide-element>
       <Slide>
-        <div className={styles.slide} data-slide-wrapper data-lenis-prevent>
+        <div className={styles.slide} data-slide-wrapper>
           <Arrow className={`${styles.arrow} ${styles.left}`} />
           {clients.map((x, i) => <Snapshot key={`Snapshot_${i}`} {...x}/>)}
           <Arrow className={`${styles.arrow} ${styles.right}`} />
         </div>
-        <div className={styles.bar} data-slide-bar/>
       </Slide>
     </section>
   )

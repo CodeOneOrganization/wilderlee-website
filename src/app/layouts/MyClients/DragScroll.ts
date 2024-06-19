@@ -92,8 +92,8 @@ class DragScroll {
     if (!this.draggable) return false
 
     const x = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
-    this.progress += (this.startX - x) * 2.5
-    this.startX = x
+    this.progress += (this.x_0 - x) * 2.5
+    this.x_0 = x
     this.move()
   }
 
@@ -103,15 +103,15 @@ class DragScroll {
 
   public events() {
     window.addEventListener("resize", this.calculate)
-    window.addEventListener("wheel", this.handleWheel)
+    // this.el.addEventListener("wheel", this.handleWheel)
 
     this.el.addEventListener("touchmove", this.handleTouchMove)
     window.addEventListener("touchend", this.handleTouchEnd)
     window.addEventListener("touchstart", this.handleTouchStart)
 
-    window.addEventListener("mousemove", this.handleTouchMove)
-    window.addEventListener("mouseup", this.handleTouchEnd)
-    window.addEventListener("mousedown", this.handleTouchStart)
+    this.el.addEventListener("mousedown", this.handleTouchStart)
+    this.el.addEventListener("mousemove", this.handleTouchMove)
+    this.el.addEventListener("mouseup", this.handleTouchEnd)
 
     document.body.addEventListener("mouseleave", this.handleTouchEnd)
   }
@@ -127,10 +127,6 @@ class DragScroll {
     this.wrap.style.transform = `translateX(${-this.x}px)`
     this.speed = Math.min(100, this.oldX - this.x)
     this.oldX = this.x
-
-    this.items.forEach((item) => {
-      // item.querySelector("img")!.style.transform = `scaleX(${1 + Math.abs(this.speed) * 0.004}})`
-    })
   }
 }
 
