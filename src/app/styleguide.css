@@ -15,6 +15,12 @@
   --border-size: 0.3em;
 }
 
+@media (width <= 480px){
+  :root {
+    --section-padding: min(15vh, 103px)
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -68,6 +74,10 @@ section {
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+[data-slide-wrapper]{
+  cursor: grab;
 }
 
 /* ----------------------- TYPOGRAPHY --------------------- */
@@ -134,7 +144,16 @@ small.tiny {
 @media(width <= 968px) {
   p.small,
   span.small {
-    font-size: 0.4em;
+    font-size: 0.6em;
+  }
+
+  h3, h3 > * {
+    font-size: min(39.44px, 9.1vw);
+  }
+
+  h4, 
+  h4 > * {
+    font-size: 1.2em;
   }
 
 }

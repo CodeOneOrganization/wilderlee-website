@@ -1,16 +1,19 @@
-.card{
+.card {
     position: relative;
     min-width: 200px;
     /* width: 25.83vw; */
     /* height: 15.9vw; */
 }
-.card *{
+
+.card * {
     margin-left: 3.64vw;
 }
-.paragraph{
+
+.paragraph {
     margin-top: 3.69vw;
 }
-.line{
+
+.line {
     margin: 0;
     position: absolute;
     left: 0;
@@ -19,8 +22,29 @@
     height: 14vw;
     background-color: #fff;
 }
-.cards{
+
+.cards {
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+}
+
+
+@media(width <=480px) {
+    .cards {
+        flex-direction: column;
+        gap: max(100px, 10vh);
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .line {
+        position: relative;
+        width: 100%;
+        height: 4px;
+
+        margin-bottom: 36px;
+    }
 }

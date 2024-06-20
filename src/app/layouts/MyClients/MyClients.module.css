@@ -39,7 +39,7 @@
   display: inline-block;
 
   padding: max(4vw, 2em);
-  height: 70dvh;
+  height: 70vmin;
   aspect-ratio: 1 / 1;
 
   overflow: hidden;

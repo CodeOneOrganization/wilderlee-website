@@ -15,7 +15,7 @@ export default function Home() {
       <Hero/>
       <TrainYourMind />
       <Avaliations />
-      <MyClients />
+      {/* <MyClients /> */}
       {/* <TrainYourMind /> */}
       <Info/>
       <Plans/>

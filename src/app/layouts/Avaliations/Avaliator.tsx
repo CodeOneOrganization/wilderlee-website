@@ -10,7 +10,7 @@ interface Props {
 }
 export default function Avaliator({ name, socialMedia, imageUrl, content }: Props) {
   return (
-    <article className={styles.card}>
+    <article className={styles.card} data-slide-item>
       <div className={styles.linearGradientBorder} />
       <div className={`${styles.top} row`}>
         <img className={styles.image} src={imageUrl} alt="" />

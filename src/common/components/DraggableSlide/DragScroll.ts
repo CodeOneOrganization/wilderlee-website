@@ -103,7 +103,6 @@ class DragScroll {
 
   public events() {
     window.addEventListener("resize", this.calculate)
-    // this.el.addEventListener("wheel", this.handleWheel)
 
     this.el.addEventListener("touchmove", this.handleTouchMove)
     window.addEventListener("touchend", this.handleTouchEnd)

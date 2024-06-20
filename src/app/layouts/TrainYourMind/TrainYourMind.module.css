@@ -4,7 +4,7 @@
 .wrapper {
   position: relative;
 
-  width: 100%;
+  width: auto;
   height: 75dvh;
   
   background: #444;
@@ -63,3 +63,10 @@
   transform: rotate(-45deg);
 }
 
+@media (width <= 480px){
+  .wrapper {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 21 / 25;
+  }
+}

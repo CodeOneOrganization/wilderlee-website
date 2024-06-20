@@ -1,9 +1,10 @@
 .avaliations {
-  display: flex;
   gap: calc(4 * min(1vw, 1em));
 
-  max-width: calc(100vw - var(--container-padding));
+  /* max-width: calc(100vw - var(--container-padding)); */
   padding-right: 0;
+
+  white-space: nowrap;
 
   overflow: scroll;
   

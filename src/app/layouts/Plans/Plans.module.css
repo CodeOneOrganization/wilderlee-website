@@ -4,8 +4,6 @@
 .card {
   position: relative;
 
-  max-width: 427px;
-  /* height: 28.28vw; */
   padding: max(2vw, 1em);
 
   background-color: #000;
@@ -19,6 +17,11 @@
   padding-top: 2.96vw;
   text-decoration: line-through;
 }
+
+.oldPrice {
+  color: #888;
+}
+
 .time {
   padding-top: 3.75vw;
 }
@@ -107,6 +110,7 @@
   width: 22vw;
 }
 .titleTable {
+  height: 5.2vw;
   padding-left: 5.9vw;
 }
 .tableContainer {

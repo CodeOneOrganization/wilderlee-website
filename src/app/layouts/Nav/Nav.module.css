@@ -12,23 +12,15 @@
   z-index: 998;
 }
 
-.gymPlate {
-  position: fixed;
-  right: calc(0px + var(--container-padding));
-  top: calc(0px + 1.19vw);
-
-  cursor: pointer;
-
-  border: none;
-  background-color: transparent;
-  transform-origin: center;
-
-  z-index: 99;
+.logo {
+  height: max(4vw, 2em);
 }
 
 .cheeseBurger {
   height: max(4vw, 2em);
   aspect-ratio: 1 / 1;
+
+  cursor: pointer;
 }
 
 .menu {
@@ -38,7 +30,6 @@
 
 .menu menu {
   list-style: none;
-
   & li {
     cursor: pointer;
     overflow: hidden;
