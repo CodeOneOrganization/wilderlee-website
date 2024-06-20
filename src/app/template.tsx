@@ -7,7 +7,7 @@ export default function Template({ children }: Props) {
 
   return (
     <>
-      {/* <Preloader /> */}
+      <Preloader />
       {children}
     </>
   )

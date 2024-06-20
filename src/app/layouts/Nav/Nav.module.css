@@ -13,11 +13,11 @@
 }
 
 .logo {
-  height: max(4vw, 2em);
+  height: 2.72vmax
 }
 
 .cheeseBurger {
-  height: max(4vw, 2em);
+  height: 2.72vmax;
   aspect-ratio: 1 / 1;
 
   cursor: pointer;
