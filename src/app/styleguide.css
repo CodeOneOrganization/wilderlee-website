@@ -144,7 +144,7 @@ small.tiny {
 @media(width <= 968px) {
   p.small,
   span.small {
-    font-size: 0.6em;
+    font-size: min(17.8px, 4.13vw);
   }
 
   h3, h3 > * {
