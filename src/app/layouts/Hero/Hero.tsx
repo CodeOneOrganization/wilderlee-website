@@ -2,14 +2,7 @@
 
 import styles from "./Hero.module.css";
 
-// import { rotateHover, rotateHoverOut } from "@/common/animations/RotateHover";
-import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect";
-import { TextAnimationHero } from "@/app/layouts/NewHero/animations/TitleAnimationHero";
-
 export default function NewHero() {
-  // useIsomorphicEffect(() => {
-  //   TextAnimationHero();
-  // });
   return (
     <section className={`${styles.hero} fullHeight`}>
       <div className={styles.overlay}/>

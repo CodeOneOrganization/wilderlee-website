@@ -61,8 +61,8 @@ export default function Plans() {
             ))}
         </div>
         <div className={`${styles.tableContainer} row`}>
-            {tables.map((table) => (
-                <Table title={table.title} padding={table.padding}/>
+            {tables.map((table, index) => (
+                <Table key={index} title={table.title} padding={table.padding}/>
             ))}
         </div>
     </section>

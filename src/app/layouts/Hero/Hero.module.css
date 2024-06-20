@@ -1,5 +1,5 @@
-.hero{
-    
+.hero {
+
     width: 100vw;
     /* background: url("../../../../public/images/BackGroundHero2.jpg") no-repeat center/cover; */
 }
@@ -29,35 +29,43 @@
 
 }
 
-.title{
+.title {
     overflow: hidden;
     position: absolute;
-    left: 3vw;
+    left: var(--container-padding);
     bottom: 6.41vw;
 
     font-weight: 800;
     font-style: italic;
     line-height: 0.9;
 
-    /* transform: translateX(-50%); */
+    transform: translateX(-2%);
 }
-.title_span{
+
+.title_span {
     font-size: 13vw;
     display: block;
     line-height: 0.9;
     /* transform: translateY(20vw); */
 }
-.subTitle{
+
+.subTitle {
     overflow: hidden;
     position: absolute;
     right: 7vw;
     bottom: 3.68vw;
 }
-.subTitle_span{
+
+.subTitle_span {
     display: block;
+
+    font-family: var(--font-orbitron);
+    font-size:max(11px, 0.5em);
+
     transform: translateY(100%);
 }
-.plate{
+
+.plate {
     position: absolute;
     top: 50%;
     left: 50%;

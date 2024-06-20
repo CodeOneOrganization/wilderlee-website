@@ -2,35 +2,37 @@
   justify-content: space-between;
 }
 .card {
-  background-color: #000;
-  width: 25.625vw;
-  height: 28.28vw;
   position: relative;
+
+  padding: max(2vw, 1em);
+
+  background-color: #000;
   border-radius: 0.37vw;
-}
-.card > * {
-  padding-left: 1.87vw;
 }
 .card p {
   font-family: var(--font-khula);
 }
-.titleCard {
-  padding-top: 2.7vw;
-}
+.titleCard { }
 .oldPrice {
   padding-top: 2.96vw;
   text-decoration: line-through;
 }
+
+.oldPrice {
+  color: #888;
+}
+
 .time {
   padding-top: 3.75vw;
 }
 .contact {
   cursor: pointer;
-  width: 21.9vw;
+  width: 100%;
   height: 2.64vw;
 
   background-color: var(--color-blue);
   color: var(--color-white);
+  font-family: var(--font-orbitron);
   font-size: 0.95vw;
   font-weight: 500;
   line-height: 0.1;
@@ -68,7 +70,7 @@
   align-items: center;
 }
 .rounded h4 {
-  padding-right: 1.5vw;
+  /* padding-inline: 1.5vw; */
 }
 .effect {
   width: 24vw;
@@ -108,6 +110,7 @@
   width: 22vw;
 }
 .titleTable {
+  height: 5.2vw;
   padding-left: 5.9vw;
 }
 .tableContainer {

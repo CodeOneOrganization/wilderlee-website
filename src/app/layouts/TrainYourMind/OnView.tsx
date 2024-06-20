@@ -43,7 +43,6 @@ export default function OnView({children}: Props) {
         onEnterBack: () => { _ctx.onView() },
         onLeave: () => { _ctx.onFar() },
         onLeaveBack: () => { _ctx.onFar() },
-        markers: true
       })
     })
 

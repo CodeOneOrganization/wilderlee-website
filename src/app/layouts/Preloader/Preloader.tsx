@@ -5,7 +5,7 @@ import GSAP from "gsap"
 import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect"
 
 import styles from "./Preloader.module.css"
-import heroStyles from "@/app/layouts/NewHero/Hero.module.css"
+import heroStyles from "@/app/layouts/Hero/Hero.module.css"
 import navStyles from "@/app/layouts/Nav/Nav.module.css"
 import useLenisScroll from "@/common/hooks/useLenisScroll"
 import SplitType from "split-type"

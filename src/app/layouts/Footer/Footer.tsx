@@ -13,7 +13,7 @@ export default function Footer() {
 
       <div className={styles.siteMap}>
         <Card
-          Title="Contato"
+          Title="Sitemap"
           paragraph1="Contato"
           paragraph2="Suporte e Ajuda"
           paragraph3="Planos"
@@ -59,7 +59,7 @@ export default function Footer() {
 
       <div className={`${styles.bottom} container row`}>
         <p className="small">Todos os direitos reservados</p>
-        <p className="small">Website by CodeOne Organization</p>
+        <p className="small">Website by Synergy Code</p>
       </div>
     </footer>
   );

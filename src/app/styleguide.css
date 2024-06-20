@@ -1,17 +1,24 @@
 :root {
-  --section-padding: max(142px, 7.4vw);
+  --section-padding: max(207px, 19.16vh);
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
   --primitive-white: 255, 255, 255;
   /* --color-black: #000; */
   --color-black: #0F0F0F;
+  --color-black-overlay: #080808;
   --color-blue: #00BAF7;
   --color-white: rgba(var(--primitive-white), 1);
   --color-gray: rgba(var(--primitive-white), 0.08);
 
   --title-size: max(2rem, 6.66vw);
   --border-size: 0.3em;
+}
+
+@media (width <= 480px){
+  :root {
+    --section-padding: min(15vh, 103px)
+  }
 }
 
 *,
@@ -43,7 +50,7 @@ body {
 }
 section {
   position: relative;
-  padding-block: var(--section-padding);
+  padding-top: var(--section-padding);
 }
 
 .container {
@@ -67,6 +74,10 @@ section {
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+[data-slide-wrapper]{
+  cursor: grab;
 }
 
 /* ----------------------- TYPOGRAPHY --------------------- */
@@ -94,8 +105,7 @@ h3>* {
   text-transform: uppercase;
 }
 
-h4,
-h4>* {
+h4 {
   font-size: calc(var(--title-size) / 2.985984);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
@@ -110,7 +120,7 @@ h5 > *{
 p,
 span {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: max(20px, 1.25vw);
 
 }
@@ -118,7 +128,7 @@ span {
 p.small,
 span.small {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: calc(max(20px, 1.25vw) / 1.2);
 }
 
@@ -126,7 +136,24 @@ p.tiny,
 small.tiny {
   line-height: 1;
   letter-spacing: 0.2em;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   text-transform: uppercase;
   font-size: 0.4em;
+}
+
+@media(width <= 968px) {
+  p.small,
+  span.small {
+    font-size: 0.6em;
+  }
+
+  h3, h3 > * {
+    font-size: min(39.44px, 9.1vw);
+  }
+
+  h4, 
+  h4 > * {
+    font-size: 1.2em;
+  }
+
 }
