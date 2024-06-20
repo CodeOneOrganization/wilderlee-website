@@ -1,3 +1,4 @@
+
 import styles from "../Plans.module.css";
 import Button from "@/app/layouts/Plans/Button";
 
@@ -22,7 +23,7 @@ export default function Card({
   return (
     <div className={styles.card}>
       <h4 className={styles.titleCard}>{title}</h4>
-      <p className="small">{For}</p>
+      <p className="tiny">{For}</p>
 
       <h5 className={styles.oldPrice}>R${oldPrice}</h5>
       <h3>R${price}</h3>

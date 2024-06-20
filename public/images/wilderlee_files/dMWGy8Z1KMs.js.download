@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("ReactDOM_DEPRECATED",["ReactDOMCompatibilityLayer"],(function(a,b,c,d,e,f){a=importNamespace("ReactDOMCompatibilityLayer").render_DEPRECATED;b=importNamespace("ReactDOMCompatibilityLayer").unmountComponentAtNode_DEPRECATED;f.render_DEPRECATED=a;f.unmountComponentAtNode_DEPRECATED=b}),66);

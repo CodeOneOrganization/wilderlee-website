@@ -48,3 +48,17 @@
 
   z-index: 999;
 }
+
+@media (width <= 480px){
+  .wChar {
+    width: 30vw;
+  }
+
+  .job {
+    font-size: calc(16.44px * 0.6326);
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, calc(-15vw - 2vh));
+  }
+}

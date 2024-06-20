@@ -4,23 +4,21 @@ import styles from "./TrainYourMind.module.css"
 
 import PlayIcon from "@/common/components/Play"
 import OnView from "./OnView"
+import Arrow from "@/common/components/Arrow"
 
 export default function TrainYourMind() {
   return (
     <section className={`${styles.trainYourMind} container`}>
-      <div className={`${styles.top} row`}>
-        <h3 className={styles.title}>Trene sua mente</h3>
-        <div className={styles.divider}>
-          <hr className={styles.line} />
-          <p className={styles.innerText}>Foco no treino</p>
-        </div>
-      </div>
       <div className={styles.wrapper}>
         <OnView>
           <video muted data-video-content loop className={styles.video} src="videos/SonyVideo.mp4" autoPlay typeof="video/mp4" />
           <PlayIcon className={styles.play} />
         </OnView>
       </div>
+      <h1 className={styles.call}>
+        Quero Mudar Minha<br /><b className={`${styles.inherit} blue`}>Vida</b> Agora
+        <Arrow className={styles.arrow} />
+      </h1>
     </section>
   )
 }

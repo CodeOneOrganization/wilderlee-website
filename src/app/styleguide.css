@@ -1,5 +1,5 @@
 :root {
-  --section-padding: max(142px, 7.4vw);
+  --section-padding: max(142px, 21vh);
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
@@ -43,7 +43,7 @@ body {
 }
 section {
   position: relative;
-  padding-block: var(--section-padding);
+  padding-top: var(--section-padding);
 }
 
 .container {
@@ -107,14 +107,14 @@ h5 > * {
 p,
 span {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: max(20px, 1.25vw);
 }
 label.small,
 p.small,
 span.small {
   line-height: 1.4;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   font-size: calc(max(20px, 1.25vw) / 1.2);
 }
 
@@ -122,15 +122,15 @@ p.tiny,
 small.tiny {
   line-height: 1;
   letter-spacing: 0.2em;
-  font-family: var(--font-oranienbaum);
+  font-family: var(--font-khula);
   text-transform: uppercase;
   font-size: 0.4em;
 }
 
-@media screen and (max-width: 850px) {
-
-  ::root{
-    --container-padding: 0vw;
+@media (width <= 850px) {
+  :root{
+    --container-padding: 1em;
+    --section-padding: 15vh;
   }
 
   h3,
@@ -157,7 +157,12 @@ small.tiny {
   p.small,
   span.small {
     line-height: 1.4;
-    font-family: var(--font-oranienbaum);
-    font-size: 4vw;
+    font-family: var(--font-khula);
+    font-size: min(17.8px, 4.14vw);
+  }
+
+  p,
+  span {
+    font-size: min(20px, 4.65vw);
   }
 }

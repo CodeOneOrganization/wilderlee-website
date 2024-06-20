@@ -1,11 +1,11 @@
-export default function Logo() {
+interface Props extends React.SVGAttributes<SVGSVGElement>{}
+export default function Logo({...props}: Props) {
   return (
     <svg
-      width="49"
-      height="50"
       viewBox="0 0 49 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <mask
         id="mask0_19_324"

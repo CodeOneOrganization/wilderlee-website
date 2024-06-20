@@ -13,7 +13,7 @@ export default function Footer() {
 
       <div className={styles.siteMap}>
         <Card
-          Title="Site Map"
+          Title="Sitemap"
           paragraph1="Contato"
           paragraph2="Suporte e Ajuda"
           paragraph3="Planos"

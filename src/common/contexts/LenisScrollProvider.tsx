@@ -40,6 +40,7 @@ export default function LenisScrollProvider({ children }: Props) {
     }
   }, [])
 
+  
   useEffect(() => {
     if (!_lenis) return
     _lenis.current.stop()
