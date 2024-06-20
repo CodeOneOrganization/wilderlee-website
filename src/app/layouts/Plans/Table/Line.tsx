@@ -1,4 +1,4 @@
-import Check from "@/common/components/Checl"
+import Check from "@/common/components/Check"
 import styles from "../Plans.module.css"
 const lines = [
   {

@@ -50,7 +50,7 @@ export default function Avaliations() {
     <section className={`${styles.avaliations}`} data-slide-element>
       <DraggableSlide trigger={styles.avaliations}>
       <div className={styles.slide} data-slide-wrapper>
-        {users.map(x => <Card {...x} />)}
+        {users.map((x, i) => <Card {...x} key={`user_${i}`}/>)}
       </div>
       </DraggableSlide>
     </section>

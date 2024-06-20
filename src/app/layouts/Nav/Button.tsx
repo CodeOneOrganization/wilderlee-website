@@ -6,9 +6,7 @@ import { Close, Open } from "@/app/layouts/Nav/Animations/Overlay";
 
 import styles from "./Nav.module.css";
 
-
-import GymPlate from "@/common/components/GymPlate";
-import { rotateHover, rotateHoverOut } from "@/common/animations/RotateHover";
+import CheeseIcon from "@/common/components/CheeseIcon";
 
 interface Props extends React.SVGAttributes<SVGSVGElement> {}
 export default function Button({ ...props }: Props) {
@@ -18,12 +16,8 @@ export default function Button({ ...props }: Props) {
   }, [isOpen]);
 
   return (
-    <button
-      className={styles.gymPlate}
-      onMouseEnter={() => rotateHover({ className: `.${styles.gymPlate}` })}
-      onMouseLeave={() => rotateHoverOut({ className: `.${styles.gymPlate}` })}
-    >
-      <GymPlate {...props} onClick={handleVerify} />
-    </button>
+    <div className={styles.cheeseBurger} onClick={handleVerify}>
+        <CheeseIcon />
+      </div>
   );
 }

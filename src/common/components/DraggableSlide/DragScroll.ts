@@ -37,7 +37,6 @@ class DragScroll {
     this.el = document.querySelector<HTMLElement>(config.element)!
     this.items = document.querySelectorAll<HTMLDivElement>(config.items)!
     this.bar = document.querySelector<HTMLElement>(config.bar)!
-    console.log("items", this.items)
 
     this.init()
   }
@@ -65,9 +64,9 @@ class DragScroll {
     "handleTouchStart",
     "handleTouchEnd",
     "handleTouchMove"
-  ].forEach((method) => {
-    this[method] = this[method].bind(this)
-  })
+  ].forEach((method: string) => {
+    (this[method as keyof this] as Function) = (this[method as keyof this] as Function).bind(this);
+  });
    }
 
   public calculate() {
@@ -85,17 +84,29 @@ class DragScroll {
   public handleTouchStart(e: MouseEvent | TouchEvent) {
     e.preventDefault()
     this.draggable = true
-    this.x_0 = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
+    if(e instanceof MouseEvent){
+      this.x_0 = e.clientX
+    }else{
+      this.x_0 = e.touches[0].clientX  
+    }
+    // this.x_0 = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
   }
 
-  public handleTouchMove(e: TouchEvent | MouseEvent) {
-    if (!this.draggable) return false
-
-    const x = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
-    this.progress += (this.x_0 - x) * 2.5
-    this.x_0 = x
-    this.move()
+  public handleTouchMove(e: TouchEvent | MouseEvent): void {
+    if (!this.draggable) return;
+  
+    let x: number;
+    if (e instanceof MouseEvent) {
+      x = e.clientX;
+    } else {
+      x = e.touches[0].clientX;
+    }
+  
+    this.progress += (this.x_0 - x) * 2.5;
+    this.x_0 = x;
+    this.move();
   }
+  
 
   public handleTouchEnd() {
     this.draggable = false
