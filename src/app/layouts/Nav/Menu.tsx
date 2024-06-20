@@ -5,13 +5,23 @@ import styles from "./Nav.module.css";
 
 import { arrowHover, arrowHoverOut } from "@/app/layouts/Nav/Animations/Hover";
 
+import { useRouter } from "next/navigation"
+
+
 export default function Menu() {
+
+  const router = useRouter()
+
+  const goToContact = () => router.push("/contact")
+
+
   return (
     <div className={styles.menu}>
       <menu>
         <li
           onMouseEnter={() => arrowHover({ className: ".arrow1" })}
           onMouseLeave={() => arrowHoverOut({ className: ".arrow1" })}
+          onClick={goToContact}
         >
           {" "}
           <Arrow className="arrow1" />

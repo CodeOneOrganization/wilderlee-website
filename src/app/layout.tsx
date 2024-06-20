@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { orbitron, oranienbaum } from "./fonts"
+import { orbitron, khula } from "./fonts"
 
 import "./index.css";
 import Providers from "@/common/contexts/Providers";
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${orbitron.variable} ${oranienbaum.variable}`}>
+      <body className={`${orbitron.variable} ${khula.variable}`}>
         <Providers>{children}</Providers>
       </body>
     </html>

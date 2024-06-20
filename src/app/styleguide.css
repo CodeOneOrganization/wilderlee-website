@@ -110,7 +110,7 @@ span {
   font-family: var(--font-oranienbaum);
   font-size: max(20px, 1.25vw);
 }
-
+label.small,
 p.small,
 span.small {
   line-height: 1.4;
