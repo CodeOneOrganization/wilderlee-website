@@ -6,8 +6,9 @@
 
   width: auto;
   height: 75dvh;
+  margin-inline: 3vw;
   
-  background: #444;
+  background: transparent;
   border-radius: var(--border-size);
   
   overflow: hidden;
@@ -68,5 +69,6 @@
     width: 100%;
     height: auto;
     aspect-ratio: 21 / 25;
+    margin-inline: 0;
   }
 }

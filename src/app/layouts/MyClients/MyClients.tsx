@@ -24,7 +24,7 @@ function Snapshot({src}: SnapshotProps){
 export default function MyClients() {
   return (
     <section className={styles.myClients} data-slide-element>
-      <DraggableSlide>
+      <DraggableSlide trigger={styles.myClients}>
         <div className={styles.slide} data-slide-wrapper>
           <Arrow className={`${styles.arrow} ${styles.left}`} />
           {clients.map((x, i) => <Snapshot key={`Snapshot_${i}`} {...x}/>)}

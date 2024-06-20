@@ -15,7 +15,6 @@ export default function Preloader() {
 
   useIsomorphicEffect(() => {
     const _heroElement = document.querySelector("[data-animate='slide-text']") as HTMLElement
-    console.log("hero styles:", _heroElement)
 
     SplitType.create(_heroElement, { types: "chars" })
     const _ctx = GSAP.context(() => {

@@ -13,14 +13,16 @@
 }
 
 .logo {
-  height: max(4vw, 2em);
+  height: 2.72vmax
 }
 
 .cheeseBurger {
-  height: max(4vw, 2em);
+  height: 2.72vmax;
   aspect-ratio: 1 / 1;
 
   cursor: pointer;
+
+  z-index: 999;
 }
 
 .menu {
@@ -29,6 +31,7 @@
 }
 
 .menu menu {
+  padding-left: calc(var(--container-padding) + 24px);
   list-style: none;
   & li {
     cursor: pointer;
@@ -48,8 +51,10 @@
     }
 
     & svg {
+      position: absolute;
+      left: 2vw;
       opacity: 0;
-      transform: translateX(-1vw);
+      transform: translateX(calc(-1vw - 100%));
     }
   }
 

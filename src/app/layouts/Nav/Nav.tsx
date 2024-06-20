@@ -3,8 +3,7 @@ import styles from "./Nav.module.css";
 import Logo from "@/common/components/Logo";
 
 import Overlay from "@/app/layouts/Nav/Overlay";
-import CheeseIcon from "@/common/components/CheeseIcon";
-import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect";
+import Button from "@/app/layouts/Nav/Button";
 
 export default function Nav() {
   return (
@@ -12,9 +11,7 @@ export default function Nav() {
       <div className="logo fadeIn">
         <Logo className={styles.logo} />
       </div>
-      <div className={styles.cheeseBurger}>
-        <CheeseIcon />
-      </div>
+      <Button/>
       <Overlay />
     </nav>
   );

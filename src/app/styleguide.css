@@ -1,24 +1,17 @@
 :root {
-  --section-padding: max(207px, 19.16vh);
+  --section-padding: max(142px, 21vh);
   --container-padding: 5.9vw;
   --gap-padding: max(1vw, 8px);
 
   --primitive-white: 255, 255, 255;
   /* --color-black: #000; */
-  --color-black: #0F0F0F;
-  --color-black-overlay: #080808;
-  --color-blue: #00BAF7;
+  --color-black: #0f0f0f;
+  --color-blue: #00baf7;
   --color-white: rgba(var(--primitive-white), 1);
   --color-gray: rgba(var(--primitive-white), 0.08);
 
   --title-size: max(2rem, 6.66vw);
   --border-size: 0.3em;
-}
-
-@media (width <= 480px){
-  :root {
-    --section-padding: min(15vh, 103px)
-  }
 }
 
 *,
@@ -45,8 +38,8 @@ body {
   background-color: var(--color-black);
 }
 
-.light{
-  background-color: #1C1C1C;
+.light {
+  background-color: #1c1c1c;
 }
 section {
   position: relative;
@@ -76,10 +69,6 @@ section {
   height: 0;
 }
 
-[data-slide-wrapper]{
-  cursor: grab;
-}
-
 /* ----------------------- TYPOGRAPHY --------------------- */
 
 *.blue {
@@ -87,44 +76,41 @@ section {
 }
 
 h1,
-h1>* {
+h1 > * {
   font-size: 13vw;
   font-family: var(--font-orbitron) !important;
   font-weight: 800;
   font-style: italic;
   line-height: 0.9;
   text-transform: uppercase;
-
-
 }
 
 h3,
-h3>* {
+h3 > * {
   font-size: calc(var(--title-size) / 2.0736);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 
-h4 {
+h4,
+h4 > * {
   font-size: calc(var(--title-size) / 2.985984);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 h5,
-h5 > *{
-  font-size:  1.504vw;
+h5 > * {
+  font-size: 1.504vw;
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
-
 }
 p,
 span {
   line-height: 1.4;
   font-family: var(--font-khula);
   font-size: max(20px, 1.25vw);
-
 }
-
+label.small,
 p.small,
 span.small {
   line-height: 1.4;
@@ -141,19 +127,42 @@ small.tiny {
   font-size: 0.4em;
 }
 
-@media(width <= 968px) {
+@media (width <= 850px) {
+  :root{
+    --container-padding: 1em;
+    --section-padding: 15vh;
+  }
+
+  h3,
+  h3 > * {
+    font-size: 10.7vw;
+    font-family: var(--font-orbitron) !important;
+    text-transform: uppercase;
+  }
+
+  h4,
+  h4 > * {
+    font-size: 7vw;
+    font-family: var(--font-orbitron) !important;
+    text-transform: uppercase;
+  }
+
+  h5,
+  h5 > * {
+    font-size: 5vw;
+    font-family: var(--font-orbitron) !important;
+    text-transform: uppercase;
+  }
+
   p.small,
   span.small {
-    font-size: 0.6em;
+    line-height: 1.4;
+    font-family: var(--font-khula);
+    font-size: min(17.8px, 4.14vw);
   }
 
-  h3, h3 > * {
-    font-size: min(39.44px, 9.1vw);
+  p,
+  span {
+    font-size: min(20px, 4.65vw);
   }
-
-  h4, 
-  h4 > * {
-    font-size: 1.2em;
-  }
-
 }

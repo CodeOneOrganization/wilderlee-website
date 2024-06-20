@@ -48,9 +48,9 @@ const users = [
 export default function Avaliations() {
   return (
     <section className={`${styles.avaliations}`} data-slide-element>
-      <DraggableSlide>
+      <DraggableSlide trigger={styles.avaliations}>
       <div className={styles.slide} data-slide-wrapper>
-        {users.map(x => <Card {...x} />)}
+        {users.map((x, i) => <Card {...x} key={`user_${i}`}/>)}
       </div>
       </DraggableSlide>
     </section>

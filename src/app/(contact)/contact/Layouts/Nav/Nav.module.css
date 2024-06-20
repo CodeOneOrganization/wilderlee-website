@@ -1,0 +1,15 @@
+.nav{
+    position: fixed;
+    top: 2.9vw;
+    left: 0;
+    width: 100vw;
+    justify-content: space-between;
+    
+    z-index: 99;
+}
+.backHome{
+    cursor: pointer;
+    background-color: transparent;
+
+    transform: rotate(180deg);
+}

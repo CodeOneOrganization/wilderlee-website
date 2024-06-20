@@ -1,0 +1,84 @@
+.paragraph{
+    font-family: var(--font-orbitron) !important;
+    text-transform: uppercase;
+}
+.ornament{
+    overflow: hidden;
+
+    align-items: center;
+    gap: 1vw;
+    margin-top: 3vw;
+}
+.line{
+    /* display: inline; */
+    width: 65vw;
+    height: 0.2vw;
+    background-color: var(--color-blue);
+}
+
+.input{
+    width:  43.33vw;
+    height: 1.87vw;
+    border-radius: 0.15vw;
+    background-color: var(--color-gray);
+    font-family: var(--font-orbitron) !important;
+    text-transform: uppercase;
+
+    outline: none;
+    border: 0.1vw solid var(--color-blue);
+
+    color: var(--color-white);
+    padding-left: 1vw;
+
+    font-size: 0.84vw;
+}
+.form_wrapper{
+    margin-top:  3.38vw;
+    gap: 1.77vw;
+}
+.textArea_div{
+    margin-top: 2.80vw;
+}
+.textArea{
+    width:  43.33vw;
+
+    height: 11.14vw;
+
+    background-color: var(--color-gray);
+    color: var(--color-white);
+    font-family: var(--font-orbitron) !important;
+    border: 0.1vw solid var(--color-blue);
+
+    text-transform: uppercase;
+
+    font-size: 0.84vw;
+
+    padding: 1vw;
+
+    resize: none;
+
+}
+.submit_div{
+    width: 43.33vw;
+}
+.submit{
+    cursor: pointer;
+    width: 10.83vw;
+    height: 2.65vw;
+
+    font-family: var(--font-orbitron) !important;
+    font-size: 0.84vw;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+
+    background-color: var(--color-blue);
+
+    margin-top: 1.51vw;
+    float: right;
+}
+.label{
+    font-family: var(--font-khula) !important;
+    font-size: 0.72vw;
+    font-weight: 300;
+    line-height: 100%;
+}
