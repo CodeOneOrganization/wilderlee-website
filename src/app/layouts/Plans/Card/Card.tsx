@@ -1,5 +1,5 @@
-import Arrow from "@/common/components/Arrow";
 import styles from "../Plans.module.css";
+import Button from "@/app/layouts/Plans/Button";
 
 interface Props {
   title: string;
@@ -30,9 +30,7 @@ export default function Card({
 
       <div>
         <p className={`${styles.time} small`}>{time}</p>
-        <button className={styles.contact}>
-          Entrar em contato <Arrow />
-        </button>
+        <Button title="Entrar em contato"/>
       </div>
 
       <div className={styles.rounded}>

@@ -12,9 +12,9 @@ export default function Home() {
       <Nav/>
       <NewHero/>
       {/* <TrainYourMind /> */}
-      <Info/>
+      {/* <Info/> */}
       <Plans/>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }
