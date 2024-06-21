@@ -6,7 +6,7 @@
 }
 
 .card * {
-    /* margin-left: 3.64vw; */
+    margin-left: 3.64vw;
 }
 
 .paragraph {
@@ -30,7 +30,7 @@
 }
 
 
-@media(width <=480px) {
+@media(width <=850px) {
     .cards {
         flex-direction: column;
         gap: max(100px, 10vh);

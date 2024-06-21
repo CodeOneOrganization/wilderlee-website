@@ -64,7 +64,7 @@
   transform: rotate(-45deg);
 }
 
-@media (width <= 480px){
+@media (width <= 850px){
   .wrapper {
     width: 100%;
     height: auto;

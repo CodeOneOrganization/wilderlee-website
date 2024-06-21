@@ -126,6 +126,8 @@
     width: 80vw;
     height: 110vw;
     border-radius: 2vw;
+
+    padding: 0;
   }
 
   .card > * {
