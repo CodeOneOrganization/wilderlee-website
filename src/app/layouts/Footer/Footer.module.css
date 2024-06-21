@@ -4,6 +4,8 @@
 
     background-color: var(--color-black);
     position: relative;
+
+    overflow-x: hidden;
 }
 
 .contact {
