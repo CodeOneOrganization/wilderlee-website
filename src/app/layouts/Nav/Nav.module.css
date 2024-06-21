@@ -75,3 +75,34 @@
   backdrop-filter: blur(2px);
   z-index: 9;
 }
+
+
+@media screen and (max-width: 850px) {
+  .nav{
+    top: 3vw;
+  }
+  .menu menu {
+    & li {
+  
+      & span {
+        font-size: 12.59vw;
+        line-height: 1.5;
+      }
+  
+      & svg {
+        display: none;
+      }
+    }
+  }
+  .cheeseBurger {
+    height: 3.72vmax;
+    aspect-ratio: 1 / 1;
+  
+    cursor: pointer;
+  
+    z-index: 999;
+  }
+  .logo {
+    height: 3.72vmax
+  }
+}

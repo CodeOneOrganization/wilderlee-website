@@ -8,6 +8,7 @@
 
   overflow: scroll;
   
+  cursor: grab;
 }
 
 @media(480px <= width <= 969px) {
