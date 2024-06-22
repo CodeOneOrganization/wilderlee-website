@@ -1,8 +1,8 @@
 .card {
     position: relative;
+
     min-width: 200px;
-    /* width: 25.83vw; */
-    /* height: 15.9vw; */
+    padding-left: max(4vw, 2em);
 }
 
 .card * {
@@ -38,6 +38,8 @@
 
     .card {
         width: 100%;
+        padding-left: 0;
+
     }
 
     .line {

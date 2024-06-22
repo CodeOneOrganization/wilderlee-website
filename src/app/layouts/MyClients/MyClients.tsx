@@ -26,9 +26,7 @@ export default function MyClients() {
     <section className={styles.myClients} data-slide-element>
       <DraggableSlide trigger={styles.myClients}>
         <div className={styles.slide} data-slide-wrapper>
-          <Arrow className={`${styles.arrow} ${styles.left}`} />
           {clients.map((x, i) => <Snapshot key={`Snapshot_${i}`} {...x}/>)}
-          <Arrow className={`${styles.arrow} ${styles.right}`} />
         </div>
       </DraggableSlide>
     </section>

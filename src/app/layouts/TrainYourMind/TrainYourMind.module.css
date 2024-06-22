@@ -36,7 +36,9 @@
 
 .call {
   position: relative;
+
   padding-top: var(--section-padding);
+  width: max-content;
 
   font-size: 6.87vw;
   font-family: var(--font-orbitron);
