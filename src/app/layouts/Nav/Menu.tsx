@@ -1,9 +1,10 @@
 "use client";
+
 import Arrow from "@/common/components/Arrow";
 
 import styles from "./Nav.module.css";
 
-import { arrowHover, arrowHoverOut } from "@/app/layouts/Nav/Animations/Hover";
+// import { arrowHover, arrowHoverOut } from "@/app/layouts/Nav/Animations/Hover";
 
 import { useRouter } from "next/navigation"
 
@@ -19,27 +20,20 @@ export default function Menu() {
     <div className={styles.menu}>
       <menu>
         <li
-          onMouseEnter={() => arrowHover({ className: ".arrow1" })}
-          onMouseLeave={() => arrowHoverOut({ className: ".arrow1" })}
+          className={styles.sitemap}
           onClick={goToContact}
         >
           {" "}
-          <Arrow className="arrow1" />
-          <span className="spanMenu1">Contato</span>
+          <span className={styles.innerText}>Contato</span>
+          <Arrow className={styles.arrow} fill="var(--color-white)"/>
         </li>
-        <li
-          onMouseEnter={() => arrowHover({ className: ".arrow2" })}
-          onMouseLeave={() => arrowHoverOut({ className: ".arrow2" })}
-        >
-          <Arrow className="arrow2" />
-          <span className="spanMenu2">Sobre</span>
+        <li className={styles.sitemap}>
+          <span className={styles.innerText}>Sobre</span>
+          <Arrow className={styles.arrow} />
         </li>
-        <li
-          onMouseEnter={() => arrowHover({ className: ".arrow3" })}
-          onMouseLeave={() => arrowHoverOut({ className: ".arrow3" })}
-        >
-          <Arrow className="arrow3" />
-          <span className="spanMenu3">Planos</span>
+        <li className={styles.sitemap} >
+          <span className={styles.innerText}>Planos</span>
+          <Arrow className={styles.arrow} />
         </li>
       </menu>
     </div>

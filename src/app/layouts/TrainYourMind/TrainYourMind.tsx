@@ -17,7 +17,7 @@ export default function TrainYourMind() {
       </div>
       <h1 className={styles.call}>
         Quero Mudar Minha<br /><b className={`${styles.inherit} blue`}>Vida</b> Agora
-        <Arrow className={styles.arrow} />
+        <Arrow className={styles.arrow} fill="var(--color-white)" />
       </h1>
     </section>
   )

@@ -60,6 +60,10 @@
   object-fit: cover;
   object-position: center;
 
+}
 
-
+@media (width <= 480px){
+  .figure {
+    height: calc(100vmin - 0.75 * max(4vw, 2em));
+  }
 }

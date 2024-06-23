@@ -10,20 +10,35 @@ export default function Footer() {
         <article className={styles.road}>
           <h3 className={styles.title}>Contato</h3>
           <ul className={styles.info}>
-            <li>named@gmail.com</li>
-            <li>+55 81 00000-0000</li>
-            <li>@wilderlee.personal</li>
+            <li className={styles.item}>
+              named@gmail.com
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
+            <li className={styles.item}>
+              +55 81 00000-0000
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
+            <li className={`${styles.item} small`}>
+              @wilderlee.personal
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
           </ul>
         </article>
         <article className={styles.road}>
           <h3 className={styles.title}>Sitemap</h3>
           <ul className={styles.info}>
-            <li>
+            <li className={styles.item}>
               Contato
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
-            <li>Suporte e Ajuda</li>
-            <li>Planos</li>
+            <li className={styles.item}>
+              Suporte e Ajuda
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
+            <li className={styles.item}>
+              Planos
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
           </ul>
         </article>
         <article className={styles.road}>

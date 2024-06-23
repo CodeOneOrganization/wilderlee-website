@@ -1,5 +1,5 @@
 interface Props extends React.SVGAttributes<SVGSVGElement>{}
-export default function Arrow({fill, ...props}: Props) {
+export default function Arrow({fill = "var(--color-white)", ...props}: Props) {
   return (
     <svg
       // width="44"

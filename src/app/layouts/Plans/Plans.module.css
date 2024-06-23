@@ -129,11 +129,11 @@
   }
 
   .card > * {
-    padding-inline: 5vw;
+    /* padding-inline: 5vw; */
   }
 
   .titleCard {
-    padding-top: 13vw;
+    /* padding-top: 13vw; */
   }
 
   .oldPrice {

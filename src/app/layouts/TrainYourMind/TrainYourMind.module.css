@@ -73,4 +73,8 @@
     aspect-ratio: 21 / 25;
     margin-inline: 0;
   }
+
+  .play {
+    height: 24px;
+  }
 }
