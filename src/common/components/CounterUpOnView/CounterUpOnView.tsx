@@ -28,7 +28,6 @@ export default function CounterUpOnView({ children, target }: Props) {
     const _scrollTrigger = ScrollTrigger.create({
       trigger: `.${target}`,
       once: true,
-      markers: true,
       start: "0% 50%",
       end: "100% 50%",
       onEnter: () => { _ctx.onView() }

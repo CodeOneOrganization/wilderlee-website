@@ -1,4 +1,6 @@
-.myClients {}
+.myClients {
+  overflow: hidden;
+}
 
 .arrow {
   position: relative;
@@ -34,6 +36,7 @@
 }
 
 .figure {
+
   position: relative;
 
   display: inline-block;

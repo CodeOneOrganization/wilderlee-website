@@ -8,11 +8,14 @@
   --color-black: #0f0f0f;
   --color-blue: #00baf7;
   --color-white: rgba(var(--primitive-white), 1);
+  --color-overlay-white: rgba(var(--primitive-white), 0.4);
   --color-overlay-black: rgba(var(--primitive-white), 0.889);
   --color-gray: rgba(var(--primitive-white), 0.08);
 
   --title-size: max(2rem, 6.66vw);
-  --border-size: 0.3em;
+  --border-size: 0.37vh;
+  --rounded-size: 1.5454%;
+
 
   --animation-bezier-smooth: cubic-bezier(0.25, 0, 0.75, 1)
 }
@@ -43,6 +46,7 @@ body {
   background-color: var(--color-black);
 
   overflow-x: hidden;
+
 }
 
 *[data-slide-wrapper] {
@@ -85,6 +89,7 @@ section {
 
 *.blue {
   color: var(--color-blue);
+  font-family: inherit;
 }
 
 h1,

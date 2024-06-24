@@ -74,9 +74,7 @@
     opacity: 1;
 }
 
-.arrow path {
-    /* fill: var(--color-black); */
-}
+.arrow path { }
 
 .call {
     margin-left: auto;
@@ -144,7 +142,7 @@
         font-size: 9.67vw;
 
         border-left: 0;
-        /* border-top: 1px solid var(--color-black); */
+        border-top: var(--border-size) solid var(--color-black);
     }
 
     .road:nth-child(3) {
@@ -168,8 +166,6 @@
 
 
         font-size: min(14.4px, 3.3vw);
-
-
     }
 
     .bottom {

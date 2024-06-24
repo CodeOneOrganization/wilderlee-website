@@ -6,8 +6,9 @@
 
   white-space: nowrap;
 
-  overflow: scroll;
+  overflow: hidden;
   
+  cursor: grab;
 }
 
 @media(480px <= width <= 969px) {

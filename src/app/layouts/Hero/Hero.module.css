@@ -74,7 +74,7 @@
     transform: translate(-50%, -50%);
 }
 
-@media (width <= 480px){
+@media (width <= 850px){
     .title {
         left: 50%;
         bottom: 50%;

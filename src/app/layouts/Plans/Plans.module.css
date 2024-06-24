@@ -1,18 +1,51 @@
+.plans {
+  overflow: hidden;
+
+  padding-bottom: var(--section-padding);
+}
+
 .cards {
   justify-content: space-between;
+  gap: min(50px, 10vw);
 }
+
 .card {
   position: relative;
 
-  padding: max(2vw, 1em);
+  /* padding: max(2vw, 1em); */
 
   background-color: #000;
+
   border-radius: 0.37vw;
+
 }
+
 .card p {
   font-family: var(--font-khula);
 }
-.titleCard { }
+
+.upper {
+  padding: max(2vw, 1em);
+  padding-bottom: 0;
+
+  border-top: linear-gradient();
+}
+
+.linearGradientBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(to right, transparent, var(--color-blue));
+
+  height: 4px;
+  width: 100%;
+
+  transform: translateY(-100);
+}
+
+/* .titleCard { } */
 .oldPrice {
   padding-top: 2.96vw;
   text-decoration: line-through;
@@ -25,6 +58,7 @@
 .time {
   padding-top: 3.75vw;
 }
+
 .contact {
   cursor: pointer;
   /* width: 21.9vw; */
@@ -50,10 +84,12 @@
     height: 0.63vw;
   }
 }
+
 .division {
   padding-top: 3vw;
   color: var(--color-blue);
 }
+
 .rounded {
   width: 7.77vw;
   height: 7.77vw;
@@ -69,14 +105,41 @@
   justify-content: center;
   align-items: center;
 }
+
+.info {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: max(4vw, 2em);
+
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+
+  height: auto;
+  padding-inline: max(2vw, 1em);
+  padding-block: 1.5em;
+
+}
+
+.benefit:nth-child(2n - 1) {
+  background-color: #222;
+}
+
+.benefit:last-child {
+  border-bottom-left-radius: var(--border-size);
+  border-bottom-right-radius: var(--border-size);
+}
+
 .effect {
   width: 24vw;
   height: 0.3vw;
-  background: linear-gradient(
-    to right,
-    var(--color-black) 35%,
-    var(--color-blue)
-  );
+  background: linear-gradient(to right,
+      var(--color-black) 35%,
+      var(--color-blue));
   position: absolute;
   top: -0.2vw;
   right: 0;
@@ -86,6 +149,7 @@
 .cardTable {
   margin-top: 7.86vw;
 }
+
 .roundedCheck {
   width: 2.5vw;
   height: 2.5vw;
@@ -95,6 +159,7 @@
   display: grid;
   place-items: center;
 }
+
 .line {
   align-items: center;
   gap: 1vw;
@@ -103,14 +168,17 @@
   width: 33.5vw;
   height: 5.2vw;
 }
+
 .line p {
   width: 22vw;
 }
+
 .titleTable {
   height: 5.2vw;
   padding-left: 5.9vw;
 }
-.contactTable{
+
+.contactTable {
   padding-top: 5vw;
   padding-inline: 3vw;
 }
@@ -123,12 +191,12 @@
   }
 
   .card {
-    width: 80vw;
-    height: 110vw;
     border-radius: 2vw;
+
+    /* padding: 0; */
   }
 
-  .card > * {
+  .card>* {
     /* padding-inline: 5vw; */
   }
 
@@ -138,6 +206,7 @@
 
   .oldPrice {
     padding-top: 13vw;
+
   }
 
   .division {
@@ -157,6 +226,7 @@
     line-height: 1;
 
     border-radius: 0.5vw;
+
     & svg {
       transform: rotate(-45deg);
       width: 5vw;
@@ -189,6 +259,7 @@
     flex-direction: column;
     gap: 10vw;
   }
+
   .roundedCheck {
     width: 10vw;
     height: 7.5vw;
@@ -197,12 +268,14 @@
       height: 2vw;
     }
   }
+
   .line {
     gap: 5vw;
 
     width: 90vw;
     height: 20.2vw;
   }
+
   .line p {
     width: 92vw;
   }
@@ -210,10 +283,12 @@
   .cardTable {
     margin-top: 12vw;
   }
-  .tableContainer{
+
+  .tableContainer {
     margin-top: 20vw;
   }
-  .contactTable{
+
+  .contactTable {
     padding-top: 15vw;
     padding-inline: 13vw;
   }

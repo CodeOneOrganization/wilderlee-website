@@ -1,14 +1,32 @@
 .info {}
 
+.users  {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: inline-flex;
+    vertical-align: top;
+    float: right;
+
+}
+
+.innerImage {
+    display: inline-block;
+    margin-left: -12px;
+
+    height: 48px;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+}
+
+
 .card {
     position: relative;
 
     min-width: 200px;
     padding-left: max(4vw, 2em);
-}
-
-.card * {
-    /* margin-left: 3.64vw; */
 }
 
 .paragraph {
@@ -34,7 +52,7 @@
 }
 
 
-@media(width <=480px) {
+@media (width <=850px) {
     .cards {
         flex-direction: column;
         gap: max(100px, 10vh);
@@ -52,5 +70,13 @@
         height: 4px;
 
         margin-bottom: 36px;
+    }
+
+    .users {
+        top: 36px;
+    }
+
+    .innerImage {
+        height: 36px;
     }
 }

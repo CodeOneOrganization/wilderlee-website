@@ -82,3 +82,58 @@
     font-weight: 300;
     line-height: 100%;
 }
+
+@media screen and (max-width: 850px) {
+    .ornament{
+        gap: 0vw;
+        margin-top: 5vw;
+    }
+    .line{
+        display: none;
+    }
+
+    .input{
+        width:  80vw;
+        height: 8.87vw;
+        border-radius: 0.5vw;
+        padding-left: 2vw;
+    
+        font-size: 2vw;
+    }
+
+    .form_wrapper{
+        margin-top:  10.38vw;
+        gap: 5vw;
+    }
+
+    .textArea_div{
+        margin-top: 8.80vw;
+    }
+
+    .textArea{
+        width:  80vw;
+        height: 31.14vw;
+        font-size: 2vw;
+        padding: 2vw;
+    
+    }
+    
+    .submit{
+        cursor: pointer;
+        width: 40.83vw;
+        height: 8.65vw;
+    
+        font-family: var(--font-orbitron) !important;
+        font-size: 2vw;
+        letter-spacing: 10%;
+        text-transform: uppercase;
+    
+        background-color: var(--color-blue);
+    
+        margin-top: 0.51vw;
+        float: right;
+    }
+    .submit_div{
+        width: 80vw;
+    }
+}

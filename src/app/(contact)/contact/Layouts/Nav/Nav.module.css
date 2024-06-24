@@ -7,9 +7,19 @@
     
     z-index: 99;
 }
+
 .backHome{
     cursor: pointer;
     background-color: transparent;
 
     transform: rotate(180deg);
 }
+
+.logo{
+    height: 2.7vmax;
+}
+
+.arrow {
+    height: 2.72vmax;
+}
+

@@ -29,7 +29,7 @@
   /* display: flex; */
 
   padding-inline: var(--container-padding);
-  
+
   list-style: none;
 
   z-index: 999;
@@ -46,7 +46,7 @@
     align-items: center;
 
     & span {
-     /* font-size: 5.59vw; */
+      /* font-size: 5.59vw; */
       font-family: var(--font-orbitron);
       display: block;
 
@@ -75,7 +75,11 @@
 }
 
 .innerText {
-  color: var(--color-overlay-black);
+  position: relative;
+
+  color: var(--color-overlay-white);
+
+  transform: translateY(100%);
 }
 
 .sitemap:hover .innerText {
@@ -116,4 +120,83 @@
   background-color: #000000e1;
   backdrop-filter: blur(2px);
   z-index: 9;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  padding-inline: var(--container-padding)
+
+}
+
+.divisor {
+  display: flex;
+  gap: max(2vw, 1em);
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.spreadText {
+  width: max-content;
+
+  color: var(--color-blue);
+  text-wrap: nowrap; 
+  font-family: var(--font-orbitron);
+
+}
+
+.justifyCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+
+.line {
+  height: var(--border-size);
+  width: 100%;
+
+  background-color: var(--color-blue);
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+  .nav {
+    top: 3vw;
+  }
+
+  .menu menu {
+    & li {
+
+      /* & span {
+        font-size: 12.59vw;
+        line-height: 1.5;
+      } */
+
+      /* & svg {
+        display: none;
+      } */
+    }
+  }
+
+  .cheeseBurger {
+    height: 3.72vmax;
+    aspect-ratio: 1 / 1;
+
+    cursor: pointer;
+
+    z-index: 999;
+  }
+
+  .logo {
+    height: 3.72vmax
+  }
 }
