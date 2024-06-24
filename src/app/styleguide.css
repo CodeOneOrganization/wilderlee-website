@@ -8,10 +8,16 @@
   --color-black: #0f0f0f;
   --color-blue: #00baf7;
   --color-white: rgba(var(--primitive-white), 1);
+  --color-overlay-white: rgba(var(--primitive-white), 0.4);
+  --color-overlay-black: rgba(var(--primitive-white), 0.889);
   --color-gray: rgba(var(--primitive-white), 0.08);
 
   --title-size: max(2rem, 6.66vw);
-  --border-size: 0.3em;
+  --border-size: 0.37vh;
+  --rounded-size: 1.5454%;
+
+
+  --animation-bezier-smooth: cubic-bezier(0.25, 0, 0.75, 1)
 }
 
 *,
@@ -22,13 +28,15 @@
   border: 0;
   outline: none;
   box-sizing: border-box;
+
+  font-family: var(--font-khula);
 }
 
 html {
   font-size: max(24px, 1vw);
   font-weight: 400;
-  -webkit-font-smoothing: antialised;
-  font-smoothing: antialised;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   line-height: 1;
 }
 
@@ -41,9 +49,14 @@ body {
 
 }
 
+*[data-slide-wrapper] {
+  cursor: grab;
+}
+
 .light {
   background-color: #1c1c1c;
 }
+
 section {
   position: relative;
   padding-top: var(--section-padding);
@@ -76,10 +89,11 @@ section {
 
 *.blue {
   color: var(--color-blue);
+  font-family: inherit;
 }
 
 h1,
-h1 > * {
+h1>* {
   font-size: 13vw;
   font-family: var(--font-orbitron) !important;
   font-weight: 800;
@@ -89,30 +103,33 @@ h1 > * {
 }
 
 h3,
-h3 > * {
+h3>* {
   font-size: calc(var(--title-size) / 2.0736);
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
 
 h4,
-h4 > * {
+h4>* {
   font-size: calc(var(--title-size) / 2.985984);
-  font-family: var(--font-orbitron) !important;
+  font-family: var(--font-orbitron);
   text-transform: uppercase;
 }
+
 h5,
-h5 > * {
+h5>* {
   font-size: 1.504vw;
   font-family: var(--font-orbitron) !important;
   text-transform: uppercase;
 }
+
 p,
 span {
   line-height: 1.4;
   font-family: var(--font-khula);
   font-size: max(20px, 1.25vw);
 }
+
 label.small,
 p.small,
 span.small {
@@ -130,23 +147,23 @@ small.tiny {
   font-size: 0.4em;
 }
 
-@media (width <= 850px) {
-  :root{
-    --container-padding: 1em;
+@media (width <=850px) {
+  :root {
+    --container-padding: 0.5em;
     --section-padding: 15vh;
   }
 
   h3,
-  h3 > * {
+  h3>* {
     font-size: 10.7vw;
     font-family: var(--font-orbitron) !important;
     text-transform: uppercase;
   }
 
   h4,
-  h4 > * {
+  h4>* {
     font-size: 7vw;
-    font-family: var(--font-orbitron) !important;
+    font-family: var(--font-orbitron);
     text-transform: uppercase;
   }
 
@@ -165,7 +182,8 @@ small.tiny {
   }
 
   p,
-  span {
+  span,
+  li {
     font-size: min(20px, 4.65vw);
   }
 }

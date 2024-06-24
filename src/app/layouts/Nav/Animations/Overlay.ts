@@ -12,31 +12,12 @@ export function Open(state: any) {
     },
   });
 
-  gsap.to(`.${styles.asterisc} svg rect`, {
-    attr: {
-      fill: "#fff",
-    },
-    duration: 1,
-    delay: 0.2,
-  });
-
-  gsap.to(".spanMenu1", {
+  gsap.to(`.${styles.innerText}`, {
     y: 0,
     ease: "elastic.inOut(1,8)",
     duration: 2,
-  });
-  gsap.to(".spanMenu2", {
-    y: 0,
-    ease: "elastic.inOut(1,8)",
-    duration: 2,
-    delay: 0.1,
-  });
-  gsap.to(".spanMenu3", {
-    y: 0,
-    ease: "elastic.inOut(1,8)",
-    duration: 2,
-    delay: 0.2,
-  });
+    stagger: 0.1
+  })
 }
 
 export function Close(state: any) {
@@ -46,35 +27,16 @@ export function Close(state: any) {
     ease: "power3.inOut",
     duration: 0.5,
     delay: 1,
-
     onComplete: () => {
       state(false);
     },
   });
 
-  gsap.to(`.${styles.asterisc} svg rect`, {
-    attr: {
-      fill: "#00BAF7",
-    },
-    duration: 1,
-    delay: 1,
-  });
-
-  gsap.to(".spanMenu1", {
-    y: "22vw",
+  gsap.to(`.${styles.innerText}`, {
+    y: "100%",
     ease: "elastic.inOut(1,8)",
     duration: 1,
+    stagger: 0.1
   });
-  gsap.to(".spanMenu2", {
-    y: "22vw",
-    ease: "elastic.inOut(1,8)",
-    duration: 1,
-    delay: 0.1,
-  });
-  gsap.to(".spanMenu3", {
-    y: "22vw",
-    ease: "elastic.inOut(1,8)",
-    duration: 1,
-    delay: 0.2,
-  });
+  
 }

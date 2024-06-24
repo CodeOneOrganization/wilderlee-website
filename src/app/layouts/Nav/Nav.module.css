@@ -26,13 +26,17 @@
 }
 
 .menu {
+  /* display: flex; */
+
+  padding-inline: var(--container-padding);
+
+  list-style: none;
+
   z-index: 999;
-  display: flex;
 }
 
 .menu menu {
-  padding-left: calc(var(--container-padding) + 24px);
-  list-style: none;
+
   & li {
     cursor: pointer;
     overflow: hidden;
@@ -42,25 +46,67 @@
     align-items: center;
 
     & span {
-      font-size: 5.59vw;
+      /* font-size: 5.59vw; */
       font-family: var(--font-orbitron);
       display: block;
 
-      transform: translateY(22vw);
+      /* transform: translateY(22vw); */
       line-height: 1.3;
     }
 
-    & svg {
+    /* & svg {
       position: absolute;
       left: 2vw;
       opacity: 0;
       transform: translateX(calc(-1vw - 100%));
-    }
+    } */
   }
 
   & li:not(:first-of-type) {
     margin-top: 1.66vw;
   }
+}
+
+.sitemap {
+  justify-content: space-between;
+
+  font-size: 9.6vw;
+  font-family: var(--font-orbitron);
+}
+
+.innerText {
+  position: relative;
+
+  color: var(--color-overlay-white);
+
+  transform: translateY(100%);
+}
+
+.sitemap:hover .innerText {
+  color: var(--color-white);
+}
+
+.innerText {
+  font: inherit;
+  font-size: 9.6vw;
+  font-family: inherit;
+}
+
+.arrow {
+  display: inline;
+  float: right;
+
+  height: 12px;
+
+  transform: translateX(-100%) scaleX(1);
+  opacity: 0;
+  transition: 200ms var(--animation-bezier-smooth);
+}
+
+
+.sitemap:hover .arrow {
+  transform: translateX(0%) scaleX(-1);
+  opacity: 1;
 }
 
 .overlay {
@@ -76,32 +122,80 @@
   z-index: 9;
 }
 
+.bottom {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  padding-inline: var(--container-padding)
+
+}
+
+.divisor {
+  display: flex;
+  gap: max(2vw, 1em);
+  align-items: center;
+
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.spreadText {
+  width: max-content;
+
+  color: var(--color-blue);
+  text-wrap: nowrap; 
+  font-family: var(--font-orbitron);
+
+}
+
+.justifyCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+
+.line {
+  height: var(--border-size);
+  width: 100%;
+
+  background-color: var(--color-blue);
+}
+
+
+
 
 @media screen and (max-width: 850px) {
-  .nav{
+  .nav {
     top: 3vw;
   }
+
   .menu menu {
     & li {
-  
-      & span {
+
+      /* & span {
         font-size: 12.59vw;
         line-height: 1.5;
-      }
-  
-      & svg {
+      } */
+
+      /* & svg {
         display: none;
-      }
+      } */
     }
   }
+
   .cheeseBurger {
     height: 3.72vmax;
     aspect-ratio: 1 / 1;
-  
+
     cursor: pointer;
-  
+
     z-index: 999;
   }
+
   .logo {
     height: 3.72vmax
   }

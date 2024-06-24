@@ -31,8 +31,8 @@
 }
 
 .top {
-  gap: min(1vw, 16px);
-  margin-bottom: calc(2.2 * min(1vw, 16px));
+  gap: max(1vw, 16px);
+  margin-bottom: calc(1 * max(1vw, 16px));
 }
 
 .image {
@@ -111,6 +111,15 @@
 
   .card:nth-child(1){
     margin-left: var(--container-padding);
+  }
+
+  .image {
+    height: 48px;
+    width: 48px;
+  }
+
+  .arrow {
+    height: 12px;
   }
 
 }

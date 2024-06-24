@@ -1,84 +1,132 @@
 "use client";
 
-import Table from "@/app/layouts/Plans/Table";
-import Card from "./Card";
 import styles from "./Plans.module.css";
-import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect";
-import { useState } from "react";
+
+import Button from "./Button";
 
 export default function Plans() {
-  const [windowWidth, setWindowWidth] = useState<boolean>(false);
-  useIsomorphicEffect(() => {
-    const windowWidth = window.matchMedia("(max-width: 850px)").matches;
-
-    setWindowWidth(windowWidth);
-  }, [windowWidth]);
-
-  const cards = [
-    {
-      title: "Trimestral",
-      For: "Para Alunos Intermediários",
-      oldPrice: "449,99",
-      price: "299,99",
-      division: "3 X R$119,99",
-      time: "Por 3 meses",
-    },
-    {
-      title: "Semestral",
-      For: "Para Atletas",
-      oldPrice: "749,99",
-      price: "599,99",
-      division: "7 X R$99,99",
-      time: "Por 6 meses",
-    },
-    {
-      title: "Anual",
-      For: "Para Atletas de fisiculturismo",
-      oldPrice: "1150,99",
-      price: "999,99",
-      division: "12 X R$99,99",
-      time: "Por 1 ano",
-    },
-  ];
-
-  const tables = [
-    {
-      title: "Trimestral",
-      padding: windowWidth ? "12vw" : "5.9vw",
-    },
-    {
-      title: "Semestral",
-      padding: windowWidth ? "12vw" : "4vw",
-    },
-    {
-      title: "Plano Anual",
-      padding: windowWidth ? "12vw" : "2vw",
-    },
-  ];
-
-  const buttons = [1, 2, 3];
-
   return (
     <section className={`${styles.plans} col`}>
       <div className={`${styles.cards} container row`}>
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            title={card.title}
-            For={card.For}
-            oldPrice={card.oldPrice}
-            price={card.price}
-            division={card.division}
-            time={card.time}
-          />
-        ))}
+        <article className={styles.card}>
+          <div className={styles.linearGradientBorder} />
+          <div className={styles.upper}>
+            <h4 className={styles.titleCard}>Trimestral</h4>
+            <p className="tiny">Para alunos</p>
+
+            <h5 className={styles.oldPrice}>R$449,99</h5>
+            <h3>R$299,99</h3>
+            <h5 className={styles.division}>3 x R$119,99</h5>
+
+            <p className={`${styles.time} small`}>Por 3 mêses</p>
+            <Button title="Entrar em contato" />
+          </div>
+          <ul className={styles.info}>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              Protocolo de treinamento atualizado a cada 45 dias
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+          </ul>
+          <div className={styles.rounded}>
+            <h4>-13%</h4>
+          </div>
+        </article>
+        <article className={styles.card}>
+          <div className={styles.linearGradientBorder} />
+          <div className={styles.upper}>
+            <h4 className={styles.titleCard}>Trimestral</h4>
+            <p className="tiny">Para alunos</p>
+
+            <h5 className={styles.oldPrice}>R$449,99</h5>
+            <h3>R$299,99</h3>
+            <h5 className={styles.division}>3 x R$119,99</h5>
+
+            <p className={`${styles.time} small`}>Por 3 mêses</p>
+            <Button title="Entrar em contato" />
+          </div>
+          <ul className={styles.info}>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              Protocolo de treinamento atualizado a cada 45 dias
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+          </ul>
+
+          <div className={styles.rounded}>
+            <h4>-13%</h4>
+          </div>
+        </article>
+        <article className={styles.card}>
+          <div className={styles.linearGradientBorder} />
+          <div className={styles.upper}>
+            <h4 className={styles.titleCard}>Trimestral</h4>
+            <p className="tiny">Para alunos</p>
+
+            <h5 className={styles.oldPrice}>R$449,99</h5>
+            <h3>R$299,99</h3>
+            <h5 className={styles.division}>3 x R$119,99</h5>
+
+            <p className={`${styles.time} small`}>Por 3 mêses</p>
+            <Button title="Entrar em contato" />
+          </div>
+          <ul className={styles.info}>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              Protocolo de treinamento atualizado a cada 45 dias
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+            <li className={styles.benefit}>
+              <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.7831 2.00001L5.09094 10.7554L1.87004 7.30833" stroke="white" stroke-width="2.5772" stroke-linecap="square" /> </svg>
+              90 dias de acompanhamento no Whatsapp
+            </li>
+          </ul>
+          <div className={styles.rounded}>
+            <h4>-13%</h4>
+          </div>
+        </article>
       </div>
-      <div className={`${styles.tableContainer} row`}>
-        {tables.map((table, index) => (
-          <Table key={index} title={table.title} padding={table.padding} />
-        ))}
-      </div>
-  
-    </section>
+    </section >
   );
 }
