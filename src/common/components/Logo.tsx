@@ -1,5 +1,5 @@
 interface Props extends React.SVGAttributes<SVGSVGElement>{
-  fill: string 
+  fill?: string 
 }
 export default function Logo({fill = "white", ...props}: Props) {
   return (
