@@ -8,9 +8,9 @@ export default function Overlay() {
       <div className={styles.bottom}>
         <div className={styles.divisor}>
           <small className={`${styles.spreadText} tiny`}>Redes Sociais</small>
-          <div className={styles.line} />
+          <hr className={styles.line} />
         </div>
-        <div className={styles.justifyCenter}>
+        <div className={styles.contacts}>
           <p className="tiny">Instagram</p>
           <p className="tiny">Facebook</p>
         </div>

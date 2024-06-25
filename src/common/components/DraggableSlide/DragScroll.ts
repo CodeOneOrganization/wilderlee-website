@@ -1,3 +1,4 @@
+import { get } from "http"
 
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(value, max))
@@ -55,25 +56,39 @@ class DragScroll {
   }
 
   public bindings() {
-  [
-    "events",
-    "calculate",
-    "raf",
-    "handleWheel",
-    "move",
-    "handleTouchStart",
-    "handleTouchEnd",
-    "handleTouchMove"
-  ].forEach((method: string) => {
-    (this[method as keyof this] as Function) = (this[method as keyof this] as Function).bind(this);
-  });
-   }
+    [
+      "events",
+      "calculate",
+      "raf",
+      "handleWheel",
+      "move",
+      "handleTouchStart",
+      "handleTouchEnd",
+      "handleTouchMove"
+    ].forEach((method: string) => {
+      (this[method as keyof this] as Function) = (this[method as keyof this] as Function).bind(this);
+    });
+  }
 
   public calculate() {
+    let marginLeftTotal = 0;
+
+    this.items.forEach(item => {
+      const itemStyles = window.getComputedStyle(item)
+      const marginLeft = itemStyles.getPropertyValue("margin-left")
+        .replace(/[^0-9]/g, '')
+      const marginNumber = Number(marginLeft)
+
+      marginLeftTotal += marginNumber
+    })
+
     this.wrapWidth = this.items[0].clientWidth * this.items.length
     this.progress = 0
     this.wrap.style.width = `${this.wrapWidth}px`
-    this.maxScroll = this.wrapWidth - this.el.clientWidth
+    this.maxScroll = this.wrapWidth + marginLeftTotal - this.el.clientWidth
+
+
+    console.log("Additional amount of marginLeft", marginLeftTotal)
   }
 
   handleWheel(e: WheelEvent) {
@@ -84,29 +99,29 @@ class DragScroll {
   public handleTouchStart(e: MouseEvent | TouchEvent) {
     e.preventDefault()
     this.draggable = true
-    if(e instanceof MouseEvent){
+    if (e instanceof MouseEvent) {
       this.x_0 = e.clientX
-    }else{
-      this.x_0 = e.touches[0].clientX  
+    } else {
+      this.x_0 = e.touches[0].clientX
     }
     // this.x_0 = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
   }
 
   public handleTouchMove(e: TouchEvent | MouseEvent): void {
     if (!this.draggable) return;
-  
+
     let x: number;
     if (e instanceof MouseEvent) {
       x = e.clientX;
     } else {
       x = e.touches[0].clientX;
     }
-  
+
     this.progress += (this.x_0 - x) * 2.5;
     this.x_0 = x;
     this.move();
   }
-  
+
 
   public handleTouchEnd() {
     this.draggable = false

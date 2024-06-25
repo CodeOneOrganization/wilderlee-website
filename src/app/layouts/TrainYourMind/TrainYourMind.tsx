@@ -8,7 +8,7 @@ import Arrow from "@/common/components/Arrow"
 
 export default function TrainYourMind() {
   return (
-    <section className={`${styles.trainYourMind} container`}>
+    <section className={`${styles.trainYourMind} container`} id="introduction">
       <div className={styles.wrapper}>
         <OnView>
           <video muted data-video-content loop className={styles.video} src="videos/SonyVideo.mp4" autoPlay typeof="video/mp4" />
