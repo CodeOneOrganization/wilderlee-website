@@ -17,9 +17,9 @@ export default function CounterUpOnView({ children, target }: Props) {
       ctx.add("onView", () => {
         GSAP.to(_element, {
           innerText: targetValue,
-          duration: 1.2,
+          duration: 1.8,
           snap: {
-            innerText: 1
+            innerText: 5
           }
         })
       })

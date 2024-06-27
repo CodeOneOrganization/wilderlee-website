@@ -90,6 +90,7 @@ section {
 *.blue {
   color: var(--color-blue);
   font-family: inherit;
+  font-size: inherit;
 }
 
 h1,
@@ -139,12 +140,17 @@ span.small {
 }
 
 p.tiny,
-small.tiny {
+small.tiny,
+li.tiny {
   line-height: 1;
   letter-spacing: 0.2em;
   font-family: var(--font-khula);
   text-transform: uppercase;
   font-size: 0.4em;
+}
+
+*::selection {
+  background-color: var(--color-blue);
 }
 
 @media (width <=850px) {

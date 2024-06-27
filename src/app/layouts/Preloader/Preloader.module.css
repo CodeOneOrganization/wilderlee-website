@@ -19,19 +19,21 @@
   top: 50%;
   left: 50%;
 
+  width: 5.1vw;
+
   transform: translate(-50%, -50%);
 }
 
 .job {
   position: absolute;
-  top: calc(50% - 196px / 2 - 1vw);
+  top: calc(50% - 5.1vw / 2 - 1.14vh);
   left: 50%;
 
   color: var(--color-black);
   font-family: var(--font-orbitron);
   text-transform: uppercase;
   line-height: 0.9;
-  font-size: 16.44px;
+  font-size: 0.428vw;
 
   transform: translate(-50%, -50%);
 }

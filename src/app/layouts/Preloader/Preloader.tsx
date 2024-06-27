@@ -18,6 +18,7 @@ export default function Preloader() {
 
     SplitType.create(_heroElement, { types: "chars" })
     const _ctx = GSAP.context(() => {
+      document.documentElement.style.cursor = "wait"
       const timeline = GSAP.timeline()
 
       timeline.set(`.${styles.preloader}`, {
@@ -62,15 +63,11 @@ export default function Preloader() {
         y: 0,
         ease: "elastic.inOut(1,8)",
         duration: 2,
-      }, "-=1.5")
-      timeline.to(`.${navStyles.nav} .fadeIn`, {
-        stagger: 0.4,
-        duration: 0.4,
-        opacity: 1,
         onComplete: () => {
+          document.documentElement.style.cursor = "default"
           lenis?.current.start()
         }
-      }, "-=0.750")
+      }, "-=1.5")
     })
 
     return () => _ctx.revert()

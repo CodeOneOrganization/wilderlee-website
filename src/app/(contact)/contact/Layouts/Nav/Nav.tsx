@@ -21,6 +21,7 @@ export default function Nav() {
   const backToHome = () => pageTransitionIn("/")
 
   function pageTransitionIn(route: string) {
+    document.documentElement.style.cursor = "wait"
     timeline.current.set(`.${_preloaderStyles.preloader}`, {
       visibility: "visible",
       height: "0dvh"

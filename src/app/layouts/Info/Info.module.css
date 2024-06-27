@@ -6,6 +6,7 @@
     right: 0;
 
     display: inline-flex;
+    flex-direction: column;
     vertical-align: top;
     float: right;
 
@@ -13,12 +14,15 @@
 
 .innerImage {
     display: inline-block;
-    margin-left: -12px;
-
+    
     height: 48px;
     aspect-ratio: 1 / 1;
-
+    
     border-radius: 50%;
+}
+
+.innerImage:not(:nth-child(1)) {
+    margin-top: -24px;
 }
 
 
@@ -74,9 +78,17 @@
 
     .users {
         top: 36px;
+
+        flex-direction: row;
     }
 
+    
     .innerImage {
         height: 36px;
+    }
+    
+    .innerImage:not(:nth-child(1)){
+        margin-top: 0;
+        margin-left: -12px;
     }
 }

@@ -38,9 +38,9 @@
   position: relative;
 
   padding-top: var(--section-padding);
-  width: max-content;
+  width: 100%;
 
-  font-size: 6.87vw;
+  font-size: 6.96vw;
   font-family: var(--font-orbitron);
   font-style: normal;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 }
 
 .call .inherit {
-  font-size: 6.87vw;
+  font-size: 6.96vw;
   font-style: normal;
   text-align: justify;
 }

@@ -120,6 +120,12 @@
     /* font-size: 0.80vw; */
 }
 
+.socialMedias {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+}
+
 @media (width <=480px) {
     .footer {
         flex-direction: column;

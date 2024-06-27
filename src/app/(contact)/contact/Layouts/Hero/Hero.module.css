@@ -1,4 +1,39 @@
+.contact {
+    display: flex;
+    flex-direction: row;
+
+    padding-inline: calc(3.418 * var(--container-padding));
+}
+.contentToLeft {
+    display: inline-block;
+    max-width: 550px;
+}
+
+.contentToRight {
+    display: inline;
+    float: right;
+
+    padding-left: max(4vw, 2em);
+    max-width: 550px;
+}
+
+.contentToRight .ornament{
+    margin-top: 0;
+}
+
+.socialMedias {
+    gap: 48px;
+
+    margin-top: max(2vw, 1em);
+
+    list-style: none;
+    list-style-type: none;
+}
+
 .paragraph{
+    width: max-content;
+
+    white-space: nowrap;
     font-family: var(--font-orbitron) !important;
     text-transform: uppercase;
 }
@@ -11,26 +46,27 @@
 }
 .line{
     /* display: inline; */
-    width: 65vw;
-    height: 0.2vw;
+    width: 100%;
+    height: var(--border-size);
     background-color: var(--color-blue);
 }
 
 .input{
-    width:  43.33vw;
+    /* width:  43.33vw; */
+    width: 100%;
     height: 1.87vw;
-    border-radius: 0.15vw;
-    background-color: var(--color-gray);
+    padding-left: 1em;
+    padding-block: 1.5em;
+    
+    color: var(--color-white);
     font-family: var(--font-orbitron) !important;
     text-transform: uppercase;
-
+    font-size: 0.4em;
+    
+    border-radius: var(--border-size);
+    background-color: var(--color-gray);
     outline: none;
     border: 0.1vw solid var(--color-blue);
-
-    color: var(--color-white);
-    padding-left: 1vw;
-
-    font-size: 0.84vw;
 }
 .form_wrapper{
     margin-top:  3.38vw;
@@ -40,9 +76,9 @@
     margin-top: 2.80vw;
 }
 .textArea{
-    width:  43.33vw;
-
-    height: 11.14vw;
+    /* width:  43.33vw; */
+    width: 100%;
+    min-height: 19.82vh;
 
     background-color: var(--color-gray);
     color: var(--color-white);
@@ -84,21 +120,19 @@
 }
 
 @media screen and (max-width: 850px) {
+    .title {
+        font-size: 10.7vw;
+    }
+
     .ornament{
         gap: 0vw;
         margin-top: 5vw;
     }
-    .line{
-        display: none;
-    }
 
     .input{
-        width:  80vw;
-        height: 8.87vw;
         border-radius: 0.5vw;
         padding-left: 2vw;
     
-        font-size: 2vw;
     }
 
     .form_wrapper{
@@ -111,8 +145,8 @@
     }
 
     .textArea{
-        width:  80vw;
-        height: 31.14vw;
+        /* width:  80vw; */
+        /* height: 31.14vw; */
         font-size: 2vw;
         padding: 2vw;
     

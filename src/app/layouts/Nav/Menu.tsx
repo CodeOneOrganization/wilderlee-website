@@ -22,7 +22,9 @@ export default function Menu() {
   }
   const goToAboutMe = () => {
     lenis?.current.scrollTo("#introduction", {
-      duration: 1
+      duration: 1,
+      onComplete: () => {
+      }
     })
   }
 

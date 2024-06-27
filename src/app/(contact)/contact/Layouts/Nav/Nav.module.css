@@ -9,10 +9,12 @@
 }
 
 .backHome{
-    cursor: pointer;
-    background-color: transparent;
+    display: inline-flex;
 
-    transform: rotate(180deg);
+    background-color: transparent;
+    
+    cursor: pointer;
+    transform: rotate(180deg) scale(0.8);
 }
 
 .logo{

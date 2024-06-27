@@ -1,4 +1,3 @@
-import { get } from "http"
 
 function clamp(value: number, min: number, max: number) {
   return Math.max(min, Math.min(value, max))
@@ -86,9 +85,6 @@ class DragScroll {
     this.progress = 0
     this.wrap.style.width = `${this.wrapWidth}px`
     this.maxScroll = this.wrapWidth + marginLeftTotal - this.el.clientWidth
-
-
-    console.log("Additional amount of marginLeft", marginLeftTotal)
   }
 
   handleWheel(e: WheelEvent) {
