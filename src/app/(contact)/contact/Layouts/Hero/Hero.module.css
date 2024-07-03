@@ -120,6 +120,9 @@
 }
 
 @media screen and (max-width: 850px) {
+    .contact{
+        padding-inline: 0;
+    }
     .title {
         font-size: 10.7vw;
     }
@@ -132,7 +135,8 @@
     .input{
         border-radius: 0.5vw;
         padding-left: 2vw;
-    
+        
+        letter-spacing: 0.5vw;
     }
 
     .form_wrapper{
@@ -149,7 +153,8 @@
         /* height: 31.14vw; */
         font-size: 2vw;
         padding: 2vw;
-    
+        letter-spacing: 0.5vw;
+        
     }
     
     .submit{
@@ -166,6 +171,8 @@
     
         margin-top: 0.51vw;
         float: right;
+
+        margin-top: 4vw;
     }
     .submit_div{
         width: 80vw;

@@ -2,6 +2,11 @@ import Menu from "@/app/layouts/Nav/Menu";
 import styles from "./Nav.module.css";
 
 export default function Overlay() {
+
+  const goToWhats = () =>{
+    window.open(`${process.env.NEXT_PUBLIC_CONTACT}Olá, eu gostaria de saber sobre os planos`)
+  }
+
   return (
     <div className={`${styles.overlay} col`}>
       <Menu />
@@ -11,8 +16,8 @@ export default function Overlay() {
           <hr className={styles.line} />
         </div>
         <div className={styles.contacts}>
-          <p className="tiny">Instagram</p>
-          <p className="tiny">Facebook</p>
+          <a href="https://www.instagram.com/wilderlee.personal/" target="_blank" className="tiny">Instagram</a>
+          <a href={`${process.env.NEXT_PUBLIC_CONTACT}Olá, eu gostaria de saber mais sobre as consultorias`} target="_blank" className="tiny">whatsapp</a>
         </div>
       </div>
     </div>

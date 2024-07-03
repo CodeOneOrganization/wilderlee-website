@@ -1,4 +1,6 @@
-.info {}
+.info {
+    overflow-x: hidden;
+}
 
 .users  {
     position: absolute;
@@ -57,6 +59,11 @@
 
 
 @media (width <=850px) {
+    .paragraph{
+        margin-top: 5.69vw;
+
+        text-wrap: wrap;
+    }
     .cards {
         flex-direction: column;
         gap: max(100px, 10vh);

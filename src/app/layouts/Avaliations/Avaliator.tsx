@@ -6,9 +6,15 @@ interface Props {
   name: string,
   socialMedia: string,
   imageUrl: string,
-  content: string
+  content: string,
+  gender: string
 }
-export default function Avaliator({ name, socialMedia, imageUrl, content }: Props) {
+export default function Avaliator({ name, socialMedia, imageUrl, content, gender }: Props) {
+  
+  const goToWhats = () =>{
+    window.open(`${process.env.NEXT_PUBLIC_CONTACT}Olá, eu gostaria de saber mais sobre as consultorias`)
+  }
+
   return (
     <article className={styles.card} data-slide-item>
       <div className={styles.linearGradientBorder} />
@@ -21,7 +27,7 @@ export default function Avaliator({ name, socialMedia, imageUrl, content }: Prop
       </div>
       <p className={styles.opinion}>{content}</p>
       <div className={styles.bottom}>
-        <button className={styles.call}>Mude Como Elas</button>
+        <button className={styles.call} onClick={goToWhats}>Mude Como {gender}</button>
         <Arrow className={styles.arrow} />
       </div>
     </article>

@@ -1,0 +1,13 @@
+.call{
+  opacity: 0;
+  position: fixed;
+  right: 5.20vw;
+  bottom: 2vw;
+
+  z-index: 997;
+}
+
+.callImage{
+  width: 5vw;
+  height: 5vw;
+}

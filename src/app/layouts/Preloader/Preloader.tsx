@@ -6,7 +6,7 @@ import useIsomorphicEffect from "@/common/hooks/useIsomorphicEffect"
 
 import styles from "./Preloader.module.css"
 import heroStyles from "@/app/layouts/Hero/Hero.module.css"
-import navStyles from "@/app/layouts/Nav/Nav.module.css"
+import whatsappStyles from "@/app/layouts/WhatsAppBtn/WhatsAppBtn.module.css"
 import useLenisScroll from "@/common/hooks/useLenisScroll"
 import SplitType from "split-type"
 
@@ -68,7 +68,13 @@ export default function Preloader() {
           lenis?.current.start()
         }
       }, "-=1.5")
+
+      timeline.to(`.${whatsappStyles.call}`,{
+        opacity: 1,
+        duration: 1
+      })
     })
+    
 
     return () => _ctx.revert()
   }, [])

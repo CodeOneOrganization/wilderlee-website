@@ -78,7 +78,7 @@ class DragScroll {
         .replace(/[^0-9]/g, '')
       const marginNumber = Number(marginLeft)
 
-      marginLeftTotal += marginNumber
+      marginLeftTotal += marginNumber + 10
     })
 
     this.wrapWidth = this.items[0].clientWidth * this.items.length

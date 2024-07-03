@@ -1,4 +1,7 @@
-.trainYourMind {}
+.trainYourMind {
+  overflow-x: hidden;
+
+}
 
 
 .wrapper {
