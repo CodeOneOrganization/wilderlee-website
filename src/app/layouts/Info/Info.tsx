@@ -35,7 +35,7 @@ export default function Info() {
             <br />
           </h3>
           <p className={`${styles.paragraph} small`} >
-            Sou Wilderlee, um personal trainer certificado <br /> com anos deexperiência ajudando pessoas a <br /> transformarem seus corpos e vidas. Minha <br />abordagem
+          Ao longo da minha carreira, consegui <br /> transformar a vida de todos os alunos que eu <br />consultei, mudando tanto a mentalidade quanto <br />a autoestima, o físico e a saúde.
           </p>
         </article>
         <article className={styles.card}>
@@ -46,7 +46,7 @@ export default function Info() {
             Nacional
           </h3>
           <p className={`${styles.paragraph} small`} >
-            Sou Wilderlee, um personal trainer certificado <br /> com anos deexperiência ajudando pessoas a <br /> transformarem seus corpos e vidas. Minha <br />abordagem
+          Referência nacional na área, com conhecimento <br /> e resultados comprovados, posso ajudar a <br /> transformar sua saúde mental, física e <br /> emocional. 
           </p>
         </article>
 

@@ -20,6 +20,9 @@ export default function Footer() {
   const goToAbout = () => lenis?.current.scrollTo("#introduction")
   const goToPlans = () => lenis?.current.scrollTo("#plans")
 
+  const goToInstagram = () => {
+    window.open("https://www.instagram.com/wilderlee.personal/")
+  }
 
   function pageTransitionIn({ onComplete }: { onComplete: () => void }) {
     timeline.current.set(`.${_preloaderStyles.preloader}`, {
@@ -65,11 +68,8 @@ export default function Footer() {
               named@gmail.com
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
-            <li className={styles.item}>
-              +55 81 00000-0000
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
-            </li>
-            <li className={`${styles.item} small`}>
+            
+            <li className={`${styles.item} small`} onClick={goToInstagram}>
               @wilderlee.personal
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
@@ -82,25 +82,26 @@ export default function Footer() {
               Contato
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
-            {/* <li className={styles.item}>
-              Suporte e Ajuda
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
-            </li> */}
+            
             <li className={styles.item} onClick={goToPlans}>
               Planos
+              <Arrow className={styles.arrow} fill="var(--color-black)" />
+            </li>
+           
+            <li className={styles.item} onClick={goToAbout}>
+              Sobre
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
           </ul>
         </article>
         <article className={styles.road}>
-          <button onClick={goToContact} className={styles.button_call}>Entrar em Contato</button>
+          <button onClick={goToContact} className={styles.button_call}>Fale diretamente comigo</button>
           <Logo className={styles.logo} fill="var(--color-blue, #fff)" />
         </article>
       </div>
       <div className={styles.bottom}>
         <div className={styles.socialMedias}>
-          <p className="tiny">Instagram</p>
-          <p className="tiny">Whatsapp</p>
+          <p className="tiny" onClick={goToInstagram}>Instagram</p>
           <p className="tiny">Facebook</p>
         </div>
         <p className="tiny">Website by Synergy Code</p>
