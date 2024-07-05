@@ -103,7 +103,7 @@ export default function Footer() {
           <p className="tiny">Whatsapp</p>
           <p className="tiny">Facebook</p>
         </div>
-        <p className="tiny">Website by Synergy Code</p>
+        <p className="tiny">Site criado pela SynergyCode</p>
       </div>
     </footer>
   );
