@@ -6,7 +6,7 @@
     justify-content: space-between;
 
     width: 100vw;
-    height: 27.96vw;
+    /* height: 27.96vw; */
     padding-block: calc(36px + max(4vw, 2em)) calc(0.5 * max(4vw, 2em));
 
     color: var(--color-black);
@@ -62,6 +62,10 @@
     /* fill: var(--color-black); */
 }
 
+.arrow path {
+    stroke: var(--color-black);
+}
+
 .item .arrow {
     transform: translateX(-100%) scaleX(1);
     opacity: 0;
@@ -112,6 +116,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    padding-top: var(--gap-big-padding);
 
     text-transform: uppercase;
     font-size: 1.4em;

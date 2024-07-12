@@ -1,8 +1,6 @@
 .nav{
-    position: fixed;
-    top: 2.9vw;
-    left: 0;
     width: 100vw;
+    padding-top: 2.9vw;
     justify-content: space-between;
     
     z-index: 99;
@@ -21,7 +19,14 @@
     height: 2.7vmax;
 }
 
+.logo path {
+    stroke: var(--color-white);
+}
+
 .arrow {
     height: 2.72vmax;
 }
 
+.arrow path {
+    stroke: var(--color-white);
+}

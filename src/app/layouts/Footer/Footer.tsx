@@ -22,7 +22,6 @@ export default function Footer() {
 
   const goToAbout = () => lenis?.current.scrollTo("#introduction")
   const goToPlans = () => lenis?.current.scrollTo("#plans")
-
   const goToInstagram = () => {
     window.open("https://www.instagram.com/wilderlee.personal/")
   }

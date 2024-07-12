@@ -13,15 +13,20 @@
 }
 
 .logo {
-  height: 2.72vmax
+  height: 1.5em;
 }
 
 .cheeseBurger {
-  height: 2.72vmax;
+  height: 1.5em;
   aspect-ratio: 1 / 1;
+
+  box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0);
 
   cursor: pointer;
 
+  transition:
+    box-shadow 200ms var(--animation-bezier-smooth),
+    background 200ms var(--animation-bezier-smooth);
   z-index: 999;
 }
 
@@ -36,7 +41,7 @@
   z-index: 999;
 }
 
-.divisor  {
+.divisor {
   display: flex;
   flex-direction: row;
 
@@ -51,7 +56,7 @@
   max-width: calc(var(--container-padding) + 550px);
 } */
 
-.top.divisor{
+.top.divisor {
   position: absolute;
   top: 0;
 
@@ -99,7 +104,7 @@
   position: relative;
 
   color: var(--color-overlay-white);
-  
+
   transform: translateY(100%);
 }
 
@@ -127,6 +132,10 @@
   transform: translateX(-100%) scaleX(1);
   opacity: 0;
   transition: 200ms var(--animation-bezier-smooth);
+}
+
+.arrow path {
+  stroke: var(--color-white);
 }
 
 
@@ -173,7 +182,7 @@
   width: max-content;
 
   color: var(--color-blue);
-  text-wrap: nowrap; 
+  text-wrap: nowrap;
   font-family: var(--font-orbitron) !important;
 
 }
@@ -213,7 +222,8 @@
     padding-right: var(--container-padding);
   }
 
-  .top, .bottom {
+  .top,
+  .bottom {
     width: 100%;
     padding-right: var(--container-padding);
   }

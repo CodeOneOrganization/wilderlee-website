@@ -1,4 +1,5 @@
 import gsap from "gsap";
+
 import styles from "../Nav.module.css";
 
 export function Open(state: any) {

@@ -11,13 +11,13 @@ export default function Arrow({fill = "var(--color-white)", ...props}: Props) {
     >
       <path
         d="M23.75 7L36.5 19L23.75 31"
-        stroke={fill}
+        // stroke={fill}
         strokeWidth="9.5325"
         strokeLinecap="square"
       />
       <path
         d="M5 19L33.125 19"
-        stroke={fill}
+        // stroke={fill}
         strokeWidth="9.5325"
         strokeLinecap="square"
       />

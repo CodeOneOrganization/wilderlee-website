@@ -1,13 +1,28 @@
 .contact {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: row;
 
     padding-inline: calc(3.418 * var(--container-padding));
-    padding-bottom: 10vh;
+    padding-bottom: var(--gap-big-padding);
 }
+
+.top {
+    display: flex;
+
+    grid-column: 1 / -1;
+
+}
+
+.contentToLeft,
+.contentToRight {
+    padding-top: 3vw;
+}
+
 .contentToLeft {
     display: inline-block;
     max-width: 550px;
+
 }
 
 .contentToRight {
@@ -18,17 +33,72 @@
     max-width: 550px;
 }
 
-.contentToRight .ornament{
-    margin-top: 0;
+.personalTrainer {
+    display: inline-block;
+    vertical-align: bottom;
+
+    margin-left: var(--gap-big-padding);
+    height: 96px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+    mix-blend-mode: lighten;
 }
 
-.socialMedias {
-    gap: 48px;
+.logo {
+    display: inline-block;
+    vertical-align: bottom;
+    float: right;
+
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.contentToRight .ornament:not(:first-child){
+    margin-top: var(--gap-big-padding);
+}
+
+
+.list {
+    gap: 16px;
 
     margin-top: max(2vw, 1em);
 
     list-style: none;
     list-style-type: none;
+}
+
+.index {
+    cursor: pointer;
+}
+
+.arrow {
+    height: 12px;
+    width: 12px;
+    float: right;
+    vertical-align: middle;
+
+    
+}
+
+.arrow path {
+    stroke: var(--color-white);
+}
+
+.index .arrow {
+    transform: translateX(-100%) scale(1);
+    opacity: 0;
+
+    transition: 200ms var(--animation-bezier-smooth);
+}
+
+.index:hover .arrow {
+    transform: translateX(0%) scaleX(-1);
+    opacity: 1;
 }
 
 .paragraph{
@@ -43,80 +113,97 @@
 
     align-items: center;
     gap: 1vw;
-    margin-top: 3vw;
 }
 .line{
-    /* display: inline; */
     width: 100%;
     height: var(--border-size);
     background-color: var(--color-blue);
 }
 
 .input{
-    /* width:  43.33vw; */
     width: 100%;
-    height: 1.87vw;
+    height: 3em;
     padding-left: 1em;
-    padding-block: 1.5em;
+    /* padding-block: 1.5em; */
     
     color: var(--color-white);
-    font-family: var(--font-orbitron) !important;
+    /* font-family: var(--font-orbitron) !important; */
     text-transform: uppercase;
-    font-size: 0.4em;
+    font-size: 16px;
+    font-family: var(--font-khula);
+    text-transform: none;
     
     border-radius: var(--border-size);
     background-color: var(--color-gray);
     outline: none;
+
+    transition: border 200ms var(--animation-bezier-smooth);
+}
+
+.input:active,
+.input:focus {
     border: 0.1vw solid var(--color-blue);
 }
+
 .form_wrapper{
     margin-top:  3.38vw;
     gap: 1.77vw;
 }
+
 .textArea_div{
     margin-top: 2.80vw;
 }
+
 .textArea{
-    /* width:  43.33vw; */
     width: 100%;
+    padding: 1vw;
     min-height: 19.82vh;
 
-    background-color: var(--color-gray);
     color: var(--color-white);
-    font-family: var(--font-orbitron) !important;
-    border: 0.1vw solid var(--color-blue);
+    font-family: var(--font-khula);
+    text-transform: none;
+    font-size: 16px;
+    
+    background-color: var(--color-gray);
 
-    text-transform: uppercase;
-
-    font-size: 0.84vw;
-
-    padding: 1vw;
-
+    transition: border 200ms var(--animation-bezier-smooth);
+    
     resize: none;
-
+    
 }
+
+.textArea:active,
+.textArea:focus {
+    border: 0.1vw solid var(--color-blue);
+}
+
 .submit_div{
     width: 43.33vw;
 }
-.submit{
-    cursor: pointer;
-    width: 10.83vw;
-    height: 2.65vw;
 
+.submit{
+    margin-top: 1.51vw;
+    float: right;
+    width: 322px;
+    height: 2.65vw;
+    
     font-family: var(--font-orbitron) !important;
     font-size: 0.84vw;
     color: var(--color-white);
     letter-spacing: 10%;
     text-transform: uppercase;
-
+    
     background-color: var(--color-blue);
-
-    margin-top: 1.51vw;
-    float: right;
+    border-radius: var(--border-size);
+    
+    cursor: pointer;
 }
+
 .label{
+    margin-bottom: var(--gap-padding);
+
     font-family: var(--font-khula) !important;
-    font-size: 0.72vw;
+    font-size: 0.8em;
     font-weight: 300;
     line-height: 100%;
 }
@@ -125,6 +212,7 @@
     .contact{
         padding-inline: 5vw;
     }
+
     .title {
         font-size: 10.7vw;
     }
@@ -176,6 +264,7 @@
 
         margin-top: 4vw;
     }
+
     .submit_div{
         width: 80vw;
     }
