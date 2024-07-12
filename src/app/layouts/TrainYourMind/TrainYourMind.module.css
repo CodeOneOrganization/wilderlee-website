@@ -1,8 +1,6 @@
 .trainYourMind {
   overflow-x: hidden;
-
 }
-
 
 .wrapper {
   position: relative;
@@ -39,7 +37,7 @@
 
 .call {
   position: relative;
-  padding-top: var(--section-padding);
+  margin-top: var(--section-padding);
   width: 100%;
 
   font-size: 5.96vw;
@@ -49,13 +47,22 @@
   line-height: 0.9;
   text-align: justify;
 
+  box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0);
+  transition: box-shadow 200ms var(--animation-bezier-smooth);
+  clip-path: inset(4px -100vmax 0 -100vmax);
+
   cursor: pointer;
 }
 
-.call .inherit {
-  font-size: 6.96vw;
-  font-style: normal;
-  text-align: justify;
+.call:hover {
+  box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0.5);
+}
+
+
+.call:hover .inherit {
+  color: var(--color-blue);
+
+  transition: 200ms var(--animation-bezier-smooth);
 }
 
 .arrow {
@@ -66,6 +73,16 @@
   height: calc(0.875 * 6.85vw);
 
   transform: rotate(-45deg);
+}
+
+.arrow path {
+  stroke: var(--color-white);
+
+  transition: 200ms var(--animation-bezier-smooth);
+}
+
+.call:hover .arrow path {
+  stroke: var(--color-blue);
 }
 
 @media (width <= 850px){

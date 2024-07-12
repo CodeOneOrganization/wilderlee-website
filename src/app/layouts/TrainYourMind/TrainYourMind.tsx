@@ -3,9 +3,10 @@
 import styles from "./TrainYourMind.module.css"
 
 import PlayIcon from "@/common/components/Play"
-import OnView from "./OnView"
 import Arrow from "@/common/components/Arrow"
 import useLenisScroll from "@/common/hooks/useLenisScroll";
+
+import OnView from "./OnView"
 
 
 export default function TrainYourMind() {
@@ -19,7 +20,15 @@ export default function TrainYourMind() {
     <section className={`${styles.trainYourMind} container`} id="introduction">
       <div className={styles.wrapper}>
         <OnView>
-          <video muted data-video-content loop className={styles.video} src="videos/SonyVideo.mp4" autoPlay typeof="video/mp4" />
+          <video
+            muted
+            data-video-content
+            loop
+            className={styles.video}
+            src="videos/SonyVideo.mp4"
+            autoPlay
+            typeof="video/mp4"
+          />
           <PlayIcon className={styles.play} />
         </OnView>
       </div>

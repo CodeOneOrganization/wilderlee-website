@@ -1,12 +1,28 @@
 .contact {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     flex-direction: row;
 
     padding-inline: calc(3.418 * var(--container-padding));
+    padding-bottom: var(--gap-big-padding);
 }
+
+.top {
+    display: flex;
+
+    grid-column: 1 / -1;
+
+}
+
+.contentToLeft,
+.contentToRight {
+    padding-top: 3vw;
+}
+
 .contentToLeft {
     display: inline-block;
     max-width: 550px;
+
 }
 
 .contentToRight {
@@ -17,17 +33,47 @@
     max-width: 550px;
 }
 
-.contentToRight .ornament{
-    margin-top: 0;
+.personalTrainer {
+    display: inline-block;
+    vertical-align: bottom;
+
+    margin-left: var(--gap-big-padding);
+    height: 96px;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: center;
+
+    mix-blend-mode: lighten;
 }
 
-.socialMedias {
-    gap: 48px;
+.logo {
+    display: inline-block;
+    vertical-align: bottom;
+    float: right;
+
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.contentToRight .ornament:not(:first-child){
+    margin-top: var(--gap-big-padding);
+}
+
+
+.list {
+    gap: 16px;
 
     margin-top: max(2vw, 1em);
 
     list-style: none;
     list-style-type: none;
+}
+
+.index {
+    cursor: pointer;
 }
 
 .paragraph{
@@ -42,17 +88,14 @@
 
     align-items: center;
     gap: 1vw;
-    margin-top: 3vw;
 }
 .line{
-    /* display: inline; */
     width: 100%;
     height: var(--border-size);
     background-color: var(--color-blue);
 }
 
 .input{
-    /* width:  43.33vw; */
     width: 100%;
     height: 1.87vw;
     padding-left: 1em;
@@ -68,13 +111,16 @@
     outline: none;
     border: 0.1vw solid var(--color-blue);
 }
+
 .form_wrapper{
     margin-top:  3.38vw;
     gap: 1.77vw;
 }
+
 .textArea_div{
     margin-top: 2.80vw;
 }
+
 .textArea{
     /* width:  43.33vw; */
     width: 100%;
@@ -94,9 +140,11 @@
     resize: none;
 
 }
+
 .submit_div{
     width: 43.33vw;
 }
+
 .submit{
     cursor: pointer;
     width: 10.83vw;
@@ -112,9 +160,12 @@
     margin-top: 1.51vw;
     float: right;
 }
+
 .label{
+    margin-bottom: var(--gap-padding);
+
     font-family: var(--font-khula) !important;
-    font-size: 0.72vw;
+    font-size: 0.8em;
     font-weight: 300;
     line-height: 100%;
 }
@@ -123,6 +174,7 @@
     .contact{
         padding-inline: 5vw;
     }
+
     .title {
         font-size: 10.7vw;
     }
@@ -174,6 +226,7 @@
 
         margin-top: 4vw;
     }
+
     .submit_div{
         width: 80vw;
     }

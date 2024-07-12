@@ -52,9 +52,9 @@ export default function Card({
       <ul className={styles.info}>
         {benefits.map((x, index) => <Benefit key={`Benefit_${title}_${index}`} {...x} />)}
       </ul>
-      <div className={styles.rounded}>
+      {/* <div className={styles.rounded}>
         <h4>{discount}%</h4>
-      </div>
+      </div> */}
     </article>
 
   );
