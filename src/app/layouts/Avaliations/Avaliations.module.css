@@ -1,6 +1,7 @@
 .avaliations {
+  overflow-x: hidden;
   gap: calc(4 * min(1vw, 1em));
-
+  
   /* max-width: calc(100vw - var(--container-padding)); */
   padding-right: 0;
 
@@ -9,6 +10,8 @@
   overflow: hidden;
   
   cursor: grab;
+
+
 }
 
 @media(480px <= width <= 969px) {

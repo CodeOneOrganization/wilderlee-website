@@ -6,17 +6,19 @@ import Avaliations from "@/app/layouts/Avaliations";
 import MyClients from "@/app/layouts/MyClients/MyClients";
 import Plans from "@/app/layouts/Plans";
 import Info from "@/app/layouts/Info";
+import WhatsAppBtn from "@/app/layouts/WhatsAppBtn/WhatsAppBtn";
 
 
 export default function Home() {
   return (
     <>
+    <WhatsAppBtn/>
       <Nav/>
       <Hero/>
       <TrainYourMind />
       <Avaliations />
       <Info/>
-      <MyClients />
+      {/* <MyClients /> */}
       <Plans/>
       <Footer/>
     </>

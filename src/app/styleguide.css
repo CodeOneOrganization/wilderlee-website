@@ -60,6 +60,7 @@ body {
 section {
   position: relative;
   padding-top: var(--section-padding);
+  overflow-x: hidden;
 }
 
 .container {
@@ -91,6 +92,15 @@ section {
   color: var(--color-blue);
   font-family: inherit;
   font-size: inherit;
+}
+
+button{
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 h1,
@@ -139,6 +149,7 @@ span.small {
   font-size: calc(max(20px, 1.25vw) / 1.2);
 }
 
+a.tiny,
 p.tiny,
 small.tiny,
 li.tiny {
@@ -155,7 +166,7 @@ li.tiny {
 
 @media (width <=850px) {
   :root {
-    --container-padding: 0.5em;
+    --container-padding: 1em;
     --section-padding: 15vh;
   }
 

@@ -47,14 +47,14 @@ export default function Card({
         <h5 className={styles.division}>{price.installment.amount} x R${convertPointToComma(price.installment.value)}</h5>
 
         <p className={`${styles.time} small`}>Por {time.value} {time.measure}</p>
-        <Button title="Entrar em contato" />
+        <Button title="Entrar em contato" plan={title}/>
       </div>
       <ul className={styles.info}>
         {benefits.map((x, index) => <Benefit key={`Benefit_${title}_${index}`} {...x} />)}
       </ul>
-      <div className={styles.rounded}>
+      {/* <div className={styles.rounded}>
         <h4>{discount}%</h4>
-      </div>
+      </div> */}
     </article>
 
   );

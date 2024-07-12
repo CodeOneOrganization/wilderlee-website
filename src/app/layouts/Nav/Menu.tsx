@@ -23,8 +23,11 @@ export default function Menu() {
   const goToAboutMe = () => {
     lenis?.current.scrollTo("#introduction", {
       duration: 1,
-      onComplete: () => {
-      }
+    })
+  }
+  const goToPlans= () => {
+    lenis?.current.scrollTo("#plans", {
+      duration: 1,
     })
   }
 
@@ -80,7 +83,7 @@ export default function Menu() {
           <h6 className={`${styles.innerText} ${styles.link}`}>Sobre</h6>
           <Arrow className={styles.arrow} />
         </li>
-        <li className={styles.sitemap} >
+        <li className={styles.sitemap} onClick={goToPlans}>
           <span className={`${styles.innerText} ${styles.link}`}>Planos</span>
           <Arrow className={styles.arrow} />
         </li>

@@ -3,6 +3,7 @@
     flex-direction: row;
 
     padding-inline: calc(3.418 * var(--container-padding));
+    padding-bottom: 10vh;
 }
 .contentToLeft {
     display: inline-block;
@@ -104,6 +105,7 @@
 
     font-family: var(--font-orbitron) !important;
     font-size: 0.84vw;
+    color: var(--color-white);
     letter-spacing: 10%;
     text-transform: uppercase;
 
@@ -120,6 +122,9 @@
 }
 
 @media screen and (max-width: 850px) {
+    .contact{
+        padding-inline: 5vw;
+    }
     .title {
         font-size: 10.7vw;
     }
@@ -132,7 +137,8 @@
     .input{
         border-radius: 0.5vw;
         padding-left: 2vw;
-    
+        
+        letter-spacing: 0.5vw;
     }
 
     .form_wrapper{
@@ -149,7 +155,8 @@
         /* height: 31.14vw; */
         font-size: 2vw;
         padding: 2vw;
-    
+        letter-spacing: 0.5vw;
+        
     }
     
     .submit{
@@ -166,6 +173,8 @@
     
         margin-top: 0.51vw;
         float: right;
+
+        margin-top: 4vw;
     }
     .submit_div{
         width: 80vw;

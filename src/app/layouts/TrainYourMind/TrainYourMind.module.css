@@ -1,4 +1,7 @@
-.trainYourMind {}
+.trainYourMind {
+  overflow-x: hidden;
+
+}
 
 
 .wrapper {
@@ -36,11 +39,10 @@
 
 .call {
   position: relative;
-
   padding-top: var(--section-padding);
   width: 100%;
 
-  font-size: 6.96vw;
+  font-size: 5.96vw;
   font-family: var(--font-orbitron);
   font-style: normal;
   text-transform: uppercase;

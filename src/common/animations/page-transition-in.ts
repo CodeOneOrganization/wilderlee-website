@@ -1,7 +1,7 @@
-import { MutableRefObject } from "react";
+// import { MutableRefObject } from "react";
 
-import GSAP from ".d"
+// import GSAP from ".d"
 
-function pageTransitionIn(timeline: MutableRefObject<GSAP.>) {
-  timeline.current.set()
-}
+// function pageTransitionIn(timeline: MutableRefObject<GSAP.>) {
+//   timeline.current.set()
+// }

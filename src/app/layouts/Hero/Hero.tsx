@@ -6,7 +6,7 @@ export default function NewHero() {
   return (
     <section className={`${styles.hero} fullHeight`}>
       <div className={styles.overlay}/>
-      <video className={styles.video} autoPlay loop muted src="/videos/WilderleeVideo.mp4" />
+      <video className={styles.video} autoPlay loop muted src="/videos/SonyVideo2.webm" />
       <h1 className={styles.title} data-animate="slide-text">
         Wilderlee
       </h1>
