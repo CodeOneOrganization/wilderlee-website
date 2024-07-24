@@ -9,12 +9,19 @@
   padding-block: calc(2.4 * max(1vw, 0.5em));
   margin-left: 2em;
 
-  background-color: var(--color-black-overlay, #000);
+  /* background-color: var(--color-black-overlay, #000); */
+  background-color: #090909;
 
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
 
+  transition: background-color 200ms var(--animation-bezier-smooth);
+
   cursor: grab;
+}
+
+.card:hover {
+  background-color: var(--color-black-overlay, #000);
 }
 
 .linearGradientBorder {
@@ -23,12 +30,16 @@
   left: 0;
   right: 0;
 
-  background: linear-gradient(to right, transparent, var(--color-blue));
+  background: linear-gradient(to right, #00000000, #00000000);
 
   height: 4px;
   width: 100%;
-
+  transition: background 200ms var(--animation-bezier-smooth);
   transform: translateY(-100);
+}
+
+.card:hover .linearGradientBorder {
+  /* background: linear-gradient(to right, #00000000, var(--color-blue)); */
 }
 
 .top {
@@ -48,15 +59,15 @@
 
 .name {
   display: inline-block;
-  
+
 }
 
 .socialMedia {
   display: block;
 
   margin-top: 1em;
-  
-  font-size: 0.38em;
+
+  font-size: 11px;
   text-transform: capitalize;
   text-transform: uppercase;
   font-weight: 400;
@@ -71,7 +82,8 @@
   margin-bottom: calc(5.2 * min(1vw, 16px));
 
   white-space: normal;
-  text-align: justify;
+  text-align: left;
+  font-size: calc(max(20px, 1.25vw) / 1.2);
 }
 
 .bottom {
@@ -90,15 +102,29 @@
   color: var(--color-white);
 
   background: transparent;
-
+  transition: color 200ms var(--animation-bezier-smooth)
 }
 
 .arrow {
   max-height: 24px;
   aspect-ratio: 1 / 1;
+
+  transform: scaleX(1) translateX(-100%);
+  opacity: 0.0;
+  transition: transform 200ms var(--animation-bezier-smooth),
+              opacity 200ms var(--animation-bezier-smooth);
 }
 
-@media (width <= 480px){
+.card:hover .arrow {
+  opacity: 1;
+  transform: scaleX(-1);
+}
+
+.arrow path {
+  stroke: var(--color-white);
+}
+
+@media (width <=480px) {
   .opinion {
     max-width: calc(100vw - 2 * var(--container-padding) - 2 * 2em);
   }
@@ -106,11 +132,11 @@
   .card {
     min-width: calc(100vw - 2 * var(--container-padding) - 2 * 2em);
 
-    margin-left: 1em ;
-    
+    margin-left: 1em;
+
   }
 
-  .card:nth-child(1){
+  .card:nth-child(1) {
     margin-left: var(--container-padding);
   }
 

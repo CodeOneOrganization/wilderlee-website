@@ -8,7 +8,7 @@
   --primitive-white: 255, 255, 255;
   /* --color-black: #000; */
   --color-black: #0f0f0f;
-  --color-blue: #00baf7;
+  --color-blue: #00baf7ff;
   --color-white: rgba(var(--primitive-white), 1);
   --color-overlay-white: rgba(var(--primitive-white), 0.4);
   --color-overlay-black: rgba(var(--primitive-white), 0.889);
@@ -55,6 +55,17 @@ body {
   cursor: grab;
 }
 
+.mobileNone {
+
+}
+
+@media(width <= 480px) {
+  .mobileNone {
+    display: none !important;
+  }
+
+}
+
 .light {
   background-color: #1c1c1c;
 }
@@ -97,11 +108,11 @@ section {
   font-size: inherit;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--color-white);
 }
@@ -169,7 +180,7 @@ li.tiny {
 
 @media (width <=850px) {
   :root {
-    --container-padding: 1em;
+    --container-padding: 5vw;
     --section-padding: 15vh;
   }
 
@@ -188,7 +199,7 @@ li.tiny {
   }
 
   h5,
-  h5 > * {
+  h5>* {
     font-size: 5vw;
     font-family: var(--font-orbitron) !important;
     text-transform: uppercase;

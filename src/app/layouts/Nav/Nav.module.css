@@ -16,6 +16,10 @@
   height: 1.5em;
 }
 
+.icon {
+  
+}
+
 .cheeseBurger {
   height: 1.5em;
   aspect-ratio: 1 / 1;
@@ -28,6 +32,52 @@
     box-shadow 200ms var(--animation-bezier-smooth),
     background 200ms var(--animation-bezier-smooth);
   z-index: 999;
+}
+
+.cheeseBurger:hover path {
+  stroke: #aaa;
+}
+
+.cheeseBurger path:nth-child(2n) {
+  transition: d 200ms var(--animation-bezier-smooth),
+              stroke 200ms var(--animation-bezier-smooth);
+}
+
+.cheeseBurger path:nth-child(2) {
+  d: path("M10.5 4H37.5");
+}
+
+.cheeseBurger path:nth-child(4) {
+  d: path("M10.5 16.375H37.5");
+}
+
+.cheeseBurger path:nth-child(6) {
+  d: path("M10.5 28.75H37.5");
+}
+
+.cheeseBurger:hover path:nth-child(2) {
+  d: path("M0 4H37.5");
+}
+
+.cheeseBurger:hover path:nth-child(4) {
+  d: path("M0 16.375H37.5");
+}
+
+.cheeseBurger:hover path:nth-child(6) {
+  d: path("M0 28.75H37.5");
+}
+
+.fork {
+  height: 1.5em;
+  aspect-ratio: 1 / 1;
+
+  transition: stroke 200ms var(--animation-bezier-smooth);
+
+  z-index: 998;
+}
+
+.fork:hover path {
+  stroke: #aaa;
 }
 
 .menu {
@@ -210,7 +260,7 @@
   }
 
   .cheeseBurger {
-    height: 3.72vmax;
+    /* height: 3.72vmax; */
     aspect-ratio: 1 / 1;
 
     cursor: pointer;

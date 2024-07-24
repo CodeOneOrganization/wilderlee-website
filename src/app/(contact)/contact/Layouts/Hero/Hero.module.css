@@ -4,7 +4,7 @@
     flex-direction: row;
 
     padding-inline: calc(3.418 * var(--container-padding));
-    padding-bottom: var(--gap-big-padding);
+    padding-bottom: calc(3 * var(--gap-big-padding));
 }
 
 .top {
@@ -38,13 +38,15 @@
     vertical-align: bottom;
 
     margin-left: var(--gap-big-padding);
-    height: 96px;
+    height: 128px;
     aspect-ratio: 1 / 1;
 
     object-fit: cover;
-    object-position: center;
+    object-position: top;
 
     mix-blend-mode: lighten;
+
+    border-radius: 50%;
 }
 
 .logo {
@@ -58,7 +60,7 @@
     margin-left: auto;
 }
 
-.contentToRight .ornament:not(:first-child){
+.contentToRight .ornament:not(:first-child) {
     margin-top: var(--gap-big-padding);
 }
 
@@ -82,7 +84,7 @@
     float: right;
     vertical-align: middle;
 
-    
+
 }
 
 .arrow path {
@@ -101,38 +103,40 @@
     opacity: 1;
 }
 
-.paragraph{
+.paragraph {
     width: max-content;
 
     white-space: nowrap;
     font-family: var(--font-orbitron) !important;
     text-transform: uppercase;
 }
-.ornament{
+
+.ornament {
     overflow: hidden;
 
     align-items: center;
     gap: 1vw;
 }
-.line{
+
+.line {
     width: 100%;
     height: var(--border-size);
     background-color: var(--color-blue);
 }
 
-.input{
+.input {
     width: 100%;
     height: 3em;
     padding-left: 1em;
     /* padding-block: 1.5em; */
-    
+
     color: var(--color-white);
     /* font-family: var(--font-orbitron) !important; */
     text-transform: uppercase;
     font-size: 16px;
     font-family: var(--font-khula);
     text-transform: none;
-    
+
     border-radius: var(--border-size);
     background-color: var(--color-gray);
     outline: none;
@@ -145,16 +149,16 @@
     border: 0.1vw solid var(--color-blue);
 }
 
-.form_wrapper{
-    margin-top:  3.38vw;
+.form_wrapper {
+    margin-top: 3.38vw;
     gap: 1.77vw;
 }
 
-.textArea_div{
+.textArea_div {
     margin-top: 2.80vw;
 }
 
-.textArea{
+.textArea {
     width: 100%;
     padding: 1vw;
     min-height: 19.82vh;
@@ -163,13 +167,13 @@
     font-family: var(--font-khula);
     text-transform: none;
     font-size: 16px;
-    
+
     background-color: var(--color-gray);
 
     transition: border 200ms var(--animation-bezier-smooth);
-    
+
     resize: none;
-    
+
 }
 
 .textArea:active,
@@ -177,29 +181,34 @@
     border: 0.1vw solid var(--color-blue);
 }
 
-.submit_div{
+.submit_div {
     width: 43.33vw;
 }
 
-.submit{
+.submit {
     margin-top: 1.51vw;
     float: right;
     width: 322px;
     height: 2.65vw;
-    
+    padding-block: 0.8em;
+
     font-family: var(--font-orbitron) !important;
     font-size: 0.84vw;
     color: var(--color-white);
     letter-spacing: 10%;
     text-transform: uppercase;
-    
+
     background-color: var(--color-blue);
     border-radius: var(--border-size);
-    
+
     cursor: pointer;
 }
 
-.label{
+.submit:disabled {
+    opacity: 0.7;
+}
+
+.label {
     margin-bottom: var(--gap-padding);
 
     font-family: var(--font-khula) !important;
@@ -209,63 +218,97 @@
 }
 
 @media screen and (max-width: 850px) {
-    .contact{
+    .contact {
+        grid-template-columns: 1fr;
+        grid-template-areas: "first"
+            "second"
+            "forth"
+            "third";
+        gap: var(--gap);
+
         padding-inline: 5vw;
+
+
+    }
+
+    .title {
+        grid-area: first;
+    }
+
+    .branding {
+        grid-area: second;
+    }
+
+    .contentToRight {
+        padding-left: 0;
+
+        grid-area: third;
+    }
+
+    .contentToRight {
+        grid-area: forth;
+    }
+
+    .personalTrainer {
+        display: block;
+
+        margin-left: auto;
+        margin-inline: auto;
     }
 
     .title {
         font-size: 10.7vw;
     }
 
-    .ornament{
-        gap: 0vw;
+    .ornament {
+        /* gap: 0vw; */
         margin-top: 5vw;
     }
 
-    .input{
+    .input {
         border-radius: 0.5vw;
         padding-left: 2vw;
-        
-        letter-spacing: 0.5vw;
+
+        /* letter-spacing: 0.5vw; */
     }
 
-    .form_wrapper{
-        margin-top:  10.38vw;
+    .form_wrapper {
+        margin-top: 10.38vw;
         gap: 5vw;
     }
 
-    .textArea_div{
+    .textArea_div {
         margin-top: 8.80vw;
     }
 
-    .textArea{
+    .textArea {
         /* width:  80vw; */
         /* height: 31.14vw; */
-        font-size: 2vw;
+        /* font-size: 2vw; */
         padding: 2vw;
-        letter-spacing: 0.5vw;
-        
+        /* letter-spacing: 0.5vw; */
+
     }
-    
-    .submit{
+
+    .submit {
         cursor: pointer;
-        width: 40.83vw;
-        height: 8.65vw;
-    
+        width: 100%;
+        height: auto;
+
         font-family: var(--font-orbitron) !important;
-        font-size: 2vw;
+        font-size: 16px;
         letter-spacing: 10%;
         text-transform: uppercase;
-    
+
         background-color: var(--color-blue);
-    
+
         margin-top: 0.51vw;
         float: right;
 
         margin-top: 4vw;
     }
 
-    .submit_div{
+    .submit_div {
         width: 80vw;
     }
 }

@@ -10,10 +10,9 @@ import OnView from "./OnView"
 
 
 export default function TrainYourMind() {
-
   const lenis = useLenisScroll()
 
-  const goToPlans = () => lenis?.current.scrollTo("#plans", {duration: 1, easing: t => Math.pow(t, 5)})
+  const goToPlans = () => lenis?.current.scrollTo("#plans", { duration: 1, easing: t => Math.pow(t, 5) })
 
 
   return (
@@ -34,7 +33,10 @@ export default function TrainYourMind() {
       </div>
       <h1 className={styles.call} onClick={goToPlans}>
         Quero Mudar Minha<br /><b className={`${styles.inherit} blue`}>Vida</b> Agora
-        <Arrow className={styles.arrow} fill="var(--color-white)" />
+        <div className={styles.overflowBox}>
+          <Arrow className={styles.arrow} fill="var(--color-white)" />
+          <Arrow className={`${styles.arrow} ${styles.over}`} fill="var(--color-white)" />
+        </div>
       </h1>
     </section>
   )

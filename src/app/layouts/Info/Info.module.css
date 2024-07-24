@@ -1,6 +1,4 @@
-.info {
-    overflow-x: hidden;
-}
+.info { }
 
 .users  {
     position: absolute;
@@ -32,7 +30,7 @@
     position: relative;
 
     min-width: 200px;
-    padding-left: max(4vw, 2em);
+    padding-inline: calc(0.5 * var(--gap));
 }
 
 .paragraph {
@@ -44,6 +42,7 @@
 .line {
     margin: 0;
     position: absolute;
+    display: none;
     left: 0;
     top: 0;
     width: 0.3vw;
@@ -52,6 +51,8 @@
 }
 
 .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
@@ -59,19 +60,24 @@
 
 
 @media (width <=850px) {
+    .info {
+        overflow: hidden;
+    }
     .paragraph{
         margin-top: 5.69vw;
 
         text-wrap: wrap;
     }
+
     .cards {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        /* flex-direction: column; */
         gap: max(100px, 10vh);
     }
 
     .card {
         width: 100%;
-        padding-left: 0;
+        padding-inline: 0;
 
     }
 
@@ -84,7 +90,7 @@
     }
 
     .users {
-        top: 36px;
+        top: 0;
 
         flex-direction: row;
     }

@@ -8,7 +8,8 @@ import styles from "./Nav.module.css";
 
 import CheeseIcon from "@/common/components/CheeseIcon";
 
-function ForkIcon() {
+interface Props extends React.SVGAttributes<SVGSVGElement> { }
+function ForkIcon({ ...props }: Props) {
   return (
     <svg
       // width="34"
@@ -16,6 +17,7 @@ function ForkIcon() {
       viewBox="0 0 34 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path d="M3 3L31 31" stroke="white" stroke-width="7.32" />
       <path d="M31 3L3 31" stroke="white" stroke-width="7.32" />
@@ -55,11 +57,24 @@ export default function Button({ ...props }: Props) {
     }
   }, [])
 
-  const Icon = !isOpen ? CheeseIcon : ForkIcon
+  useEffect(() => {
+    const handleOnClick = () => {
+      const target = document.getElementsByTagName("menu").item(0)!
+
+      target.setAttribute("data-menu", "closed")
+    }
+
+    window.addEventListener("click", handleOnClick)
+
+    return () => {
+      window.removeEventListener("click", handleOnClick)
+
+    }
+  }, [])
 
   return (
-    <div className={styles.cheeseBurger} onClick={handleVerify}>
-      <Icon />
+    <div className={styles.icon} onClick={handleVerify}>
+      {!isOpen ? (<CheeseIcon className={styles.cheeseBurger} />) : (<ForkIcon className={styles.fork} />)}
     </div>
   );
 }

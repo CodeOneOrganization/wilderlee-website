@@ -8,7 +8,7 @@ import styles from "./Nav.module.css";
 import _preloaderStyles from "@/app/layouts/Preloader/Preloader.module.css"
 
 import { useRouter } from "next/navigation"
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import useLenisScroll from "@/common/hooks/useLenisScroll";
 
 

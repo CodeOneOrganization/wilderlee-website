@@ -4,7 +4,7 @@ import styles from "./Hero.module.css";
 
 export default function NewHero() {
   return (
-    <section className={`${styles.hero} fullHeight`}>
+    <section className={`${styles.hero}`}>
       <div className={styles.overlay}/>
       <video className={styles.video} autoPlay loop muted src="/videos/SonyVideo2.webm" />
       <h1 className={styles.title} data-animate="slide-text">

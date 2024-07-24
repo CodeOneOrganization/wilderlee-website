@@ -1,7 +1,7 @@
-interface Props extends React.SVGAttributes<SVGSVGElement>{
-  fill?: string 
+interface Props extends React.SVGAttributes<SVGSVGElement> {
+  fill?: string
 }
-export default function Logo({fill = "white", ...props}: Props) {
+export default function Logo({ fill = "white", ...props }: Props) {
   return (
     <svg
       viewBox="0 0 49 50"

@@ -1,5 +1,6 @@
 import Nav from "./Layouts/Nav"
 import Hero from "./Layouts/Hero"
+import Footer from "@/app/layouts/Footer/Footer"
 
 interface Props extends React.PropsWithChildren { }
 export default function ContactClient({ children }: Props) {
@@ -8,6 +9,7 @@ export default function ContactClient({ children }: Props) {
       <Nav />
       <Hero />
       {children}
+      <Footer />
     </>
   )
 }

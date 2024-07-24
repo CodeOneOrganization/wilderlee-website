@@ -31,7 +31,7 @@
   border-top: linear-gradient();
 }
 
-.linearGradientBorder {
+/* .linearGradientBorder {
   position: absolute;
   top: 0;
   left: 0;
@@ -43,7 +43,7 @@
   width: 100%;
 
   transform: translateY(-100);
-}
+} */
 
 /* .titleCard { } */
 .oldPrice {
@@ -134,6 +134,14 @@
 .benefit:last-child {
   border-bottom-left-radius: var(--border-size);
   border-bottom-right-radius: var(--border-size);
+}
+
+.checkIcon {
+  display: block;
+  
+  width: 14px;
+  height: 14px;
+  aspect-ratio: 1 / 1;
 }
 
 .effect {
@@ -293,5 +301,9 @@
   .contactTable {
     padding-top: 15vw;
     padding-inline: 13vw;
+  }
+
+  .benefit {
+    gap: 1em;
   }
 }

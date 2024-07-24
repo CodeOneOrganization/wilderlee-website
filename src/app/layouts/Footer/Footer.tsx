@@ -67,7 +67,7 @@ export default function Footer() {
           <h3 className={styles.title}>Contato</h3>
           <ul className={styles.info}>
             <li className={styles.item}>
-              named@gmail.com
+              Wilderleep@gmail.com
               <Arrow className={styles.arrow} fill="var(--color-black)" />
             </li>
             
