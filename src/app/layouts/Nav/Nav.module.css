@@ -17,7 +17,9 @@
 }
 
 .icon {
+  z-index: 999;
   
+  cursor: pointer;
 }
 
 .cheeseBurger {
@@ -26,7 +28,7 @@
 
   box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0);
 
-  cursor: pointer;
+  /* cursor: pointer; */
 
   transition:
     box-shadow 200ms var(--animation-bezier-smooth),
