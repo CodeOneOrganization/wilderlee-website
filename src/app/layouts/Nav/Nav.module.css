@@ -73,7 +73,7 @@
 
   transition: stroke 200ms var(--animation-bezier-smooth);
 
-  z-index: 998;
+  z-index: 999;
 }
 
 .fork:hover path {

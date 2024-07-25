@@ -29,8 +29,11 @@ function ForkIcon({ ...props }: Props) {
 interface Props extends React.SVGAttributes<SVGSVGElement> { }
 export default function Button({ ...props }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const handleVerify = useCallback(() => {
+  const handleVerify = useCallback((event: React.MouseEvent) => {
+    event.stopPropagation()
+
     const target = document.getElementsByTagName("menu").item(0)!
+    console.log("target inside handleVerify", target)
     target.setAttribute("data-menu", isOpen ? "closed" : "opened")
 
     !isOpen ? Open(setIsOpen) : Close(setIsOpen);
@@ -39,10 +42,12 @@ export default function Button({ ...props }: Props) {
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       const target = document.getElementsByTagName("menu").item(0)!
-
+      console.log("key has pressed")
+      console.log("target inside handleKeyDown", target)
       // When the user press Escape key and the menu is opened, then will closed immediately itself
       if (e.key === "Escape") {
         if (target.dataset.menu === "opened") {
+          console.log("Escape and menu target fired")
           setIsOpen(false)
           Close(setIsOpen)
           target.setAttribute("data-menu", "closed")
@@ -61,6 +66,8 @@ export default function Button({ ...props }: Props) {
     const handleOnClick = () => {
       const target = document.getElementsByTagName("menu").item(0)!
 
+      setIsOpen(false)
+      Close(setIsOpen)
       target.setAttribute("data-menu", "closed")
     }
 

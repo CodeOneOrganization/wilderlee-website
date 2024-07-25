@@ -6,21 +6,8 @@ import emailjs from "@emailjs/browser"
 
 import styles from "../Hero.module.css"
 
-// function getTemplateParams(formData: FormData) {
-//   let obj: any = {}
-
-//   for (const [key, value] of formData) {
-//     obj[key] = value
-//   }
-
-//   obj["to_name"] = "Wilderlee"
-
-
-//   return obj
-// }
-
 export default function Form() {
-  const ref = useRef<HTMLFormElement>(null!)
+  const formRef = useRef<HTMLFormElement>(null!)
   const [error, setError] = useState<boolean>(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -29,10 +16,8 @@ export default function Form() {
 
     setIsLoading(true)
 
-    // const formData = new FormData(ref.current)
-    
     const serviceId = "service_811dob9"
-    const formElement = ref.current
+    const formElement = formRef.current
     const templateId = "template_zm4fg9g"
     const emailJsPublicKey = "6jR2WevNx08rP13w7"
 
@@ -45,22 +30,23 @@ export default function Form() {
         setError(true)
       }).finally(() => {
         setIsLoading(false)
+        formElement.reset()
       })
 
-  }, [ref.current, isLoading])
+  }, [formRef.current, isLoading])
 
   return (
-    <form ref={ref} onSubmit={handleOnSubmit}>
+    <form ref={formRef} onSubmit={handleOnSubmit}>
       <div className={`${styles.form_wrapper} col`}>
-        isError: {String(error)}
+        {/* isError: {String(error)} */}
         <br />
         <div className="col">
-          <label htmlFor="name" className={`${styles.label} small`}>Como devo lhe chamar?</label>
+          <label htmlFor="from_name" className={`${styles.label} small`}>Como devo lhe chamar?</label>
           <input name="from_name" className={styles.input} type="text" id="name" required placeholder="Seu nome" />
         </div>
         <div className="col">
-          <label htmlFor="email" className={`${styles.label} small`}>Qual o seu email?</label>
-          <input name="email" className={styles.input} type="email" id="email" placeholder="algumemail@mail.com" />
+          <label htmlFor="from_email" className={`${styles.label} small`}>Qual o seu email?</label>
+          <input name="from_email" className={styles.input} type="email" id="email" placeholder="algumemail@mail.com" />
         </div>
       </div>
       <div className={`${styles.textArea_div} col`}>
