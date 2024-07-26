@@ -6,6 +6,7 @@ import Avaliations from "@/app/layouts/Avaliations";
 import Plans from "@/app/layouts/Plans";
 import Info from "@/app/layouts/Info";
 import WhatsAppBtn from "@/app/layouts/WhatsAppBtn/WhatsAppBtn";
+import MyClients from "@/app/layouts/MyClients/MyClients";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <TrainYourMind />
       <Avaliations />
       <Info/>
+      <MyClients/>
       <Plans/>
       <Footer/>
     </>
