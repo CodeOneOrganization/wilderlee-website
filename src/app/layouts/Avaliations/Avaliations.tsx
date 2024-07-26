@@ -18,7 +18,7 @@ const users = [
     name: "Lúcia",
     socialMedia: "@jacintasilva.designer",
     content: "Wilderlee me ajudou a transformar meu corpo e mente. Com seus planos personalizados e apoio constante, conquistei uma saúde melhor e maior bem-estar, vivendo uma vida mais plena.",
-    imageUrl: "/images/lucia.jpg",
+    imageUrl: "/images/jacinta.jpg",
     gender: "ela"
   },
   {
