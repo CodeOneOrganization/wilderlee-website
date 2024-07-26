@@ -104,7 +104,6 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.socialMedias}>
           <p className="tiny" onClick={goToInstagram}>Instagram</p>
-          <p className="tiny">Facebook</p>
         </div>
         <p className="tiny">Site criado pela SynergyCode</p>
       </div>

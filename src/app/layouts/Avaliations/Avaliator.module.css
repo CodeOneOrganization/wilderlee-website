@@ -49,6 +49,7 @@
 
 .image {
   display: inline-block;
+  object-fit: cover;
 
   height: 96px;
   width: 96px;
