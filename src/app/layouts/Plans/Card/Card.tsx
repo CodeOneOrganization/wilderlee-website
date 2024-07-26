@@ -26,15 +26,7 @@ export default function Card({
   time,
   target
 }: Props) {
-  // function getDiscount(newValue: number, oldValue: number){
-  //   const ratio = newValue / oldValue
-  //   const decreasedRatio = 1 - ratio
-    
-  //   const percentage = 100 * decreasedRatio
-  //   return percentage.toFixed(0)
-  // }
-
-  // const discount = getDiscount(price.current, price.old)
+ 
   return (
     <article className={styles.card}>
       <div className={styles.linearGradientBorder} />
@@ -52,9 +44,7 @@ export default function Card({
       <ul className={styles.info}>
         {benefits.map((x, index) => <Benefit key={`Benefit_${title}_${index}`} {...x} />)}
       </ul>
-      {/* <div className={styles.rounded}>
-        <h4>{discount}%</h4>
-      </div> */}
+      
     </article>
 
   );

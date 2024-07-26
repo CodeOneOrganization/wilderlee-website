@@ -13,14 +13,6 @@ export default function RotatingOnView({ children }: Props) {
   useIsomorphicEffect(() => {
     GSAP.registerPlugin(ScrollTrigger)
 
-    function _onScroll() {
-      
-    }
-
-    // lenis?.current.on("scroll", (e) => {
-    //   e.5 
-    // })
-
     return () => lenis?.current.off("scroll", ScrollTrigger.update)
 
   }, [lenis])

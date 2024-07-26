@@ -19,6 +19,7 @@
     aspect-ratio: 1 / 1;
     
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .innerImage:not(:nth-child(1)) {
@@ -31,11 +32,12 @@
 
     min-width: 200px;
     padding-inline: calc(0.5 * var(--gap));
+
 }
 
 .paragraph {
     margin-top: 3.69vw;
-
+    
     text-wrap: nowrap;
 }
 
