@@ -7,11 +7,11 @@ const plans = [{
     old: 549.99,
     installment: {
       amount: 3,
-      value: 199.99
+      value: 99.99
     }
   },
   benefits: [
-    { content: "90dias dias de acompanhamento no Whatsapp" },
+    { content: "90 dias dias de acompanhamento no Whatsapp" },
     { content: "Plano alimentar atualizado a cada 45 dias" },
     { content: "Protocolo de treinamento atualizado a cada 30 dias" },
     { content: "Correção de exercícios por vídeos" },

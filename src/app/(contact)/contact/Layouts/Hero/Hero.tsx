@@ -55,7 +55,7 @@ export default function Hero() {
             <Arrow className={styles.arrow} />
           </li>
           <li className={`${styles.index} tiny`}>
-            +55 (81) 9 9513-3284
+            {process.env.NEXT_PUBLIC_WHATSAPP_FORMATTED}
             <Arrow className={styles.arrow} />
           </li>
         </ul>
