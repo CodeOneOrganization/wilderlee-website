@@ -5,8 +5,5 @@ export const metadata: Metadata = {
     default: "Wilderlee",
     template: "%s / Personal trainer"
   } ,
-  // openGraph: {
-  //   images: 
-  // }
   
 }

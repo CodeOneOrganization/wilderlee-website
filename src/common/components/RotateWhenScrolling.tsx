@@ -20,11 +20,9 @@ export default function RotatingOnScroll({ children, rotate = 180 }: Props) {
 
     const _scrollTrigger = ScrollTrigger.create({
       onUpdate: (e) => {
-        // previous rotation of element - previous rotation in z axis
         const rpz = GSAP.getProperty(_element, "data-rotate-previous") || 0
         const p = e.progress
 
-        // current rotation in z axis
         const rnz = GSAP.utils.interpolate(rpz, rotate * p, 0.5)
 
 

@@ -5,10 +5,8 @@ import PlanCard from "./Card";
 
 import mockedPlans from "./mockedPlans"
 
-// import Button from "./Button";
 
 export default function Plans() {
-  console.log("plans", mockedPlans)
   return (
     <section className={`${styles.plans} col`} id="plans">
       <div className={`${styles.cards} container row`}>

@@ -10,43 +10,62 @@ import { useRouter } from "next/navigation"
 export default function Hero() {
   const router = useRouter()
 
-  const goToWhatsApp = () => { window.open(`https://wa.me/${process.env.NEXT_PUBLIC_CONTACT}`) }
+  const goToWhatsApp = () => {
+    window.open(`https://wa.me/${process.env.NEXT_PUBLIC_CONTACT}`)
+  }
   return (
     <section className={`${styles.contact} container`}>
-      <h3 className={styles.title}>Fale <b className="blue">Diretamente </b> <br /> comigo</h3>
+      <h3 className={styles.title}>
+        Fale <b className="blue">Diretamente </b> <br /> comigo
+      </h3>
       <div className={styles.branding}>
-        <img className={styles.personalTrainer} src="images/wilderleephoto.jpg" alt="" />
+        <img
+          className={styles.personalTrainer}
+          src="images/wilderleephoto.jpg"
+          alt=""
+        />
         <Logo className={`${styles.logo} mobileNone`} />
       </div>
       <div className={styles.contentToLeft}>
         <div className={`${styles.ornament} row`}>
-          <small className={`${styles.paragraph} tiny blue`}>Preencha os dados abaixo</small>
+          <small className={`${styles.paragraph} tiny blue`}>
+            Preencha os dados abaixo
+          </small>
           <div className={styles.line}></div>
         </div>
         <Form />
-        {/* <button className={styles.submit}>enviar</button> */}
       </div>
       <div className={styles.contentToRight}>
         <div className={`${styles.ornament} row`}>
-          <small className={`${styles.paragraph} tiny blue`}>Redes sociais</small>
+          <small className={`${styles.paragraph} tiny blue`}>
+            Redes sociais
+          </small>
           <div className={styles.line}></div>
         </div>
         <ul className={`${styles.list} col`}>
           <li className={`${styles.index} tiny`}>
-            <a href="https://www.instagram.com/wilderlee.personal/" target="_blank">
+            <a
+              href="https://www.instagram.com/wilderlee.personal/"
+              target="_blank"
+            >
               Instagram
             </a>
             <Arrow className={styles.arrow} />
           </li>
           <li className={`${styles.index} tiny`}>
-            <a href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, gostaria de saber mais sobre os planos.`} target="_blank">
+            <a
+              href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre os planos.`}
+              target="_blank"
+            >
               WhatsApp
             </a>
             <Arrow className={styles.arrow} />
           </li>
         </ul>
         <div className={`${styles.ornament} row`}>
-          <small className={`${styles.paragraph} tiny blue`}>Informações de Contato</small>
+          <small className={`${styles.paragraph} tiny blue`}>
+            Informações de Contato
+          </small>
           <div className={styles.line}></div>
         </div>
         <ul className={`${styles.list} col`}>
@@ -55,22 +74,26 @@ export default function Hero() {
             <Arrow className={styles.arrow} />
           </li>
           <li className={`${styles.index} tiny`}>
+            <a
+              href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre os planos.`}
+              target="_blank"
+            >
+              {process.env.NEXT_PUBLIC_WHATSAPP_FORMATED}
+            </a>
             {process.env.NEXT_PUBLIC_WHATSAPP_FORMATTED}
             <Arrow className={styles.arrow} />
           </li>
         </ul>
         <div className={`${styles.ornament} row`}>
-          <small className={`${styles.paragraph} tiny blue`}>Onde me encontrar</small>
+          <small className={`${styles.paragraph} tiny blue`}>
+            Onde me encontrar
+          </small>
           <div className={styles.line}></div>
         </div>
         <ul className={`${styles.list} col`}>
-          <li className={`${styles.index} tiny`}>
-            Pernambuco, Brasil
-            {/* <Arrow className={styles.arrow} /> */}
-          </li>
+          <li className={`${styles.index} tiny`}>Pernambuco, Brasil</li>
           <li className={`${styles.index} tiny`}>
             Av. Horácio Ferraz Cavalcanti, n° 185
-            {/* <Arrow className={styles.arrow} /> */}
           </li>
         </ul>
       </div>

@@ -9,7 +9,7 @@ interface Props {
 export default function Button({title, plan}: Props) {
 
   const goToWhats = () =>{
-    window.open(`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre as consultorias.`)
+    window.open(`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre o plano ${plan}`)
   }
 
   return (
