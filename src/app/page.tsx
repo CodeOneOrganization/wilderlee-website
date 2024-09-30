@@ -12,15 +12,15 @@ import MyClients from "@/app/layouts/MyClients/MyClients";
 export default function Home() {
   return (
     <>
-    <WhatsAppBtn/>
-      <Nav/>
-      <Hero/>
+      <WhatsAppBtn />
+      <Nav />
+      <Hero />
       <TrainYourMind />
       <Avaliations />
-      <Info/>
-      <MyClients/>
-      <Plans/>
-      <Footer/>
+      <Info />
+      <MyClients />
+      <Plans />
+      <Footer />
     </>
   );
 }

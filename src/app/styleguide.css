@@ -108,6 +108,10 @@ section {
   font-size: inherit;
 }
 
+*.blue::selection {
+  color: var(--color-white);
+}
+
 button {
   cursor: pointer;
 }

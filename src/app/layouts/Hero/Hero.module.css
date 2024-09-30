@@ -87,6 +87,16 @@
         transform: translate(-52%, -50%);
     }
 
+    .video {
+        top: 0%;
+        left: 0;
+
+        width: 100%;
+        height: calc(100dvh - var(--section-padding) / 2);
+
+        transform: none;
+    }
+
     .subTitle {
         right: 0;
         bottom: 50%;

@@ -78,9 +78,9 @@ export default function Hero() {
               href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre os planos.`}
               target="_blank"
             >
-              {process.env.NEXT_PUBLIC_WHATSAPP_FORMATED}
+              {process.env.NEXT_PUBLIC_WHATSAPP_FORMATTED}
+              {/* {process.env.NEXT_PUBLIC_WHATSAPP_FORMATED} */}
             </a>
-            {process.env.NEXT_PUBLIC_WHATSAPP_FORMATTED}
             <Arrow className={styles.arrow} />
           </li>
         </ul>

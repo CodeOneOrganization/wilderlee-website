@@ -1,4 +1,7 @@
-.info { }
+.info {
+    /* overflow-y: hidden; */
+    height: auto;
+ }
 
 .users  {
     position: absolute;

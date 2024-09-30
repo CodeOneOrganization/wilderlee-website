@@ -9,6 +9,7 @@ export default function ContactClient({ children }: Props) {
       <Nav />
       <Hero />
       {children}
+      <Footer />
     </>
   )
 }
