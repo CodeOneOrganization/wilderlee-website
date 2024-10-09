@@ -4,7 +4,6 @@
     height: calc(100vh - 1vw);
 
     overflow-y: hidden;
-    /* background: url("../../../../public/images/BackGroundHero2.jpg") no-repeat center/cover; */
 }
 
 .video {
@@ -13,12 +12,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    /* width: 70vw; */
+    width: 100vw;
     /* height: 100dvh; */
 
     object-fit: cover;
 
-    filter: saturate(0.4);
+    filter: saturate(0.4) blur(5px);
     /* transform: ; */
 
 }
@@ -93,6 +92,8 @@
 
         width: 100%;
         height: calc(100dvh - var(--section-padding) / 2);
+
+        filter: saturate(0.4);
 
         transform: none;
     }
