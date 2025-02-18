@@ -68,12 +68,12 @@ export default function Footer() {
           <ul className={styles.info}>
             <li className={styles.item}>
               Wilderleep@gmail.com
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
+              <Arrow className={styles.arrow} fill="var(--color-dark-blue)" />
             </li>
             
             <li className={`${styles.item} small`} onClick={goToInstagram}>
               @wilderlee.personal
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
+              <Arrow className={styles.arrow} fill="var(--color-dark-blue)" />
             </li>
           </ul>
         </article>
@@ -82,17 +82,17 @@ export default function Footer() {
           <ul className={styles.info}>
             <li className={styles.item} onClick={goToContact}>
               Contato
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
+              <Arrow className={styles.arrow} fill="var(--color-dark-blue)" />
             </li>
             
             <li className={styles.item} onClick={goToPlans}>
               Planos
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
+              <Arrow className={styles.arrow} fill="var(--color-dark-blue)" />
             </li>
            
             <li className={styles.item} onClick={goToAbout}>
               Sobre
-              <Arrow className={styles.arrow} fill="var(--color-black)" />
+              <Arrow className={styles.arrow} fill="var(--color-dark-blue)" />
             </li>
           </ul>
         </article>

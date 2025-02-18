@@ -148,7 +148,7 @@
   width: 24vw;
   height: 0.3vw;
   background: linear-gradient(to right,
-      var(--color-black) 35%,
+      var(--color-dark-blue) 35%,
       var(--color-blue));
   position: absolute;
   top: -0.2vw;
