@@ -6,8 +6,7 @@
   --gap: var(--gap-big-padding);
 
   --primitive-white: 255, 255, 255;
-  /* --color-black: #000; */
-  --color-black: #0f0f0f;
+  --color-dark-blue: #0F171F;
   --color-blue: #00baf7ff;
   --color-white: rgba(var(--primitive-white), 1);
   --color-overlay-white: rgba(var(--primitive-white), 0.4);
@@ -45,7 +44,7 @@ html {
 body {
   color: var(--color-white);
 
-  background-color: var(--color-black);
+  background-color: var(--color-dark-blue);
 
   overflow-x: hidden;
 

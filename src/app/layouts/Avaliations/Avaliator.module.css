@@ -9,7 +9,7 @@
   padding-block: calc(2.4 * max(1vw, 0.5em));
   margin-left: 2em;
 
-  /* background-color: var(--color-black-overlay, #000); */
+  /* background-color: var(--color-dark-blue-overlay, #000); */
   background-color: #090909;
 
   border-bottom-right-radius: 7px;
@@ -21,7 +21,7 @@
 }
 
 .card:hover {
-  background-color: var(--color-black-overlay, #000);
+  background-color: var(--color-dark-blue-overlay, #000);
 }
 
 .linearGradientBorder {

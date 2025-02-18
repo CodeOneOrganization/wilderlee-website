@@ -1,14 +1,23 @@
 .avaliations {
   overflow-x: hidden;
+  overflow-y: initial;
+
   gap: calc(4 * min(1vw, 1em));
 
   padding-right: 0;
+  padding-bottom: 10vw;
 
   white-space: nowrap;
 
-  overflow: hidden;
-
   cursor: grab;
+
+  position: relative;
+}
+
+.avaliations svg{
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 
 @media (480px <= width <= 969px) {

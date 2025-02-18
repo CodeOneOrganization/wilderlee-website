@@ -17,8 +17,8 @@ function ForkIcon({ ...props }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M3 3L31 31" stroke="white" stroke-width="7.32" />
-      <path d="M31 3L3 31" stroke="white" stroke-width="7.32" />
+      <path d="M3 3L31 31" stroke="white" strokeWidth="7.32" />
+      <path d="M31 3L3 31" stroke="white" strokeWidth="7.32" />
     </svg>
 
   )
