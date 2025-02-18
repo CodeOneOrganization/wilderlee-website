@@ -79,6 +79,11 @@
 }
 
 @media (width <= 850px){
+    
+    .hero{
+        height: 100dvh;
+    }
+
     .title {
         left: 50%;
         bottom: 50%;

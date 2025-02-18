@@ -1,11 +1,7 @@
 .avaliations {
-  overflow-x: hidden;
-  overflow-y: initial;
-
+  overflow: hidden;
   gap: calc(4 * min(1vw, 1em));
-
   padding-right: 0;
-  padding-bottom: 10vw;
 
   white-space: nowrap;
 
@@ -14,19 +10,19 @@
   position: relative;
 }
 
-.avaliations svg{
+.avaliations svg {
   top: 0;
   left: 0;
   position: absolute;
 }
 
-@media (480px <= width <= 969px) {
+@media (480px <=width <=969px) {
   .avaliations {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (width <= 480px) {
+@media (width <=480px) {
   .avaliations {
     grid-template-columns: repeat(1, 1fr);
   }
