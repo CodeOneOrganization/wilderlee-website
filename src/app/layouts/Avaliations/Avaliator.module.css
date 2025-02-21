@@ -88,9 +88,8 @@
 }
 
 .bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 100%;
+  position: relative;
 
   width: 100%;
 }
@@ -109,8 +108,9 @@
 .arrow {
   max-height: 24px;
   aspect-ratio: 1 / 1;
+  margin-left: 10vw;
 
-  transform: scaleX(1) translateX(-100%);
+  /* transform: scaleX(1) translateX(-100%); */
   opacity: 0.0;
   transition: transform 200ms var(--animation-bezier-smooth),
               opacity 200ms var(--animation-bezier-smooth);
