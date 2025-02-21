@@ -12,7 +12,7 @@ import OnView from "./OnView"
 export default function TrainYourMind() {
   const lenis = useLenisScroll()
 
-  const goToPlans = () => lenis?.current.scrollTo("#plans", { duration: 1, easing: t => Math.pow(t, 5) })
+  const goToPlans = () => lenis?.current.scrollTo("#plans", { duration: 1 })
 
 
   return (
