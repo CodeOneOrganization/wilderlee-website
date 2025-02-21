@@ -4,6 +4,7 @@ import Button from "@/app/layouts/Plans/Button";
 
 import { IBenefit, ICard } from "../PlansTypes";
 import convertPointToComma from "@/common/utils/convert-point-to-comma";
+import gsap from "gsap";
 
 interface Props extends ICard { }
 
@@ -19,6 +20,7 @@ function Benefit({ content }: BenefitProps) {
   )
 }
 
+
 export default function Card({
   title,
   price,
@@ -27,8 +29,17 @@ export default function Card({
   target
 }: Props) {
  
+  const linearGradienteAnimationIn = () => {
+    gsap.to(`.${styles.linearGradientBorder}`,{
+      width: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+      stagger: .1
+    })
+  }
+
   return (
-    <article className={styles.card}>
+    <article className={styles.card} onMouseEnter={linearGradienteAnimationIn}>
       <div className={styles.linearGradientBorder} />
       <div className={styles.upper}>
         <h4 className={styles.titleCard}>{title}</h4>

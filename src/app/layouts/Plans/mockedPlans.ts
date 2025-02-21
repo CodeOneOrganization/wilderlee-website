@@ -3,7 +3,7 @@ import { ICard } from "./PlansTypes";
 const plans = [{
   title: "Trimestral",
   price: {
-    current: 299.99,
+    current: 239.99,
     old: 549.99,
     installment: {
       amount: 3,

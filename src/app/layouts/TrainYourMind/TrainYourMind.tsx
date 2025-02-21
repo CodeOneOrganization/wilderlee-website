@@ -20,12 +20,11 @@ export default function TrainYourMind() {
       <div className={styles.wrapper}>
         <OnView>
           <video
-            muted
             data-video-content
+            autoPlay
             loop
             className={styles.video}
-            src="videos/SonyVideo.mp4"
-            autoPlay
+            src="videos/apresentation.mp4"
             typeof="video/mp4"
           />
           <PlayIcon className={styles.play} />

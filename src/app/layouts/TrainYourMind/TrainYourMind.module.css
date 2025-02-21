@@ -7,7 +7,7 @@
   position: relative;
 
   width: auto;
-  height: 75dvh;
+  height: 79dvh;
   margin-inline: 3vw;
 
   background: transparent;
@@ -22,8 +22,7 @@
 
   object-fit: cover;
 
-  user-select: none;
-  pointer-events: none;
+  filter: brightness(50%) saturate(120%); 
 
 }
 
