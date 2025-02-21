@@ -14,8 +14,9 @@ export default function LenisScrollProvider({ children }: Props) {
 
   useIsomorphicEffect(() => {
     const lenis = new Lenis({
+
       autoResize: true,
-      easing: (t) => Math.pow(t, 5)
+      touchMultiplier: 1.3
 
     })
 
