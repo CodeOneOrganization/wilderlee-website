@@ -29,7 +29,7 @@ function Snapshot({ src }: SnapshotProps) {
 function Video({src}: VideoProps) {
   return (
     <div className={styles.video} data-slide-item>
-      <video src={src} autoPlay loop controls muted></video>
+      <video src={src} autoPlay loop muted></video>
     </div>
   )
 }
