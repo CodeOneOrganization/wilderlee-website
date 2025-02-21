@@ -1,23 +1,36 @@
 "use client"
 
 import styles from "./MyClients.module.css"
-
-import Arrow from "@/common/components/Arrow"
 import DraggableSlide from "@/common/components/DraggableSlide"
 
-const clients = [
-  { src: "/images/image-snapshot1.jpg", },
-  { src: "/images/image-snapshot2.jpg", },
-  { src: "/images/image-snapshot3.jpg", }
+const clientsPhotos = [
+  { src: "/images/after-before.jpg", },
+  { src: "/images/after-before2.jpg", },
+  { src: "/images/after-before3.jpg", },
+]
+
+const clientsVideos = [
+  {src: "/videos/client.mp4",},
+  {src: "/videos/client2.mp4",}
 ]
 
 
-interface SnapshotProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
-function Snapshot({src}: SnapshotProps){
-  return( 
+interface SnapshotProps extends React.ImgHTMLAttributes<HTMLImageElement> { }
+interface VideoProps extends React.ImgHTMLAttributes<HTMLVideoElement> { }
+
+function Snapshot({ src }: SnapshotProps) {
+  return (
     <figure className={styles.figure} data-slide-item >
       <img className={styles.image} src={src} alt="" />
     </figure>
+  )
+}
+
+function Video({src}: VideoProps) {
+  return (
+    <div className={styles.video} data-slide-item>
+      <video src={src} autoPlay loop controls muted></video>
+    </div>
   )
 }
 
@@ -26,7 +39,10 @@ export default function MyClients() {
     <section className={styles.myClients} data-slide-element>
       <DraggableSlide trigger={styles.myClients}>
         <div className={styles.slide} data-slide-wrapper>
-          {clients.map((x, i) => <Snapshot key={`Snapshot_${i}`} {...x}/>)}
+
+          {clientsPhotos.map((x, i) => <Snapshot key={`Snapshot_${i}`} {...x} />)}
+          {clientsVideos.map((x, i) => <Video key={`Video ${i}`} {...x} />)}
+
         </div>
       </DraggableSlide>
     </section>

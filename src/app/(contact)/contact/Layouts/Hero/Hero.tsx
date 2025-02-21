@@ -79,7 +79,7 @@ export default function Hero() {
               target="_blank"
             >
               {process.env.NEXT_PUBLIC_WHATSAPP_FORMATTED}
-              {/* {process.env.NEXT_PUBLIC_WHATSAPP_FORMATED} */}
+              
             </a>
             <Arrow className={styles.arrow} />
           </li>
