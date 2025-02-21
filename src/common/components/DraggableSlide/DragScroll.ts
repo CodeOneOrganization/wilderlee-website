@@ -100,7 +100,7 @@ class DragScroll {
     } else {
       this.x_0 = e.touches[0].clientX
     }
-    this.x_0 = (e as MouseEvent).clientX || (e as TouchEvent).touches[0].clientX
+    this.x_0 = (e as MouseEvent).clientX || (e as TouchEvent).touches[0]?.clientX
   }
 
   public handleTouchMove(e: TouchEvent | MouseEvent): void {
