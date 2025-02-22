@@ -13,7 +13,7 @@
     transform: translate(-50%, -50%);
 
     width: 100vw;
-    /* height: 100dvh; */
+    /* height: 100%; */
 
     object-fit: cover;
 
@@ -71,17 +71,12 @@
     transform: translateY(100%);
 }
 
-.plate {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 @media (width <= 850px){
     
     .hero{
-        height: 100dvh;
+        height: 100vh;
     }
 
     .title {
@@ -96,7 +91,8 @@
         left: 0;
 
         width: 100%;
-        height: calc(100dvh - var(--section-padding) / 2);
+        height: 100dvh;
+        /* height: calc(100dvh - var(--section-padding) / 2); */
 
         filter: saturate(0.4);
 
