@@ -3,11 +3,11 @@ import { ICard } from "./PlansTypes";
 const plans = [{
   title: "Trimestral",
   price: {
-    current: 239.99,
-    old: 549.99,
+    current: "249.99",
+    old: 159.99,
     installment: {
       amount: 3,
-      value: 99.99
+      value: 199.99
     }
   },
   benefits: [
@@ -17,7 +17,7 @@ const plans = [{
     { content: "Correção de exercícios por vídeos" },
     { content: "Feedbacks quinzenal com ajustes nos no treino e dieta" },
   ],
-  target: "Para alunos",
+  target: "Para novos alunos",
   time: {
     measure: "mêses",
     value: 3
@@ -27,8 +27,8 @@ const plans = [{
 {
   title: "Semestral",
   price: {
-    current: 599.99,
-    old: 849.99,
+    current: 499.99,
+    old: 549.99,
     installment: {
       amount: 7,
       value: 99.99
@@ -41,7 +41,7 @@ const plans = [{
     { content: "Correção de exercícios por vídeos" },
     { content: "Feedbacks quinzenal com ajustes nos no treino e dieta" },
   ],
-  target: "Para alunos",
+  target: "Para novos alunos",
   time: {
     measure: "mêses",
     value: 6
