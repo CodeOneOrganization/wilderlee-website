@@ -40,14 +40,16 @@ export default function Card({
 
   return (
     <article className={styles.card} onMouseEnter={linearGradienteAnimationIn}>
+
       <div className={styles.linearGradientBorder} />
+
       <div className={styles.upper}>
         <h4 className={styles.titleCard}>{title}</h4>
         <p className="tiny">{target}</p>
 
         <h5 className={styles.oldPrice}>R${convertPointToComma(price.old)}</h5>
-        <h3>R${convertPointToComma(price.current)}</h3>
-        <h5 className={styles.division}>{price.installment.amount} x R${convertPointToComma(price.installment.value)}</h5>
+        <h3>R${convertPointToComma(price.current)} <span>pix</span></h3>
+        <h5 className={styles.division}>Ou {price.installment.amount}x de R${convertPointToComma(price.installment.value)}</h5>
 
         <p className={`${styles.time} small`}>Por {time.value} {time.measure}</p>
         <Button title="Entrar em contato" plan={title}/>
