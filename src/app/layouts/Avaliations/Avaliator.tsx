@@ -40,7 +40,6 @@ export default function Avaliator({ name, socialMedia, imageUrl, content, gender
       <p className={styles.opinion}>{content}</p>
       <div className={styles.bottom}>
         <button className={styles.call} onClick={goToWhats}>Mude Como {gender}</button>
-        <Arrow className={styles.arrow} />
       </div>
     </article>
   )

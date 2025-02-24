@@ -7,6 +7,7 @@ import Plans from "@/app/layouts/Plans";
 import Info from "@/app/layouts/Info";
 import WhatsAppBtn from "@/app/layouts/WhatsAppBtn/WhatsAppBtn";
 import MyClients from "@/app/layouts/MyClients/MyClients";
+import Apresentation from "./layouts/Apresentation/Apresentation";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <TrainYourMind />
+      <Apresentation/>
       <Avaliations />
       <Info />
       <MyClients />
