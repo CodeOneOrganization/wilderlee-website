@@ -1,5 +1,6 @@
 .apresentation{
   position: relative;
+  overflow: hidden;
 }
 
 .apresentation svg{
@@ -13,6 +14,7 @@
   height: 47.813vw;
   display: flex;
   gap: 5px;
+  overflow: hidden;
 }
 
 .image1{
@@ -27,4 +29,19 @@
 
 .image3{
   width: 43.385vw;
+}
+
+@media (width <=850px){
+  .container{
+    flex-direction: column;
+    height: 100%;
+    gap: 0;
+  }
+
+  .image3,
+  .image2,
+  .image1{
+    width: 100%;
+    object-fit: cover;
+  }
 }
