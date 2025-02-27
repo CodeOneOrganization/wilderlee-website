@@ -65,7 +65,7 @@ const plans = [{
     { content: "Correção de exercícios por vídeos" },
     { content: "Feedbacks quinzenal com ajustes nos no treino e dieta" },
   ],
-  target: "Para alunos",
+  target: "Para novos alunos",
   time: {
     measure: "ano",
     value: 1

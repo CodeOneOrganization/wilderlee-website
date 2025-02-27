@@ -8,11 +8,9 @@ import Arrow from "@/common/components/Arrow"
 import { useRouter } from "next/navigation"
 
 export default function Hero() {
+  
   const router = useRouter()
 
-  const goToWhatsApp = () => {
-    window.open(`https://wa.me/${process.env.NEXT_PUBLIC_CONTACT}`)
-  }
   return (
     <section className={`${styles.contact} container`}>
       <h3 className={styles.title}>
