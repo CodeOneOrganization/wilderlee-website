@@ -13,7 +13,7 @@ interface Props {
 export default function Avaliator({ name, socialMedia, imageUrl, content, gender }: Props) {
   
   const goToWhats = () =>{
-    window.open(`${process.env.NEXT_PUBLIC_CONTACT}Olá, eu gostaria de saber mais sobre as consultorias`)
+    window.open(`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_WHATSAPP}&text=Olá, eu gostaria de saber mais sobre os planos.`)
   }
 
   const linearGradienteAnimationIn = () => {
