@@ -191,6 +191,11 @@
   padding-inline: 3vw;
 }
 
+.card{
+  transform: translateY(100%);
+  opacity: 0;
+}
+
 @media screen and (max-width: 850px) {
   .cards {
     flex-direction: column;

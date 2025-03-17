@@ -8,11 +8,12 @@ import styles from "./Nav.module.css";
 import _preloaderStyles from "@/app/layouts/Preloader/Preloader.module.css"
 
 import { useRouter } from "next/navigation"
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import useLenisScroll from "@/common/hooks/useLenisScroll";
 
 
 export default function Menu() {
+  
   const router = useRouter()
   const lenis = useLenisScroll()
   const timeline = useRef(GSAP.timeline())

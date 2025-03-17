@@ -4,6 +4,9 @@ import Card from "./Avaliator"
 
 import styles from "./Avaliations.module.css"
 import DraggableSlide from "@/common/components/DraggableSlide"
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 
 
 const users = [
@@ -47,6 +50,34 @@ const users = [
 ]
 
 export default function Avaliations() {
+
+
+  const animation = () => {
+    gsap.to(`.${styles.slide}`,{
+      opacity: 1,
+      ease: "power2.inOut",
+      duration: 1.1,
+    })
+  }
+
+  useEffect(()=>{
+    
+    gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+      trigger: `.${styles.avaliations}`,
+      start: "0% 50%",
+      end: "50% 100%",
+      onEnter: () => animation()
+    })
+
+    return()=>{
+      ScrollTrigger.killAll()
+      gsap.killTweensOf(`.${styles.slide}`)
+    }
+
+  },[])
+
   return (
     <section className={`${styles.avaliations}`} data-slide-element>
       
