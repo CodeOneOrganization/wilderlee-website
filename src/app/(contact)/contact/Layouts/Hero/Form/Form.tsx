@@ -17,12 +17,12 @@ export default function Form() {
 
     setIsLoading(true)
 
-    const serviceId = "service_811dob9"
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_EMAIL
     const formElement = formRef.current
-    const templateId = "template_o9l4b3r"
-    const emailJsPublicKey = "6jR2WevNx08rP13w7"
+    const templateId = "template_uubitsv"
+    const emailJsPublicKey = process.env.NEXT_PUBLIC_SERVICE_EMAIL_KEY
 
-    emailjs.sendForm(serviceId, templateId, formElement, emailJsPublicKey)
+    emailjs.sendForm(serviceId!, templateId, formElement, emailJsPublicKey)
       .then((response) => {
         console.log("Success", response.status, response.text)
         setError(false)

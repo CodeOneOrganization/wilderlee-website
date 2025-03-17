@@ -16,6 +16,10 @@
   position: absolute;
 }
 
+.slide{
+  opacity: 0;
+}
+
 @media (480px <=width <=969px) {
   .avaliations {
     grid-template-columns: repeat(2, 1fr);

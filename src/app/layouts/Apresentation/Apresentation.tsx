@@ -1,6 +1,38 @@
+'use client'
+
 import styles from './apresentation.module.css';
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect } from "react";
 
 export default function Apresentation() {
+
+  const animation = () => {
+    gsap.to(`.${styles.image}`,{
+      y: 0,
+      stagger: .1,
+      ease: "power2.inOut",
+      duration: 1.1,
+    })
+  }
+
+  useEffect(()=>{
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    ScrollTrigger.create({
+      trigger: `.${styles.apresentation}`,
+      start: "-10% 50%",
+      end: "50% 100%",
+      onEnter: () => animation()
+    })
+
+    return()=>{
+      ScrollTrigger.killAll()
+      gsap.killTweensOf(`.${styles.image}`)
+    }
+  },[])
+
   return (
     <section className={`${styles.apresentation} container`}>
 
@@ -19,11 +51,11 @@ export default function Apresentation() {
       <div className={styles.container}>
 
         <div>
-          <img className={styles.image1} src="/images/wilderlee1.jpg" alt="" />
-          <img className={styles.image2} src="/images/wilderleeBack.jpg" alt="" />
+          <img className={`${styles.image1} ${styles.image}`} src="/images/wilderlee1.jpg" alt="" />
+          <img className={`${styles.image2} ${styles.image}`} src="/images/wilderleeBack.jpg" alt="" />
         </div>
 
-        <img className={styles.image3} src="/images/wilderlee2.jpg" alt="" />
+         <img className={`${styles.image3} ${styles.image}`} src="/images/wilderlee2.jpg" alt="" />
 
       </div>
 

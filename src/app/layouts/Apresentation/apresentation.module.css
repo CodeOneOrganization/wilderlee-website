@@ -31,6 +31,10 @@
   width: 43.385vw;
 }
 
+.image1,.image2,.image3{
+  transform: translateY(150%);
+}
+
 @media (width <=850px){
   .container{
     flex-direction: column;
@@ -43,5 +47,6 @@
   .image1{
     width: 100%;
     object-fit: cover;
+   
   }
 }
