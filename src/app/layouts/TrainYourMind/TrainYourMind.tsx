@@ -3,7 +3,6 @@
 import styles from "./TrainYourMind.module.css"
 import PlayIcon from "@/common/components/Play"
 import Arrow from "@/common/components/Arrow"
-import useLenisScroll from "@/common/hooks/useLenisScroll";
 import OnView from "./OnView"
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -11,8 +10,9 @@ import { useEffect } from "react";
 
 export default function TrainYourMind() {
   
-  const lenis = useLenisScroll()
-  const goToPlans = () => lenis?.current.scrollTo("#plans", { duration: 1 })
+  const goToPlans = () => {
+    
+  }
 
   const animation = () => {
     gsap.to(`.${styles.video}`,{
@@ -59,13 +59,15 @@ export default function TrainYourMind() {
         </OnView>
       </div>
 
+      <a href="https://bit.ly/caluladorawiderlee" target="_blank">
       <h1 className={styles.call} onClick={goToPlans}>
-        Quero Mudar Minha<br /><b className={`${styles.inherit} blue`}>Vida</b> Agora
+      <b className={`${styles.inherit} blue`}> CALCULADORA </b> DE <br />CALORIAS DIÁRIAS
         <div className={styles.overflowBox}>
           <Arrow className={styles.arrow} fill="var(--color-white)" />
           <Arrow className={`${styles.arrow} ${styles.over}`} fill="var(--color-white)" />
         </div>
       </h1>
+      </a>
     </section>
   )
 }
