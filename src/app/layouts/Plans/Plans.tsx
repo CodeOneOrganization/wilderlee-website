@@ -42,8 +42,8 @@ export default function Plans() {
     <section className={`${styles.plans} col`} id="plans">
       <div className={`${styles.cards} container row`}>
         {mockedPlans.map((x, index) =>
-          <div className={styles.card}>
-            <PlanCard key={`CardAAAA_${index}`} {...x} />
+          <div className={styles.card} key={`CardAAAA_${index}`}>
+            <PlanCard {...x} />
           </div>
         )}
       </div>
