@@ -10,6 +10,13 @@ const clientsPhotos = [
   { src: "/images/after-before.jpg", },
   { src: "/images/after-before2.jpg", },
   { src: "/images/after-before3.jpg", },
+  { src: "/images/aluno1.jpeg", },
+  { src: "/images/aluno2.jpeg", },
+  { src: "/images/aluno3.jpeg", },
+  { src: "/images/aluno4.jpeg", },
+  { src: "/images/aluno5.jpeg", },
+  { src: "/images/aluno6.jpeg", },
+
 ]
 
 const clientsVideos = [
